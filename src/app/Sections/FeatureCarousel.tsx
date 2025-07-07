@@ -117,7 +117,7 @@ export default function FeatureCarousel() {
       {/* Foreground Content */}
       <div className="relative z-10 text-center px-4 mt-60 mx-auto bg-black sm:bg-transparent">
         {/* Features Badge */}
-        <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
+        <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}
                             <div className="w-[108px] h-[20px]">
                                 <svg
