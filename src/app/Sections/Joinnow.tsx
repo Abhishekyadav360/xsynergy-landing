@@ -42,7 +42,7 @@ const Joinnow = () => {
                         loop
                         muted
                         playsInline
-                        className="absolute top-0 left-0 w-full h-full max-w-6xl mx-auto -z-10 object-contain object-center opacity-50 sm:opacity-60 hue-rotate-[230deg]">
+                        className="absolute top-0 left-0 w-full h-full max-w-6xl mx-auto -z-10 object-contain object-center opacity-50 sm:opacity-50 hue-rotate-[230deg]">
                         <source src='/video/joinnow.mp4' type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>

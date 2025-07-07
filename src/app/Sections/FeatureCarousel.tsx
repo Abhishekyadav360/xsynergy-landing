@@ -90,7 +90,7 @@ export default function FeatureCarousel() {
   const filteredImages = screenWidth < 1024 ? images.slice(0, 14) : images;
 
   return (
-    <section className="relative min-h-screen w-full bg-black text-white flex items-start justify-center overflow-hidden">
+    <section id='features' className="relative min-h-screen w-full bg-black text-white flex items-start justify-center overflow-hidden">
       {/* Spinning Icons */}
       <div
         className="absolute top-0 left-0 w-full h-full flex justify-center items-start pointer-events-none"
