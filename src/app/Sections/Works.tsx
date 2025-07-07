@@ -63,66 +63,76 @@ const Works = () => {
             alt="gradient background"
             width={750}
             height={750}
-            className="object-cover w-full h-full opacity-30"
+            className="object-cover w-full h-full opacity-10 sm:opacity-30"
           />
         </motion.div>
       </motion.div>
 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
-          <div className="w-[108px] h-[20px]">
-            <svg width="108" height="20" viewBox="0 0 108 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
-                stroke="url(#left-gradient)"
-                strokeWidth={1.2}
-                filter="url(#green-glow)"
-              />
-              <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" filter="url(#green-glow)" />
-              <defs>
-                <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#00FF7F" />
-                  <stop offset="0.5" stopColor="#00FF7F" />
-                  <stop offset="1" stopColor="#00FF7F" />
-                </linearGradient>
-                <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
-                  <stop stopColor="#00FF7F" />
-                  <stop offset="1" stopColor="#00FF7F" stopOpacity="0" />
-                </radialGradient>
-                <filter id="green-glow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feDropShadow dx="0" dy="0" stdDeviation="4.5" floodColor="#00FF7F" floodOpacity="1" />
-                </filter>
-              </defs>
-            </svg>
-          </div>
+                            {/* Left Decorative SVG */}
+                            <div className="w-[108px] h-[20px]">
+                                <svg
+                                    width={108}
+                                    height={20}
+                                    viewBox="0 0 108 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
+                                        stroke="url(#left-gradient)"
+                                        strokeWidth={1}
+                                    />
+                                    <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
+                                    <defs>
+                                        <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
+                                            <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                                            <stop offset="0.5" stopColor="#D1D5DB" />
+                                            <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                                        </linearGradient>
+                                        <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
+                                            <stop stopColor="#E5E7EB" />
+                                            <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
+                            </div>
 
-          <p className="text-green-400 font-semibold fr-fnt text-xl drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]">
-            Get Started
-          </p>
+                            {/* Center Text */}
+                            <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
+                                Get Started
+                            </p>
 
-          <div className="w-[108px] h-[20px]">
-            <svg width="108" height="20" viewBox="0 0 108 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
-                stroke="url(#right-gradient)"
-                strokeWidth={1.2}
-                filter="url(#green-glow)"
-              />
-              <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" filter="url(#green-glow)" />
-              <defs>
-                <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#00FF7F" />
-                  <stop offset="0.5" stopColor="#00FF7F" />
-                  <stop offset="1" stopColor="#00FF7F" />
-                </linearGradient>
-                <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
-                  <stop stopColor="#00FF7F" />
-                  <stop offset="1" stopColor="#00FF7F" stopOpacity="0" />
-                </radialGradient>
-              </defs>
-            </svg>
-          </div>
-        </div>
+                            {/* Right Decorative SVG */}
+                            <div className="w-[108px] h-[20px]">
+                                <svg
+                                    width={108}
+                                    height={20}
+                                    viewBox="0 0 108 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
+                                        stroke="url(#right-gradient)"
+                                        strokeWidth={1}
+                                    />
+                                    <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
+                                    <defs>
+                                        <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
+                                            <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                                            <stop offset="0.5" stopColor="#D1D5DB" />
+                                            <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                                        </linearGradient>
+                                        <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
+                                            <stop stopColor="#E5E7EB" />
+                                            <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
 
         <Title
           title="How to get started ?"
