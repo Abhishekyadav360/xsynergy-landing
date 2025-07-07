@@ -195,13 +195,14 @@ export default function FeatureCarousel() {
         {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
           {/* Card 1 */}
-          <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+          <div className="features-bx overflow-hidden relative  flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+            <div className="features-point" />
             <div
-              className="framer-uw5jb"
+              className=""
               style={{
                 background:
                   'linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)',
-                height: '1px',
+                height: '2px',
                 left: 'calc(50% - 170px / 2)',
                 position: 'absolute',
                 top: '0',
@@ -215,16 +216,18 @@ export default function FeatureCarousel() {
             <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
               Get rewarded automatically and instantly through referral-based smart contracts that never miss a payout.
             </p>
+           
           </div>
 
           {/* Card 2 */}
-          <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+          <div className="features-bx overflow-hidden relative  flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+           <div className="features-point" />
             <div
-              className="framer-uw5jb"
+              className=""
               style={{
                 background:
                   'linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)',
-                height: '1px',
+                height: '2px',
                 left: 'calc(50% - 170px / 2)',
                 position: 'absolute',
                 top: '0',
@@ -238,16 +241,18 @@ export default function FeatureCarousel() {
             <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
               Every transaction is secure, visible on-chain, and follows a fair, decentralized model — no admin interference.
             </p>
+           
           </div>
 
           {/* Card 3 */}
-          <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+          <div className="features-bx overflow-hidden relative   flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+           <div className="features-point" />
             <div
-              className="framer-uw5jb"
+              className=""
               style={{
                 background:
                   'linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)',
-                height: '1px',
+                height: '2px',
                 left: 'calc(50% - 170px / 2)',
                 position: 'absolute',
                 top: '0',
@@ -261,6 +266,7 @@ export default function FeatureCarousel() {
             <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
               Join from anywhere in the world, powered by the speed and affordability of the Polygon blockchain.
             </p>
+       
           </div>
         </div>
       </div>

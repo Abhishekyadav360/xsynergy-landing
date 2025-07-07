@@ -27,6 +27,7 @@ export default function GradientCard({
   borderWidth: 1,
 }}
     >
+       <div className="features-point" />
     
       <div className="relative w-full h-52 min-w-[320px]">
         <Image
@@ -65,7 +66,7 @@ export default function GradientCard({
       </div> */}
 
      
-      <div className="relative z-20 px-5 pt-14 pb-6 text-center">
+      <div className="relative z-20 px-5  pb-6 text-center">
         <h3 className="text-white text-2xl font-semibold mb-2">{title}</h3>
         <p className="text-lg text-gray-400">{description}</p>
       </div>

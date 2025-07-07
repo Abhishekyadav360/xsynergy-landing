@@ -10,12 +10,16 @@ import bnrbg from '@/Assets/images/bannerbg.svg';
 // import GridPattern from '../Components/GridPattern';
 // import GridFX from '../Components/GridFX';
 import GridGlow from '../Components/GridGlow';
+import MatrixText from '../Components/MatrixText';
+
 // const TARGET_TIME = new Date("2025-03-05T09:30:00Z").getTime();
 
 
 const Banner = () => {
     // const [timeLeft, setTimeLeft] = useState<number | null>(null);
 
+
+    
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -154,14 +158,14 @@ const Banner = () => {
                             <span className='inline-block rounded-xl sm:rounded-2xl px-3 py-0 sm:py-0.5 font-semibold text-span'>
                                 Welcome to
                             </span>
-                            <span className='inline-block rounded-xl sm:rounded-2xl px-3 py-0 sm:py-0.5 font-semibold text-span-gradient'>
-                                XSynergy
-                            </span>
+
+                           <MatrixText key={(typeof window !== 'undefined' && window.performance.now()) || 1} text="XSynergy" speed={40} />
+
                             – Built for Web3
                         </h1>
 
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
-                         Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
+                            Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
                         </p>
                         <div className='flex flex-wrap gap-4 justify-center items-center'>
                             <Button variant="primary" target="_blank" href="/" >

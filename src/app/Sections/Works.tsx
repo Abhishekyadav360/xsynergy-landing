@@ -70,69 +70,69 @@ const Works = () => {
 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-                            {/* Left Decorative SVG */}
-                            <div className="w-[108px] h-[20px]">
-                                <svg
-                                    width={108}
-                                    height={20}
-                                    viewBox="0 0 108 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
-                                        stroke="url(#left-gradient)"
-                                        strokeWidth={1}
-                                    />
-                                    <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
-                                    <defs>
-                                        <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
-                                            <stop stopColor="#A0A0A0" stopOpacity="0.1" />
-                                            <stop offset="0.5" stopColor="#D1D5DB" />
-                                            <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
-                                        </linearGradient>
-                                        <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
-                                            <stop stopColor="#E5E7EB" />
-                                            <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
-                                        </radialGradient>
-                                    </defs>
-                                </svg>
-                            </div>
+          {/* Left Decorative SVG */}
+          <div className="w-[108px] h-[20px]">
+            <svg
+              width={108}
+              height={20}
+              viewBox="0 0 108 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
+                stroke="url(#left-gradient)"
+                strokeWidth={1}
+              />
+              <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
+              <defs>
+                <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                  <stop offset="0.5" stopColor="#D1D5DB" />
+                  <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                </linearGradient>
+                <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
+                  <stop stopColor="#E5E7EB" />
+                  <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
 
-                            {/* Center Text */}
-                            <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-                                Steps
-                            </p>
+          {/* Center Text */}
+          <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
+            Steps
+          </p>
 
-                            {/* Right Decorative SVG */}
-                            <div className="w-[108px] h-[20px]">
-                                <svg
-                                    width={108}
-                                    height={20}
-                                    viewBox="0 0 108 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
-                                        stroke="url(#right-gradient)"
-                                        strokeWidth={1}
-                                    />
-                                    <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
-                                    <defs>
-                                        <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
-                                            <stop stopColor="#A0A0A0" stopOpacity="0.1" />
-                                            <stop offset="0.5" stopColor="#D1D5DB" />
-                                            <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
-                                        </linearGradient>
-                                        <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
-                                            <stop stopColor="#E5E7EB" />
-                                            <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
-                                        </radialGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </div>
+          {/* Right Decorative SVG */}
+          <div className="w-[108px] h-[20px]">
+            <svg
+              width={108}
+              height={20}
+              viewBox="0 0 108 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
+                stroke="url(#right-gradient)"
+                strokeWidth={1}
+              />
+              <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
+              <defs>
+                <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                  <stop offset="0.5" stopColor="#D1D5DB" />
+                  <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                </linearGradient>
+                <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
+                  <stop stopColor="#E5E7EB" />
+                  <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
 
         <Title
           title="How to get started ?"
@@ -156,11 +156,11 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
             >
               <GradientCard
                 title="Connect Your Wallet"
-                description="MetaMask, Trust Wallet, etc."
+                description="Link your MetaMask, Trust Wallet, or any supported wallet quickly and securely to get started."
                 image={glow1}
               />
             </motion.div>
@@ -172,13 +172,13 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
             >
               <GradientCard
                 title="Register Seamlessly"
-                description="No KYC. No middlemen."
+                description="No KYC or approval needed. Just sign a transaction and you're in — fast and hassle-free."
                 image={glow2}
-                className='relative mt-0 sm:mt-20'
+                className="relative mt-0 sm:mt-20"
               />
             </motion.div>
 
@@ -189,11 +189,11 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
             >
               <GradientCard
                 title="Invite & Grow"
-                description="Share your link. Let the network build."
+                description="Share your invite link and grow your network effortlessly while earning rewards."
                 image={glow3}
               />
             </motion.div>
