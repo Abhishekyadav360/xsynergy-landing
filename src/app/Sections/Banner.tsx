@@ -159,9 +159,7 @@ const Banner = () => {
                                 Welcome to
                             </span>
 
-                           <MatrixText key={(typeof window !== 'undefined' && window.performance.now()) || 1} text="XSynergy" speed={250} />
-
-                            – Built for Web3
+                           <MatrixText key={(typeof window !== 'undefined' && window.performance.now()) || 1} text="XSynergy" speed={250} /> – Built for Web3
                         </h1>
 
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
