@@ -1,0 +1,38 @@
+import Header from "./Sections/Header";
+import Banner from "./Sections/Banner";
+import About from "./Sections/About";
+// import Footer from "./Sections/Footer";
+// import Faq from "./Sections/Faq";
+// import Advantages from "./Sections/Advantages";
+// import Explore from "./Sections/Explore";
+// import Slider from "./Sections/Slider";
+import Works from "./Sections/Works";
+// import TestPage from "./Sections/TestPage";
+// import Features from "./Sections/Features";
+import FeatureCarousel from "./Sections/FeatureCarousel";
+// import Tokenomics from "./Sections/Tokenomics";
+
+
+
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <Banner />
+      <About />
+      <FeatureCarousel />
+      <Works />
+      
+      {/* <Advantages />
+      <Explore />
+      <Features /> */}
+      
+      {/* <TestPage /> */}
+      {/* <Slider /> */}
+      {/* <Tokenomics /> */}
+      {/* <Faq /> */}
+      {/* <Footer /> */}
+    </>
+  );
+}
