@@ -1,35 +1,55 @@
-import Image from "next/image";
-import logo from "@/Assets/images/favicon1.webp";
+"use client";
 
-export const Loader = ({ className = "" }: { className?: string }) => {
+import React, { useRef, useEffect } from "react";
+
+const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current!;
+    const ctx = canvas.getContext("2d")!;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    const fontSize = 20;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(0);
+
+    const maxFrames = Math.ceil(canvas.height / fontSize) - 5; // slightly faster
+    let frame = 0;
+
+    const draw = () => {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#0F0";
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        drops[i]++;
+      }
+
+      frame++;
+
+      if (frame < maxFrames) {
+        requestAnimationFrame(draw);
+      } else {
+        onFinish?.(); // Call when complete (this hides it from main page)
+      }
+    };
+
+    draw();
+  }, [onFinish]);
+
   return (
-    <div
-      className={`fixed top-0 left-0 z-50 h-screen w-full bg-black bg-opacity-60 backdrop-blur-sm flex justify-center items-center ${className}`}
-    >
-     
-      <div className="relative w-[120px] h-[120px] flex justify-center items-center">
-        
-        <Image
-          src={logo}
-          alt="Loading Logo"
-          width={45}
-          height={45}
-          className="absolute z-10"
-        />
-
-      
-        <div className="absolute w-full h-full animate-spin-slow">
-          {[...Array(5)].map((_, index) => (
-            <div
-              key={index}
-              className="absolute w-full h-full animate-orbit opacity-[calc(1-(0.2*var(--index)))]"
-              style={{ "--index": index } as React.CSSProperties}
-            >
-              <div className="absolute top-0 left-1/2 w-[10px] h-[10px] bg-[#3AE374] shadow-[0px_0px_20px_2px_#3AE374] rounded-full transform -translate-x-1/2"></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 z-[9999] w-full h-full bg-black min-h-screen"
+    />
   );
 };
+
+export default Loader;

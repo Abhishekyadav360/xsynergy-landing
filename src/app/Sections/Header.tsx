@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from "@/Assets/images/xsynergylogo.webp";
 import Button from '../Components/Button';
-import { Loader } from '../Components/Loader';
+import  Loader  from '../Components/Loader';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
