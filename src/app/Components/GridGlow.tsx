@@ -31,7 +31,7 @@ export default function GridGlow({
     const verticalCount = lines - 4;
     const horizontalCount = 4;
 
-    const sectionWidth = window.innerWidth;
+   const sectionWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
 
     const snap = (v: number) => Math.round(v / CELL) * CELL;
 
@@ -106,7 +106,7 @@ export default function GridGlow({
         const endX = g.vertical
           ? g.x
           : g.forward
-            ? window.innerWidth + g.len
+           ? (typeof window !== 'undefined' ? window.innerWidth : 1920) + g.len
             : -g.len;
 
         const endY = g.vertical

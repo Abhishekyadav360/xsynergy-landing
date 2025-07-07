@@ -1,3 +1,5 @@
+
+'use client';
 import Header from "./Sections/Header";
 import Banner from "./Sections/Banner";
 import About from "./Sections/About";
@@ -6,7 +8,7 @@ import About from "./Sections/About";
 // import Advantages from "./Sections/Advantages";
 // import Explore from "./Sections/Explore";
 // import Slider from "./Sections/Slider";
-import Works from "./Sections/Works";
+import Works from "./Sections/Works";  
 // import TestPage from "./Sections/TestPage";
 // import Features from "./Sections/Features";
 import ClientFeatureCarousel from "./Sections/ClientFeatureCarousel";
@@ -23,7 +25,7 @@ export default function Home() {
       <Banner />
       <About />
        <ClientFeatureCarousel />
-      {/* <FeatureCarousel /> */}
+     
       <Works />
        
       {/* <Advantages />
