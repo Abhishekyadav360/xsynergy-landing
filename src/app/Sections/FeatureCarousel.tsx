@@ -100,7 +100,7 @@ export default function FeatureCarousel() {
           className="relative"
           style={{ width: diameter, height: diameter, rotate: smoothRotation }}
         >
-          <div style={{ transform: 'rotate(-25deg)' }} className="absolute inset-0">
+          <div style={{ transform: 'rotate(0deg)' }} className="absolute inset-0">
             {filteredImages.map((src, i) => (
               <CarouselImage
                 key={i}
@@ -115,7 +115,7 @@ export default function FeatureCarousel() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 text-center px-4 mt-60 mx-auto bg-black sm:bg-transparent">
+      <div className="relative z-10 text-center px-4 mt-40 sm:mt-60 mx-auto bg-black sm:bg-transparent">
         {/* Features Badge */}
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}

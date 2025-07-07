@@ -154,7 +154,7 @@ const Banner = () => {
                         </div>
 
 
-                        <h1 className="text-5xl md:text-[90px] font-bold mb-3 sm:mb-3 leading-tight sm:leading-none max-w-4xl mx-auto">
+                        <h1 className="text-5xl md:text-[90px] font-bold mb-3 sm:mb-3 !leading-[1] sm:leading-none max-w-4xl mx-auto">
                             <span className='inline-block rounded-xl sm:rounded-2xl px-3 py-0 sm:py-0.5 font-semibold text-span'>
                                 Welcome to
                             </span>
