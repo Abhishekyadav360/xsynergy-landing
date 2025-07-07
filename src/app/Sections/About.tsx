@@ -61,7 +61,7 @@ const About = () => {
 
   const text =
     'XSynergy is a decentralized ecosystem built on blockchain that enables transparent, automated, and community-driven wealth generation — powered by smart contracts, with zero admin control.';
-  const prefix = 'XSynergy is a decentralized ecosys';
+  const prefix = 'XSynergy is a decentralized ecosys ';
   const prefixLen = prefix.length;
 
   return (
@@ -139,16 +139,24 @@ const About = () => {
                         </div>
 
           {/* Animated Text */}
-          <p className="mx-auto max-w-5xl flex flex-wrap justify-center text-center leading-none text-3xl sm:text-[52px] font-semibold fr-fnt">
-            {text.split('').map((char, idx) => (
-              <AnimatedLetter
-                key={idx}
-                char={char}
-                index={idx}
-                prefixLen={prefixLen}
-                scrollYProgress={scrollYProgress}
-              />
-            ))}
+          <p className="mx-auto max-w-5xl flex flex-wrap justify-center text-center leading-none text-3xl sm:text-[52px] font-semibold fr-fnt whitespace-pre-wrap">
+            {text.split(' ').map((word, wordIdx) => (
+  <span key={wordIdx} className="inline-block mr-[0.4ch]">
+    {word.split('').map((char, charIdx) => {
+      const globalIdx = text.split(' ').slice(0, wordIdx).join(' ').length + wordIdx + charIdx;
+
+      return (
+        <AnimatedLetter
+          key={`${wordIdx}-${charIdx}`}
+          char={char}
+          index={globalIdx}
+          prefixLen={prefixLen}
+          scrollYProgress={scrollYProgress}
+        />
+      );
+    })}
+  </span>
+))}
           </p>
         </div>
       </section>
