@@ -33,7 +33,7 @@ const Works = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const check = () => setIsMobile(window.innerWidth < 640);
+      const check = () => setIsMobile(window.innerWidth < 1024);
       check();
       window.addEventListener('resize', check);
       setReady(true);

@@ -51,7 +51,7 @@ const CarouselImage = ({ src, angle, radius, smoothRotation }: CarouselImageProp
       <img
         src={src}
         alt={`feature-${angle}`}
-        className="w-28 h-28 object-cover rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#1a1a1a]"
+        className="w-14 h-14 sm:w-20 sm:h-20   md:w-28 md:h-28 object-cover rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#1a1a1a]"
       />
     </motion.div>
   );
@@ -59,6 +59,10 @@ const CarouselImage = ({ src, angle, radius, smoothRotation }: CarouselImageProp
 
 export default function FeatureCarousel() {
   const [diameter, setDiameter] = useState(800);
+  const [screenWidth, setScreenWidth] = useState<number>(
+    typeof window !== 'undefined' ? window.innerWidth : 1024
+  );
+
   const baseRotation = useMotionValue(0);
   const smoothRotation = useSpring(baseRotation, { damping: 40, stiffness: 50 });
 
@@ -68,15 +72,22 @@ export default function FeatureCarousel() {
 
   useEffect(() => {
     const handleResize = () => {
-      const size = Math.min(Math.max(window.innerWidth * 0.85, 480), 1300);
+      const width = window.innerWidth;
+      setScreenWidth(width);
+
+      const size = Math.min(Math.max(width * 0.85, 480), 1300);
       setDiameter(size);
     };
+
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const radius = diameter / 2 - 50;
+
+
+  const filteredImages = screenWidth < 1024 ? images.slice(0, 14) : images;
 
   return (
     <section className="relative min-h-screen w-full bg-black text-white flex items-start justify-center overflow-hidden">
@@ -90,11 +101,11 @@ export default function FeatureCarousel() {
           style={{ width: diameter, height: diameter, rotate: smoothRotation }}
         >
           <div style={{ transform: 'rotate(-25deg)' }} className="absolute inset-0">
-            {images.map((src, i) => (
+            {filteredImages.map((src, i) => (
               <CarouselImage
                 key={i}
                 src={src}
-                angle={(360 / images.length) * i}
+                angle={(360 / filteredImages.length) * i}
                 radius={radius}
                 smoothRotation={smoothRotation}
               />
@@ -104,7 +115,7 @@ export default function FeatureCarousel() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 text-center px-4 mt-60 mx-auto">
+      <div className="relative z-10 text-center px-4 mt-60 mx-auto bg-black sm:bg-transparent">
         {/* Features Badge */}
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}
@@ -171,7 +182,6 @@ export default function FeatureCarousel() {
                             </div>
                         </div>
 
-        {/* Headline and CTA */}
         <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Packed with Innovation.</h1>
         <p className="text-gray-300 max-w-md mx-auto mb-6 leading-relaxed">
           Xsynergy is packed with cutting-edge features designed to elevate your portfolio.
@@ -182,81 +192,77 @@ export default function FeatureCarousel() {
           </Button>
         </div>
 
-        {/* Feature Cards (unchanged) */}
-       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
-                    <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
-                        <div
-                            className="framer-uw5jb"
-                            data-framer-name="Highlighter"
-                            style={{
-                                background:
-                                    "linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)",
-                                opacity: 1,
-                                flex: "none",
-                                height: "1px",
-                                left: "calc(50% - 170px / 2)",
-                                position: "absolute",
-                                top: "0",
-                                width: "170px",
-                                zIndex: 1,
-                            }}
-                        />
-                        <h2 className="text-2xl sm:text-3xl font-medium">
-                            Instant Smart Contract Payouts and Referral-Driven Earnings
-                        </h2>
-                        <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                            Get rewarded automatically and instantly through referral-based smart contracts that never miss a payout.
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
-                        <div
-                            className="framer-uw5jb"
-                            data-framer-name="Highlighter"
-                            style={{
-                                background:
-                                    "linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)",
-                                opacity: 1,
-                                flex: "none",
-                                height: "1px",
-                                left: "calc(50% - 170px / 2)",
-                                position: "absolute",
-                                top: "0",
-                                width: "170px",
-                                zIndex: 1,
-                            }}
-                        />
-                        <h2 className="text-2xl sm:text-3xl font-medium">
-                            Immutable, Transparent and Decentralized Value Distribution
-                        </h2>
-                        <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                            Every transaction is secure, visible on-chain, and follows a fair, decentralized model — no admin interference.
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
-                        <div
-                            className="framer-uw5jb"
-                            data-framer-name="Highlighter"
-                            style={{
-                                background:
-                                    "linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)",
-                                opacity: 1,
-                                flex: "none",
-                                height: "1px",
-                                left: "calc(50% - 170px / 2)",
-                                position: "absolute",
-                                top: "0",
-                                width: "170px",
-                                zIndex: 1,
-                            }}
-                        />
-                        <h2 className="text-2xl sm:text-3xl font-medium">
-                            Global Access 24/7 and Built on the Polygon Network
-                        </h2>
-                        <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                            Join from anywhere in the world, powered by the speed and affordability of the Polygon blockchain.
-                        </p>
-                    </div>
-                </div>
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
+          {/* Card 1 */}
+          <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+            <div
+              className="framer-uw5jb"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)',
+                height: '1px',
+                left: 'calc(50% - 170px / 2)',
+                position: 'absolute',
+                top: '0',
+                width: '170px',
+                zIndex: 1,
+              }}
+            />
+            <h2 className="text-2xl sm:text-3xl font-medium">
+              Instant Smart Contract Payouts and Referral-Driven Earnings
+            </h2>
+            <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
+              Get rewarded automatically and instantly through referral-based smart contracts that never miss a payout.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+            <div
+              className="framer-uw5jb"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)',
+                height: '1px',
+                left: 'calc(50% - 170px / 2)',
+                position: 'absolute',
+                top: '0',
+                width: '170px',
+                zIndex: 1,
+              }}
+            />
+            <h2 className="text-2xl sm:text-3xl font-medium">
+              Immutable, Transparent and Decentralized Value Distribution
+            </h2>
+            <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
+              Every transaction is secure, visible on-chain, and follows a fair, decentralized model — no admin interference.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm">
+            <div
+              className="framer-uw5jb"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(67 214 26) 50%, rgba(79, 26, 214, 0) 100%)',
+                height: '1px',
+                left: 'calc(50% - 170px / 2)',
+                position: 'absolute',
+                top: '0',
+                width: '170px',
+                zIndex: 1,
+              }}
+            />
+            <h2 className="text-2xl sm:text-3xl font-medium">
+              Global Access 24/7 and Built on the Polygon Network
+            </h2>
+            <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
+              Join from anywhere in the world, powered by the speed and affordability of the Polygon blockchain.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
