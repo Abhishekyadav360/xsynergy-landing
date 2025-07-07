@@ -29,7 +29,7 @@ export default function GradientCard({
     >
        <div className="features-point" />
     
-      <div className="relative w-full h-52 min-w-[320px]">
+      <div className="relative w-full h-52 min-w-72 sm:min-w-[320px]">
         <Image
           src={image}
           alt="Card top background"

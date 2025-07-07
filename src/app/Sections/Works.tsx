@@ -63,7 +63,7 @@ const Works = () => {
             alt="gradient background"
             width={750}
             height={750}
-            className="object-cover w-full h-full opacity-20 sm:opacity-30"
+            className="  object-cover w-full h-full opacity-15 sm:opacity-30  "
           />
         </motion.div>
       </motion.div>
@@ -157,6 +157,7 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.6, ease: 'easeOut' }}
+              className='px-4 sm:px-0'
             >
               <GradientCard
                 title="Connect Your Wallet"
@@ -173,6 +174,7 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.7, ease: 'easeOut' }}
+              className='px-4 sm:px-0'
             >
               <GradientCard
                 title="Register Seamlessly"
@@ -190,11 +192,13 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.6, ease: 'easeOut' }}
+              className='px-4 sm:px-0'
             >
               <GradientCard
                 title="Invite & Grow"
                 description="Share your invite link and grow your network effortlessly while earning rewards."
                 image={glow3}
+                className=''
               />
             </motion.div>
           </motion.div>
