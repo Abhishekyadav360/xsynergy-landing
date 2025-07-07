@@ -80,8 +80,8 @@ const Header = () => {
 
                 <nav className="hidden md:flex space-x-6 p-2 rounded-full backdrop-blur-sm nav-bg">
                     <Link href="#about" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'about')}>About</Link>
-                    <Link href="#advantages" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'advantages')}>Advantages</Link>
-                    <Link href="#nfts" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'nfts')}>Nfts</Link>
+                    <Link href="#features" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
+                    <Link href="#works" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
                     {/* <Link href="#tokenomics" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'tokenomics')}>Tokenomics</Link> */}
                     <Link href="#faq" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'faq')}>FAQ</Link>
                 </nav>
@@ -135,8 +135,8 @@ const Header = () => {
                 <nav className="mt-12 space-y-4 text-white text-xl">
                     <Link href="#about" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'about')}>About</Link>
                     {/* <Link href="#tokenomics" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'tokenomics')}>Tokenomics</Link> */}
-                    <Link href="#advantages" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'advantages')}>Advantages</Link>
-                    <Link href="#nfts" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'nfts')}>Nfts</Link>
+                    <Link href="#features" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
+                    <Link href="#works" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
                     <Link href="#faq" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'faq')}>FAQ</Link>
                 </nav>
             </div>
