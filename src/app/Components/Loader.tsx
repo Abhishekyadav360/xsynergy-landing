@@ -8,20 +8,32 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
   useEffect(() => {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+
+    const dpr = window.devicePixelRatio || 1;
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset any scaling before reapplying
+      ctx.scale(dpr, dpr);
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     const fontSize = 20;
-    const columns = Math.floor(canvas.width / fontSize);
+    const columns = Math.floor(window.innerWidth / fontSize);
     const drops = Array(columns).fill(0);
 
-    const maxFrames = Math.ceil(canvas.height / fontSize) ; // slightly faster
+    const maxFrames = Math.ceil(window.innerHeight / fontSize);
     let frame = 0;
 
     const draw = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       ctx.fillStyle = "#0F0";
       ctx.font = `${fontSize}px monospace`;
@@ -37,17 +49,21 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
       if (frame < maxFrames) {
         requestAnimationFrame(draw);
       } else {
-        onFinish?.(); 
+        onFinish?.();
       }
     };
 
     draw();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+    };
   }, [onFinish]);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-[9999] w-full h-full bg-black min-h-screen"
+      className="fixed top-0 left-0 w-screen h-screen bg-black z-[9999]"
     />
   );
 };
