@@ -35,7 +35,7 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
     let frame = 0;
 
     /* 🆕  Fade factor  — jitna chhota, utna lamba tail  */
-    const fadeAlpha = 0.05;      // 0.05–0.08  → lambi tail; 0.2 (default) → chhoti
+    const fadeAlpha = 0.08;      // 0.05–0.08  → lambi tail; 0.2 (default) → chhoti
 
     const draw = () => {
       /* 1️⃣  Dark overlay with lower alpha → purāne chars dheere mitenge */
@@ -82,7 +82,7 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
     <div className="fixed top-0 left-0 w-screen h-screen bg-black z-[9999]">
       <canvas ref={canvasRef} className="w-full h-full" />
 
-      {/* Logo center me, turant render hota hai */}
+    
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <Image
           src={logo}
