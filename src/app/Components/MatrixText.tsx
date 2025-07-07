@@ -6,7 +6,7 @@ const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@$%&*#';
 
 export default function MatrixText({
   text,
-  speed = 50,
+  speed = 100,
 }: {
   text: string;
   speed?: number;

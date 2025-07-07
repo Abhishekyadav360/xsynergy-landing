@@ -12,6 +12,7 @@ import Works from "./Sections/Works";
 // import TestPage from "./Sections/TestPage";
 // import Features from "./Sections/Features";
 import ClientFeatureCarousel from "./Sections/ClientFeatureCarousel";
+import Joinnow from "./Sections/Joinnow";
 // import Tokenomics from "./Sections/Tokenomics";
 
 
@@ -27,7 +28,7 @@ export default function Home() {
        <ClientFeatureCarousel />
      
       <Works />
-       
+       <Joinnow />
       {/* <Advantages />
       <Explore />
       <Features /> */}

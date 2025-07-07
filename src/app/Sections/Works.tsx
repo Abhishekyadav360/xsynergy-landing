@@ -44,13 +44,13 @@ const Works = () => {
   const cardVariants = getCardVariants(isMobile);
 
   return (
-    <section id="advantages" className="relative w-full pt-20 pb-28 overflow-visible">
+    <section id="advantages" className="relative w-full pt-28 pb-28 overflow-y-visible overflow-x-hidden">
       <motion.div
         initial={{ height: 0 }}
         whileInView={{ height: '100%' }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
         viewport={{ once: false, amount: 0.2 }}
-        className="absolute -top-10 left-0 right-0 w-full max-w-[537px] mx-auto pointer-events-none overflow-hidden -z-0"
+        className="absolute -top-5 left-0 right-0 w-full max-w-[537px] mx-auto pointer-events-none overflow-hidden -z-0"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -156,7 +156,7 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.7, ease: 'easeOut' }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <GradientCard
                 title="Connect Your Wallet"
@@ -189,7 +189,7 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.7, ease: 'easeOut' }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <GradientCard
                 title="Invite & Grow"
