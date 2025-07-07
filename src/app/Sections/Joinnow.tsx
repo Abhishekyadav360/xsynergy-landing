@@ -52,7 +52,7 @@ const Joinnow = () => {
                         <p className=" text-md md:text-lg text-white  leading-tight mb-5 mt-2 text-center z-10 mx-auto"> Ready to be part of the change?
                             Click below and take the first step.</p>
                         <div className=' flex    items-center justify-center max-w-40 mx-auto bg-black z-10 rounded-xl '>
-                            <Button variant="primary" href='/contact'>
+                            <Button variant="primary" href='/'>
                                 Join Now
                             </Button>
                         </div>
