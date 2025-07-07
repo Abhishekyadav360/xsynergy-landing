@@ -652,6 +652,11 @@ body .swiper-button-prev:after,
   animation: slow-spin 60s linear infinite;
 }
 
+@media only screen and (max-width: 576px) {
+  .joinnow-vid {
+    bottom: -100px;
+  }
+}
 @media only screen and (max-width: 500px) {
   .token-update__data li span {
     width: 55%;

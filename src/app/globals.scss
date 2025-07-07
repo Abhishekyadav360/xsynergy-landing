@@ -715,7 +715,11 @@ body .swiper-button-prev:after,
 
 
 
-
+@media only screen and (max-width: 576px) {
+ .joinnow-vid{
+         bottom: -100px;
+}
+}
 
 
 

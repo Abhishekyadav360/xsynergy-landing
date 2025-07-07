@@ -88,7 +88,10 @@ const Header = () => {
 
 
                 <div className="flex items-center gap-4">
+                    <div className='bg-black rounded-xl'>
                     <Button target='_blank' href="https://users.sfagro.club/" >Register</Button>
+
+                    </div>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden focus:outline-none pr-3"
