@@ -62,7 +62,7 @@ const Banner = () => {
                         src={bnrbg}
                         alt="Background"
                         priority
-                        className="absolute top-[130px] right-0 bottom-0 left-0 w-full h-full object-contain -z-10 opacity-100 hue-rotate-[280deg] "
+                        className="absolute top-[190px] sm:top-[130px] right-0 bottom-0 left-0 w-full h-full object-contain -z-10 opacity-100 hue-rotate-[280deg] "
                     />
                 </div>
 
