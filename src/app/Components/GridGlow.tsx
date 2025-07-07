@@ -1,6 +1,7 @@
 "use client";
+
 import { motion } from "framer-motion";
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 
 const CELL = 64;
 const LINE_SIZE = 1.2;
@@ -27,11 +28,23 @@ export default function GridGlow({
   lines?: number;
   maxLength?: number;
 }) {
+  // ✅ Track real client width
+  const [vw, setVw] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1920
+  );
+
+  useEffect(() => {
+    const updateWidth = () => setVw(window.innerWidth);
+    updateWidth(); // run once on mount
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   const glowLines: GlowLine[] = useMemo(() => {
     const verticalCount = lines - 4;
     const horizontalCount = 4;
 
-   const sectionWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+    const sectionWidth = vw;
 
     const snap = (v: number) => Math.round(v / CELL) * CELL;
 
@@ -54,28 +67,32 @@ export default function GridGlow({
       };
     });
 
-    // Horizontal lines (start slightly below top)
+    // Horizontal lines
     const minRowIndex = 1;
     const rows = Math.floor(SECTION_HEIGHT / CELL / 2) - 1;
-    const horizontalLines = Array.from({ length: horizontalCount }).map((_, i) => {
-      const rowIdx = minRowIndex + Math.floor(((i + 1) * rows) / (horizontalCount + 1));
-      const yPos = snap(rowIdx * CELL);
-      const len = 160 + Math.random() * (maxLength - 160);
-      const forward = Math.random() > 0.5;
-      return {
-        id: i + verticalCount,
-        vertical: false,
-        forward,
-        len,
-        x: forward ? -len : sectionWidth + len,
-        y: yPos,
-        duration: 6 + Math.random() * 3,
-        delay: i * 0.5,
-      };
-    });
+    const horizontalLines = Array.from({ length: horizontalCount }).map(
+      (_, i) => {
+        const rowIdx =
+          minRowIndex +
+          Math.floor(((i + 1) * rows) / (horizontalCount + 1));
+        const yPos = snap(rowIdx * CELL);
+        const len = 160 + Math.random() * (maxLength - 160);
+        const forward = Math.random() > 0.5;
+        return {
+          id: i + verticalCount,
+          vertical: false,
+          forward,
+          len,
+          x: forward ? -len : sectionWidth + len,
+          y: yPos,
+          duration: 6 + Math.random() * 3,
+          delay: i * 0.5,
+        };
+      }
+    );
 
     return [...horizontalLines, ...verticalLines];
-  }, [lines, maxLength]);
+  }, [lines, maxLength, vw]);
 
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
@@ -106,8 +123,8 @@ export default function GridGlow({
         const endX = g.vertical
           ? g.x
           : g.forward
-           ? (typeof window !== 'undefined' ? window.innerWidth : 1920) + g.len
-            : -g.len;
+          ? vw + g.len
+          : -g.len;
 
         const endY = g.vertical
           ? g.forward
@@ -120,8 +137,8 @@ export default function GridGlow({
             ? `linear-gradient(180deg, ${GLOW_COLOR}, transparent)`
             : `linear-gradient(0deg, ${GLOW_COLOR}, transparent)`
           : g.forward
-            ? `linear-gradient(90deg, ${GLOW_COLOR}, transparent)`
-            : `linear-gradient(270deg, ${GLOW_COLOR}, transparent)`;
+          ? `linear-gradient(90deg, ${GLOW_COLOR}, transparent)`
+          : `linear-gradient(270deg, ${GLOW_COLOR}, transparent)`;
 
         const dotStyle = {
           width: "8px",
@@ -136,8 +153,8 @@ export default function GridGlow({
           left: g.vertical
             ? "50%"
             : g.forward
-              ? "0%"
-              : "100%",
+            ? "0%"
+            : "100%",
         };
 
         return (
@@ -160,7 +177,10 @@ export default function GridGlow({
               filter: "blur(0.6px)",
             }}
           >
-            <div className="absolute rounded-full bg-green-400" style={dotStyle} />
+            <div
+              className="absolute rounded-full bg-green-400"
+              style={dotStyle}
+            />
           </motion.div>
         );
       })}
