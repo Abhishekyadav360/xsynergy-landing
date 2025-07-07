@@ -13,27 +13,24 @@ export default function MatrixText({
 }) {
   const [output, setOutput] = useState<string[]>(Array(text.length).fill(''));
 
-  useEffect(() => {
-    let frame = 0;
-    let interval: NodeJS.Timeout;
+useEffect(() => {
+  let frame = 0;
 
-    interval = setInterval(() => {
-      const updated = text.split('').map((char, i) => {
-        if (char === ' ') return ' ';
-        if (i < frame) return char;
-        return CHARS[Math.floor(Math.random() * CHARS.length)];
-      });
+  const interval = setInterval(() => {
+    const updated = text.split('').map((char, i) => {
+      if (char === ' ') return ' ';
+      if (i < frame) return char;
+      return CHARS[Math.floor(Math.random() * CHARS.length)];
+    });
 
-      setOutput(updated);
-      frame++;
+    setOutput(updated);
+    frame++;
 
-      if (frame > text.length) {
-        clearInterval(interval);
-      }
-    }, speed);
+    if (frame > text.length) clearInterval(interval);
+  }, speed);
 
-    return () => clearInterval(interval);
-  }, [text, speed]);
+  return () => clearInterval(interval);
+}, [text, speed]);
 
   return (
     <span className="inline-block  font-semibold text-span-gradient">
