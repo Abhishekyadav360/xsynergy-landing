@@ -9,8 +9,9 @@ import About from "./Sections/About";
 import Works from "./Sections/Works";
 // import TestPage from "./Sections/TestPage";
 // import Features from "./Sections/Features";
-import FeatureCarousel from "./Sections/FeatureCarousel";
+import ClientFeatureCarousel from "./Sections/ClientFeatureCarousel";
 // import Tokenomics from "./Sections/Tokenomics";
+
 
 
 
@@ -21,9 +22,10 @@ export default function Home() {
       <Header />
       <Banner />
       <About />
-      <FeatureCarousel />
+       <ClientFeatureCarousel />
+      {/* <FeatureCarousel /> */}
       <Works />
-      
+       
       {/* <Advantages />
       <Explore />
       <Features /> */}
