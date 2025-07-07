@@ -34,8 +34,12 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
     const maxFrames = Math.ceil(window.innerHeight / fontSize) + 30;
     let frame = 0;
 
+    /* 🆕  Fade factor  — jitna chhota, utna lamba tail  */
+    const fadeAlpha = 0.05;      // 0.05–0.08  → lambi tail; 0.2 (default) → chhoti
+
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+      /* 1️⃣  Dark overlay with lower alpha → purāne chars dheere mitenge */
+      ctx.fillStyle = `rgba(0, 0, 0, ${fadeAlpha})`;
       ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       ctx.fillStyle = "#0F0";
@@ -44,7 +48,15 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
       for (let i = 0; i < drops.length; i++) {
         const text = letters[Math.floor(Math.random() * letters.length)];
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        /* 2️⃣  Increment drop */
         drops[i]++;
+
+        /* 3️⃣  🆕  Reset column randomly after it crosses bottom
+               0.975 ka matlab ~2.5% chance har frame par reset karega   */
+        if (drops[i] * fontSize > window.innerHeight && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
       }
 
       frame++;
@@ -70,15 +82,15 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
     <div className="fixed top-0 left-0 w-screen h-screen bg-black z-[9999]">
       <canvas ref={canvasRef} className="w-full h-full" />
 
-      {/* ✅ Logo rendered immediately */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      {/* Logo center me, turant render hota hai */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <Image
           src={logo}
           alt="Center Logo"
           width={128}
           height={128}
           priority
-          className="max-w-16 w-full h-auto mx-auto animate-fade-in"
+          className="max-w-16 w-full h-auto mx-auto"
         />
       </div>
     </div>
