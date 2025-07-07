@@ -3,7 +3,7 @@
 import Header from "./Sections/Header";
 import Banner from "./Sections/Banner";
 import About from "./Sections/About";
-// import Footer from "./Sections/Footer";
+import Footer from "./Sections/Footer";
 // import Faq from "./Sections/Faq";
 // import Advantages from "./Sections/Advantages";
 // import Explore from "./Sections/Explore";
@@ -37,7 +37,7 @@ export default function Home() {
       {/* <Slider /> */}
       {/* <Tokenomics /> */}
       {/* <Faq /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

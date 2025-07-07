@@ -469,56 +469,13 @@ h6 {
   animation: orbit ease-in-out 1.5s calc(var(--index) * 0.1s) infinite;
 }
 
-.advcard2bg {
-  background-image: url(../Assets/images/farm-bg.jpg);
-}
 
-.advcard4bg {
-  position: relative;
-}
-
-.advcard4bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../Assets/images/card4bg.webp);
-  opacity: 0.6;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
 
 .about-sec {
   position: relative;
 }
 
-.about-sec::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../Assets/images/bg-img-1.webp");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
-  z-index: -1;
-  filter: hue-rotate(290deg);
-}
-.about-sec::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to top, #010101, transparent 15%);
-}
+
 .explore-card {
   background: #12131249;
   outline: 1px solid #303033;
@@ -603,10 +560,11 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../Assets/images/map-1-01.webp");
+  background-image: url("../Assets/images/footer.webp");
   background-size: cover;
   background-position: center;
-  opacity: 0.4;
+  opacity: 0.5;
+  filter: hue-rotate(230deg);
   z-index: -1;
 }
 
