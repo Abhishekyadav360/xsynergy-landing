@@ -200,7 +200,19 @@ h6 {
     -webkit-mask: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
         --size-3: calc(16px + 2 * (100vw - 320px) / 1080);
 }
-
+.joinnow-vid{
+      filter: contrast(1.01) hue-rotate(-10deg) saturate(2);
+    mask: linear-gradient(rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 50.6933%);
+    opacity: 1;
+        bottom: -45px;
+    flex: none;
+    height: 100%;
+    left: calc(50.00000000000002% - 100% / 2);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 
 // .features-bx::after {
 //     content: "";

@@ -180,6 +180,21 @@ h6 {
   --size-3: calc(16px + 2 * (100vw - 320px) / 1080);
 }
 
+.joinnow-vid {
+  filter: contrast(1.01) hue-rotate(-10deg) saturate(2);
+  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 50.6933%);
+          mask: linear-gradient(rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 50.6933%);
+  opacity: 1;
+  bottom: -45px;
+  flex: none;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 .banner-box-bg {
   -webkit-mask: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 9.009009009%, rgb(0, 0, 0) 88.7387387387%, rgba(0, 0, 0, 0) 100%) add;
   -webkit-user-select: none;
