@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SFAGRO Decentralizing Agriculture with Blockchain",
-  description: "SFAGRO is revolutionizing agriculture through blockchain technology, offering transparent transactions, NFT-based ownership, decentralized finance, and smart contracts for farmers, investors, and traders. Stake, trade, and earn rewards instantly in a trustless, community-driven ecosystem.",
-  keywords: "SFAGRO, blockchain agriculture, decentralized farming, SFA token, NFT farming, smart contracts, DeFi agriculture, crypto farming, transparent supply chain, decentralized finance, agricultural investments"
+  title: "XSynergy — Decentralized Rewards Built for Web3",
+  description: "XSynergy is a fully decentralized rewards platform powered by smart contracts on the Polygon blockchain. Join a new era of Web3 ownership and automated earning.",
+  keywords: "XSynergy, Web3, Polygon, decentralized income, smart contracts, crypto rewards, blockchain affiliate, DeFi, passive income"
 };
 
 export default function RootLayout({

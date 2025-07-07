@@ -101,7 +101,7 @@ const Works = () => {
 
                             {/* Center Text */}
                             <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-                                Get Started
+                                Steps
                             </p>
 
                             {/* Right Decorative SVG */}
@@ -178,7 +178,7 @@ const Works = () => {
                 title="Register Seamlessly"
                 description="No KYC. No middlemen."
                 image={glow2}
-                className='relative mt-20'
+                className='relative mt-0 sm:mt-20'
               />
             </motion.div>
 

@@ -137,7 +137,7 @@ export default function FeatureCarousel() {
                             </div>
 
                             {/* Center Text */}
-                            <p className="text-green-200 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
+                            <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
                                 Features
                             </p>
 
