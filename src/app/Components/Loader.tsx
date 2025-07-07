@@ -16,7 +16,7 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
     const columns = Math.floor(canvas.width / fontSize);
     const drops = Array(columns).fill(0);
 
-    const maxFrames = Math.ceil(canvas.height / fontSize) - 5; // slightly faster
+    const maxFrames = Math.ceil(canvas.height / fontSize) ; // slightly faster
     let frame = 0;
 
     const draw = () => {
@@ -37,7 +37,7 @@ const Loader: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
       if (frame < maxFrames) {
         requestAnimationFrame(draw);
       } else {
-        onFinish?.(); // Call when complete (this hides it from main page)
+        onFinish?.(); 
       }
     };
 
