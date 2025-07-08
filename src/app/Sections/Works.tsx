@@ -50,7 +50,7 @@ const Works = () => {
         whileInView={{ height: '100%' }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
         viewport={{ once: false, amount: 0.2 }}
-        className="absolute -top-5 left-0 right-0 w-full max-w-[537px] mx-auto pointer-events-none overflow-hidden -z-0"
+        className="absolute -top-[600px] left-0 right-0 w-full max-w-[537px] mx-auto pointer-events-none overflow-hidden -z-0"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -63,8 +63,9 @@ const Works = () => {
             alt="gradient background"
             width={750}
             height={750}
-            className="  object-cover w-full h-full opacity-10 sm:opacity-30  "
+            className="  object-contain sm:object-cover w-full h-full opacity-30 sm:opacity-30  "
           />
+        
         </motion.div>
       </motion.div>
 
