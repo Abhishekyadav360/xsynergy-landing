@@ -29,7 +29,7 @@ export default function GradientCard({
     >
       
     
-      <div className=" max-w-60  mx-auto py-4 px-4">
+      <div className=" max-w-60  mx-auto pt-5 pb-4 px-4">
         <Image
           src={image}
           alt="Card top background"
