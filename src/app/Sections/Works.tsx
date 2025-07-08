@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import Title from '../Components/Title';
 import GradientCard from '../Components/GradientCard';
 
-import glow1 from '@/Assets/images/app-icon3.svg';
-import glow2 from '@/Assets/images/app-icon4.svg';
-import glow3 from '@/Assets/images/app-icon5-1.svg';
+import glow1 from '@/Assets/images/worksx3.webp';
+import glow2 from '@/Assets/images/worksx1.webp';
+import glow3 from '@/Assets/images/worksx2.webp';
 import upperright from "@/Assets/images/raysfr.webp";
 import Image from 'next/image';
 
@@ -44,7 +44,7 @@ const Works = () => {
   const cardVariants = getCardVariants(isMobile);
 
   return (
-    <section id="works" className="relative w-full pt-28 pb-20 overflow-y-visible  px-4 sm:px-0">
+    <section id="works" className="relative w-full pt-28 pb-20 overflow-y-visible ">
       <motion.div
         initial={{ height: 0 }}
         whileInView={{ height: '100%' }}
@@ -158,7 +158,7 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className='px-4 sm:px-0'
+              
             >
               <GradientCard
                 title="Connect Your Wallet"
@@ -175,7 +175,7 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.7, ease: 'easeOut' }}
-              className='px-4 sm:px-0'
+             
             >
               <GradientCard
                 title="Register Seamlessly"
@@ -193,7 +193,7 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className='px-4 sm:px-0'
+              
             >
               <GradientCard
                 title="Invite & Grow"

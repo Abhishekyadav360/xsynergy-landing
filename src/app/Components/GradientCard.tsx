@@ -27,19 +27,19 @@ export default function GradientCard({
   borderWidth: 1,
 }}
     >
-       <div className="features-point" />
+      
     
-      <div className="relative w-full h-52 min-w-72 sm:min-w-[320px]">
+      <div className=" max-w-60  mx-auto py-4 px-4">
         <Image
           src={image}
           alt="Card top background"
-          fill
-          className="object-contain  "
+         
+          className=" w-full h-auto "
         />
       </div>
 
     
-      <div
+      {/* <div
         className="absolute top-[11.5rem] left-1/2 -translate-x-1/2 w-full h-[183px] z-10 pointer-events-none"
         // style={{
         //   backdropFilter: 'blur(8px)',
@@ -56,7 +56,7 @@ export default function GradientCard({
             backgroundPosition: 'center',
           }}
         />
-      </div>
+      </div> */}
 
      
       {/* <div className="absolute top-[11.5rem] left-1/2 -translate-x-1/2 z-0">
@@ -66,7 +66,7 @@ export default function GradientCard({
       </div> */}
 
      
-      <div className="relative z-20 px-5  pb-6 text-center">
+      <div className="relative z-20 px-5  pb-6 text-center ">
         <h3 className="text-white text-2xl font-semibold mb-2">{title}</h3>
         <p className="text-lg text-gray-400">{description}</p>
       </div>
