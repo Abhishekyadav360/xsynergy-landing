@@ -44,7 +44,7 @@ const Works = () => {
   const cardVariants = getCardVariants(isMobile);
 
   return (
-    <section id="works" className="relative w-full pt-28 pb-20 overflow-y-visible ">
+    <section id="works" className="relative w-full pt-28 pb-20 overflow-y-visible works-sec">
       <motion.div
         initial={{ height: 0 }}
         whileInView={{ height: '100%' }}
