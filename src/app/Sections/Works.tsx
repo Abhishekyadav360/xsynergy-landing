@@ -63,7 +63,7 @@ const Works = () => {
             alt="gradient background"
             width={750}
             height={750}
-            className="  object-cover w-full h-full opacity-15 sm:opacity-30  "
+            className="  object-cover w-full h-full opacity-10 sm:opacity-30  "
           />
         </motion.div>
       </motion.div>
