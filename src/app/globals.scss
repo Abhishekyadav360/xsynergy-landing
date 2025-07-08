@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #010101;
   --foreground: #ffffff;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 html {
