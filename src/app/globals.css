@@ -156,7 +156,7 @@ h6 {
 }
 .features-bx::before {
   content: "";
-  background: radial-gradient(#73ff00 0, transparent 65%);
+  background: radial-gradient(#00ff6a 0, transparent 65%);
   filter: blur(80px);
   -webkit-filter: blur(80px);
   transform: translateX(-50%) translateZ(0);
@@ -184,7 +184,7 @@ h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(#73ff00 1px, transparent 1px);
+  background: radial-gradient(#00ff62 1px, transparent 1px);
   background-size: var(--size-3) var(--size-3);
   opacity: 0.25;
   mask: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
