@@ -12,14 +12,14 @@ import {
 import Button from '../Components/Button';
 
 const baseImgs = [
-  '/app-icon1.svg',
-  '/app-icon2.svg',
-  '/app-icon3.svg',
-  '/app-icon4.svg',
-  '/app-icon5.svg',
-  '/app-icon1.svg',
-  '/app-icon2.svg',
-  '/app-icon3.svg',
+  '/worksx1.webp',
+  '/worksx2.webp',
+  '/worksx6.webp',
+  '/worksx3.webp',
+  '/worksx7.webp',
+  '/worksx4.webp',
+  '/worksx5.webp',
+  '/worksx8.webp',
 ];
 
 const TOTAL_ICONS = 24;
@@ -51,7 +51,7 @@ const CarouselImage = ({ src, angle, radius, smoothRotation }: CarouselImageProp
       <img
         src={src}
         alt={`feature-${angle}`}
-        className="w-14 h-14 sm:w-20 sm:h-20   md:w-28 md:h-28 object-cover rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#1a1a1a]"
+        className="w-16 h-16 sm:w-20 sm:h-20   md:w-24 md:h-24 object-cover rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] border border-[#1a1a1a] p-2"
       />
     </motion.div>
   );
