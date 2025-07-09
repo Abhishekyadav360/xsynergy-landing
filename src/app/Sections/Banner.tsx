@@ -1,16 +1,18 @@
 'use client'
 import React, { useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Button from '../Components/Button';
 // import circle from '@/Assets/images/tractor.webp';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import bnrbg from '@/Assets/images/bannerbg.svg';
+// import bnrbg from '@/Assets/images/bannerbg.svg';
 // import GridPattern from '../Components/GridPattern';
 // import GridFX from '../Components/GridFX';
 import GridGlow from '../Components/GridGlow';
 import MatrixText from '../Components/MatrixText';
+import GlobeCanvas from '../Components/GlobeCanvas';
+import About from './About';
 
 // const TARGET_TIME = new Date("2025-03-05T09:30:00Z").getTime();
 
@@ -50,9 +52,9 @@ const Banner = () => {
 
     return (
         <>
-            <section className="relative bg-cover bg-center bg-no-repeat py-36 sm:py-52 overflow-hidden">
-                <GridGlow className="-z-30" lines={12} maxLength={400} />
-                <div className='banner-box-bg'>
+            <section className="relative bg-cover bg-center bg-no-repeat py-36 sm:py-52 overflow-hidden h-[80vh] sm:h-[120vh]">
+                <GridGlow className="-z-30" lines={14} maxLength={400} />
+                <div className='absolute top-0 left-0 w-full h-full z-10 cursor-grab'>
                     {/* <video
                         autoPlay
                         loop
@@ -62,15 +64,16 @@ const Banner = () => {
                         <source src='/video/hero-bg.webm' type="video/webm" />
                         Your browser does not support the video tag.
                     </video> */}
-                    <Image
+                    {/* <Image
                         src={bnrbg}
                         alt="Background"
                         priority
                         className="absolute top-[190px] sm:top-[130px] right-0 bottom-0 left-0 w-full h-full object-contain -z-10 opacity-100 hue-rotate-[280deg] "
-                    />
+                    /> */}
+                    <GlobeCanvas />
                 </div>
 
-                <div className="flex items-center relative justify-center container px-2 sm:px-4 mx-auto mt-5">
+                <div className="flex items-center relative justify-center container px-2 sm:px-4 mx-auto mt-28 ">
                     {/* <div className="z-0">
                         <Image
                             className="left-right-animation absolute top-[0%] sm:top-[-5%] left-[0%] opacity-70 sm:opacity-100"
@@ -79,7 +82,7 @@ const Banner = () => {
                             width={100}
                         />
                     </div> */}
-                    <div className="text-center relative max-w-7xl mx-auto w-full mt-5" data-aos="fade-up">
+                    <div className="text-center relative max-w-7xl mx-auto w-full  " data-aos="fade-up">
                         {/* {timeLeft !== null && (
                             <div className='nft-card max-w-60 sm:max-w-[260px]  mx-auto flex justify-center items-center rounded-[28px] p-2 opacity-90 mb-2'>
                                 <div className="  tetx-lg sm:text-xl font-medium">
@@ -88,7 +91,7 @@ const Banner = () => {
                             </div>
                         )} */}
 
-                        <div className=" hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
+                        <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}
                             <div className="w-[108px] h-[20px]">
                                 <svg
@@ -165,18 +168,25 @@ const Banner = () => {
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
                             Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
                         </p>
-                        <div className='flex flex-wrap gap-4 justify-center items-center'>
-                            <Button variant="primary" target="_blank" href="/" >
+                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto'>
+                            <Button className=' z-20 relative' variant="primary" target="_blank" href="/" >
                                 Login
                             </Button>
                             {/* <Button variant="secondary" target="_blank" href="https://swap.sfagro.club/">
                                 Swap
                             </Button> */}
                         </div>
+                       
+                        <div className="flex flex-col justify-center items-center gap-2 mt-4 max-w-80 mx-auto ">
+          <div className="icon-scroll"></div>
+            <p className="text-sm text-gray-300">Drag and scroll !</p>
+          </div>
 
                     </div>
                 </div>
+               
             </section>
+             <About />
         </>
     );
 };

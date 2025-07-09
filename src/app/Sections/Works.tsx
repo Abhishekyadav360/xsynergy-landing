@@ -8,8 +8,10 @@ import GradientCard from '../Components/GradientCard';
 import glow1 from '@/Assets/images/worksx3.webp';
 import glow2 from '@/Assets/images/worksx1.webp';
 import glow3 from '@/Assets/images/worksx2.webp';
-import upperright from "@/Assets/images/raysfr.webp";
-import Image from 'next/image';
+// import upperright from "@/Assets/images/raysfr.webp";
+// import Image from 'next/image';
+
+import MatrixStream from '../Components/DataStreamSvg';
 
 const containerVariants = {
   hidden: {},
@@ -45,7 +47,7 @@ const Works = () => {
 
   return (
     <section id="works" className="relative w-full pt-28 pb-20 overflow-y-visible works-sec">
-      <motion.div
+      {/* <motion.div
         initial={{ height: 0 }}
         whileInView={{ height: '100%' }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
@@ -67,10 +69,11 @@ const Works = () => {
           />
         
         </motion.div>
-      </motion.div>
+      </motion.div> */}
+     <MatrixStream />
 
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
+        <div className="flex z-10 items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
           {/* Left Decorative SVG */}
           <div className="w-[108px] h-[20px]">
             <svg

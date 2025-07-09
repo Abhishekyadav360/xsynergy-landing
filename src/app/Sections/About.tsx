@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Marquee from '../Components/Marquee';
 
 interface AnimatedLetterProps {
   char: string;
@@ -11,6 +12,7 @@ interface AnimatedLetterProps {
   prefixLen: number;
   scrollYProgress: ReturnType<typeof useScroll>['scrollYProgress'];
 }
+
 
 const AnimatedLetter: React.FC<AnimatedLetterProps> = ({
   char,
@@ -65,12 +67,14 @@ const About = () => {
   const prefixLen = prefix.length;
 
   return (
-    <main className="bg-black text-white whitespace-nowrap">
+    <main className="bg-transparent text-white whitespace-nowrap ">
+     
       <section
         id="about"
         ref={sectionRef}
-        className="relative bg-black h-[250vh] px-4 pt-28 sm:pt-40 pb-0 sm:pb-10"
+        className="relative bg-transparent h-[140vh] sm:h-[180vh] px-4 pt-52 sm:pt-40 pb-0 "
       >
+             {/* <div id="stars2"></div> */}
         <div className="sticky top-1/2 -translate-y-1/2">
           {/* About Us Badge */}
           <div className="flex items-center mb-4 mt-12 justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
@@ -158,6 +162,10 @@ const About = () => {
   </span>
 ))}
           </p>
+<div className="mt-10 flex justify-center items-center">
+          <Marquee />
+
+</div>
         </div>
       </section>
     </main>
