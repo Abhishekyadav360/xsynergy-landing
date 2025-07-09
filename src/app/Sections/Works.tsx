@@ -137,14 +137,17 @@ const Works = () => {
             </svg>
           </div>
         </div>
-
-        <Title
+<div className=''data-aos="fade-down"
+>
+  <Title
           title="How to get started ?"
           highlightedText=""
           subtitle="XSynergy operates fully on the Polygon blockchain for low fees and high scalability."
           className="mb-10 text-center max-w-5xl mx-auto"
         />
 
+</div>
+        
         {ready && (
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-10 sm:mt-20"
