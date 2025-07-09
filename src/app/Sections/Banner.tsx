@@ -52,7 +52,7 @@ const Banner = () => {
 
     return (
         <>
-            <section className="relative bg-cover bg-center bg-no-repeat py-36 sm:py-52 overflow-hidden h-[80vh] sm:h-[120vh]">
+            <section className="relative bg-cover bg-center bg-no-repeat py-36 sm:py-52 overflow-hidden h-[90vh] sm:h-[120vh]">
                 <GridGlow className="-z-30" lines={14} maxLength={400} />
                 <div className='absolute top-0 left-0 w-full h-full z-10 cursor-grab'>
                     {/* <video
