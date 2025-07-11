@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef,  useState } from 'react';
+import React, { useEffect, useRef, useState, memo } from 'react';
 import { motion } from 'framer-motion';
 
 const TOTAL_LINES = 12;
@@ -23,22 +23,48 @@ const createPath = (i: number) => {
 const PATHS = Array.from({ length: TOTAL_LINES }, (_, i) => createPath(i));
 
 type Pulse = { id: number; line: number };
+type Particle = {
+  cx: number;
+  startY: number;
+  endY: number;
+  r: number;
+  opacity: number;
+  dur: number;
+};
+
+// Static lines memoized
+const StaticPaths = memo(() => (
+  <>
+    {PATHS.map((d, i) => (
+      <path
+        key={`base-${i}`}
+        d={d}
+        fill="none"
+        stroke="rgba(0,255,100,0.15)"
+        strokeWidth={1}
+        style={{
+          filter: 'drop-shadow(0 0 2px rgba(0,255,100,0.3))',
+        }}
+      />
+    ))}
+  </>
+));
 
 const MatrixStream = () => {
   const [pulses, setPulses] = useState<Pulse[]>([]);
   const [isMobile, setIsMobile] = useState(false);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const resizeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const updateMobile = () => setIsMobile(window.innerWidth < 768);
+    const updateMobile = () => {
+      const isNowMobile = window.innerWidth < 768;
+      setIsMobile((prev) => (prev !== isNowMobile ? isNowMobile : prev));
+    };
 
     updateMobile();
-
     const resizeListener = () => {
-      if (resizeTimeout.current) {
-        clearTimeout(resizeTimeout.current);
-      }
-
+      if (resizeTimeout.current) clearTimeout(resizeTimeout.current);
       resizeTimeout.current = setTimeout(updateMobile, 200);
     };
 
@@ -58,36 +84,40 @@ const MatrixStream = () => {
 
       setTimeout(() => {
         setPulses((prev) => prev.filter((p) => p.id !== id));
-      }, 5000); // match animation time
-    }, 500); // less frequent pulses
+      }, 5000);
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
 
-  const particleCount = isMobile ? PARTICLE_COUNT_MOBILE : PARTICLE_COUNT_DESKTOP;
+  useEffect(() => {
+    const count = isMobile ? PARTICLE_COUNT_MOBILE : PARTICLE_COUNT_DESKTOP;
+
+    const generatedParticles = Array.from({ length: count }).map(() => {
+      const cx = Math.random() * 1600;
+      const startY = Math.random() * 800;
+      const endY = startY + 40 + Math.random() * 60;
+      const r = 0.6 + Math.random() * 1.2;
+      const opacity = 0.2 + Math.random() * 0.3;
+      const dur = 5 + Math.random() * 3;
+
+      return { cx, startY, endY, r, opacity, dur };
+    });
+
+    setParticles(generatedParticles);
+  }, [isMobile]);
 
   return (
     <div className="absolute top-0 inset-0 z-0 overflow-hidden pointer-events-none bg-black">
-       <svg
+      <svg
         width="100%"
         height="100%"
         viewBox="0 0 1600 1000"
-        preserveAspectRatio={isMobile ? "xMidYMid slice" : "none"}
+        preserveAspectRatio={isMobile ? 'xMidYMid slice' : 'none'}
         xmlns="http://www.w3.org/2000/svg"
       >
         {/* Static lines */}
-        {PATHS.map((d, i) => (
-          <path
-            key={`base-${i}`}
-            d={d}
-            fill="none"
-            stroke="rgba(0,255,100,0.15)"
-            strokeWidth={1}
-            style={{
-              filter: 'drop-shadow(0 0 2px rgba(0,255,100,0.3))',
-            }}
-          />
-        ))}
+        <StaticPaths />
 
         {/* Glow pulses */}
         {pulses.map(({ id, line }) => {
@@ -105,41 +135,32 @@ const MatrixStream = () => {
               animate={{ strokeDashoffset: -1400 }}
               transition={{ duration, ease: 'linear' }}
               style={{
-                filter: 'drop-shadow(0 0 10px rgba(0,255,100,0.9))',
+                filter: 'drop-shadow(0 0 5px rgba(0,255,100,0.6))',
               }}
             />
           );
         })}
 
         {/* Floating particles */}
-        {Array.from({ length: particleCount }).map((_, i) => {
-          const cx = Math.random() * 1600;
-          const startY = Math.random() * 800;
-          const endY = startY + 40 + Math.random() * 60;
-          const r = 0.6 + Math.random() * 1.2;
-          const opacity = 0.2 + Math.random() * 0.3;
-          const dur = 5 + Math.random() * 3;
-
-          return (
-            <motion.circle
-              key={`particle-${i}`}
-              cx={cx}
-              cy={startY}
-              r={r}
-              fill="rgba(0,255,100,0.5)"
-              initial={{ opacity }}
-              animate={{
-                cy: [startY, endY, startY],
-                opacity: [opacity, opacity + 0.1, opacity],
-              }}
-              transition={{
-                duration: dur,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
-          );
-        })}
+        {particles.map((p, i) => (
+          <motion.circle
+            key={`particle-${i}`}
+            cx={p.cx}
+            cy={p.startY}
+            r={p.r}
+            fill="rgba(0,255,100,0.5)"
+            initial={{ opacity: p.opacity }}
+            animate={{
+              cy: [p.startY, p.endY, p.startY],
+              opacity: [p.opacity, p.opacity + 0.1, p.opacity],
+            }}
+            transition={{
+              duration: p.dur,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+        ))}
 
         {/* Top beam */}
         <motion.path
@@ -148,7 +169,7 @@ const MatrixStream = () => {
           initial={{ opacity: 0.5 }}
           animate={{ opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-          style={{ filter: 'blur(25px)' }}
+          style={{ filter: 'blur(15px)' }}
         />
 
         {/* Gradients */}
