@@ -165,18 +165,18 @@ export default function Slider() {
           </div>
 
           {/* Arrows */}
-          {/* <button
+          <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition block sm:hidden"
       >
         ‹
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition block sm:hidden"
       >
         ›
-      </button> */}
+      </button>
 
           {/* Dots */}
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex space-x-2">
