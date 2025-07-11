@@ -20,7 +20,7 @@
     "@types/swiper": "^5.4.3",
     "aos": "^2.3.4",
     "drei": "^2.2.21",
-    "framer-motion": "^11.18.2",
+    "framer-motion": "^12.23.3",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
