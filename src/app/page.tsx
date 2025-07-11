@@ -49,7 +49,7 @@ export default function Home() {
       {/* <TestPage /> */}
       
       {/* <Tokenomics /> */}
-      <Faq />
+      {/* <Faq /> */}
       <Footer />
     </>
   );
