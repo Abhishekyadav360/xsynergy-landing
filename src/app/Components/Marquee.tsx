@@ -9,7 +9,7 @@ const Marquee = ({
   text?: string
   speed?: number
 }) => {
-  const baseText = `${text} `.repeat(20) // Repeat enough to fill width
+  const baseText = `${text} `.repeat(20)
 
   return (
     <div className="w-full overflow-hidden whitespace-nowrap rounded-xl border-y border-[#33544e] bg-[#1c2224] py-2 max-w-3xl marqueebg">
@@ -24,7 +24,7 @@ const Marquee = ({
           repeat: Infinity,
         }}
       >
-        {/* Duplicate text twice for seamless scroll */}
+        
         <span>{baseText}</span>
         <span>{baseText}</span>
       </motion.div>

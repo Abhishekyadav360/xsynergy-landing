@@ -22,9 +22,9 @@ useEffect(() => {
   return (
     <>
 
-      <section className=" relative overflow-hidden pb-8 md:pb-16">
+      <section className=" relative overflow-hidden pb-8 md:pb-16 ">
 
-        <div className="absolute inset-0 z-0 flex items-center justify-center top-20">
+        <div className="absolute inset-0 z-0 flex items-center justify-center top-0 sm:top-20  ">
           <Wave />
         </div>
 
@@ -100,7 +100,7 @@ useEffect(() => {
             subtitle="XSynergy operates fully on the Polygon blockchain for low fees and high scalability."
             className="mb-10 text-center max-w-5xl mx-auto"
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
             {/* Card 1 */}
             <div
               className="overflow-hidden relative flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"

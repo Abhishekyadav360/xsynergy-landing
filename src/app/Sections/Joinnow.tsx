@@ -19,9 +19,8 @@ const Joinnow = () => {
 
     return (
         <>
-            <section className=" relative overflow-hidden py-8 md:py-14">
+            <section className="relative overflow-hidden py-6 md:py-10">
                 <div className="container mx-auto px-4 " data-aos="fade-up">
-
                     <div className={`steps-card flex flex-col  justify-center max-w-5xl mx-auto px-6 rounded-xl sm:px-10 py-6 sm:py-10  w-full overflow-hidden backdrop-blur-[50px] z-0   h-full min-h-[400px]     features-bx    `}>
                         <div
               className=""
@@ -47,11 +46,10 @@ const Joinnow = () => {
                         Your browser does not support the video tag.
                     </video>
                    </div>
-                    
-                        <h2 className=" font-bold text-3xl md:text-6xl text-white/90  !leading-none text-center z-10 max-w-4xl mx-auto " >The future of income is <span className='text-span-gradient'> decentralized</span>  — and you are early.</h2>
-                        <p className=" text-md md:text-lg text-white  leading-tight mb-5 mt-2 text-center z-10 mx-auto"> Ready to be part of the change?
+                        <h2 className="font-bold text-3xl md:text-6xl text-white/90  !leading-none text-center z-10 max-w-4xl mx-auto" >The future of income is <span className='text-span-gradient'> decentralized</span>  — and you are early.</h2>
+                        <p className="text-md md:text-lg text-white  leading-tight mb-5 mt-2 text-center z-10 mx-auto"> Ready to be part of the change?
                             Click below and take the first step.</p>
-                        <div className=' flex    items-center justify-center max-w-40 mx-auto bg-black z-10 rounded-xl '>
+                        <div className='flex items-center justify-center max-w-40 mx-auto bg-black z-10 rounded-xl'>
                             <Button variant="primary" href='/Comingsoon'>
                                 Join Now
                             </Button>

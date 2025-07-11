@@ -17,7 +17,7 @@ const services = [
     id: '02',
     title: 'Fully On-Chain & Auditable',
     desc: 'Every action and transaction is permanently recorded on the Polygon blockchain, making the system transparent and easy to verify by anyone.',
-    img: '/gt3.webp',
+    img: '/gt5.webp',  
     arrow: '↗',
   },
   {
@@ -31,7 +31,7 @@ const services = [
     id: '04',
     title: 'Real-World Utility Tokens',
     desc: 'XSynergy’s tokens are not just digital assets — they’re built for real use within the ecosystem and future real-world applications.',
-    img: '/worksx4.webp',
+    img: '/gt3.webp',
     arrow: '↗',
   },
   {
@@ -176,7 +176,7 @@ export default function Faqs() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.2, ease: 'easeInOut' }}
-                  className="relative w-96 h-96"
+                  className="relative w-[420px] h-[420px]"
                 >
                   <Image
                     src={services[hoveredIndex].img}

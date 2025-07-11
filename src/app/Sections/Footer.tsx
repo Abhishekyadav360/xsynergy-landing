@@ -8,6 +8,7 @@ import instagram from '@/Assets/images/social/instagram.svg'
 import telegram from '@/Assets/images/social/telegram.svg'
 import youtube from '@/Assets/images/social/youtube.svg'
 import logo from '@/Assets/images/favicon1.webp';
+import GridGlow from '../Components/GridGlow';
 
 
 const Footer = () => {
@@ -15,9 +16,14 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="text-white  py-10 footermain top-full sticky   ftr-bg ">
-
+        <footer className="text-white  py-10 footermain top-full sticky   ftr-bg overflow-hidden ">
+ <GridGlow className="-z-30" lines={14} maxLength={400} />
             <div className="container mx-auto px-4 relative">
+                {/* <div className="absolute bottom-0 inset-0 flex justify-center items-center z-10 pointer-events-none">
+                <h1 className=" text-[100px] sm:text-[250px]  font-extrabold text-white/10 sm:text-white/5 select-none tracking-tighter">
+                    XSynergy
+                </h1>
+            </div> */}
                 <div className="">
                             <Image src={logo} alt='logo' width={100} height={100} className='w-full h-auto max-w-12 mb-4 mx-auto  transition-transform duration-300 ease-in-out' />
 

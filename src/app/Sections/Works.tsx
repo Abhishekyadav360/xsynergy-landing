@@ -73,8 +73,8 @@ const Works = () => {
      <MatrixStream />
 
       <div className="container mx-auto px-4">
-        <div className="flex z-10 items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-          {/* Left Decorative SVG */}
+       <div className="flex z-20 relative items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
+        
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -103,12 +103,12 @@ const Works = () => {
             </svg>
           </div>
 
-          {/* Center Text */}
+     
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-            Steps
+            XSynergy
           </p>
 
-          {/* Right Decorative SVG */}
+        
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -137,6 +137,9 @@ const Works = () => {
             </svg>
           </div>
         </div>
+
+
+
 <div className=''data-aos="fade-down"
 >
   <Title

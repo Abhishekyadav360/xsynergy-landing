@@ -4,10 +4,10 @@ import Header from "./Sections/Header";
 import Banner from "./Sections/Banner";
 
 import Footer from "./Sections/Footer";
-// import Faq from "./Sections/Faq";
+import Faq from "./Sections/Faq";
 // import Advantages from "./Sections/Advantages";
 // import Explore from "./Sections/Explore";
-// import Slider from "./Sections/Slider";
+import Slider from "./Sections/Slider";
 import Works from "./Sections/Works";
 // import TestPage from "./Sections/TestPage";
 // import Features from "./Sections/Features";
@@ -34,8 +34,9 @@ export default function Home() {
       {/* <About /> */}
       <KeyFeatures />
       {/* <ClientFeatureCarousel /> */}
-      <Faqs />
       <Works />
+      <Faqs />
+      <Slider />
 
       <Joinnow />
 
@@ -46,9 +47,9 @@ export default function Home() {
       <Features /> */}
 
       {/* <TestPage /> */}
-      {/* <Slider /> */}
+      
       {/* <Tokenomics /> */}
-      {/* <Faq /> */}
+      <Faq />
       <Footer />
     </>
   );

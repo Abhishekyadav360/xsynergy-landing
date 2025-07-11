@@ -19,7 +19,7 @@ export default function GradientCard({
 }: GradientCardProps) {
   return (
     <div
-  className={`relative w-full max-w-xs rounded-2xl overflow-hidden border border-[#2d362d] bg-gradient-to-br from-[#000000] via-[#000000] to-green-900 ${className}`}
+  className={`relative w-full max-w-xs rounded-2xl overflow-hidden border border-[#2d362d] bg-gradient-to-br from-[#0000000a] via-[#00000000] to-green-900 backdrop-blur-sm ${className}`}
 //       style={{
 //   background:
 //     'linear-gradient(144deg, rgba(50,205,120,0.12) 0%, rgb(0,0,0) 100%)',
