@@ -33,26 +33,26 @@ export default function Slider() {
     else if (info.offset.x > 100) prev();
   };
 
-const getOffset = (i) => {
-  const total = slides.length;
-  const relativeIndex = (i - index + total) % total;
+  const getOffset = (i) => {
+    const total = slides.length;
+    const relativeIndex = (i - index + total) % total;
 
-  if (relativeIndex === 0) return { scale: 1, opacity: 1, x: 0, zIndex: 30 };            
-  if (relativeIndex === total - 1) return { scale: 0.8, opacity: 0.5, x: -320, zIndex: 20 };
-  if (relativeIndex === total - 2) return { scale: 0.6, opacity: 0.2, x: -520, zIndex: 10 }; 
-  if (relativeIndex === 1) return { scale: 0.8, opacity: 0.5, x: 320, zIndex: 20 };         
-  if (relativeIndex === 2) return { scale: 0.6, opacity: 0.2, x: 520, zIndex: 10 };       
+    if (relativeIndex === 0) return { scale: 1, opacity: 1, x: 0, zIndex: 30 };
+    if (relativeIndex === total - 1) return { scale: 0.8, opacity: 0.5, x: -320, zIndex: 20 };
+    if (relativeIndex === total - 2) return { scale: 0.6, opacity: 0.2, x: -520, zIndex: 10 };
+    if (relativeIndex === 1) return { scale: 0.8, opacity: 0.5, x: 320, zIndex: 20 };
+    if (relativeIndex === 2) return { scale: 0.6, opacity: 0.2, x: 520, zIndex: 10 };
 
-  return { scale: 0.6, opacity: 0, x: 1000, zIndex: 0 }; 
-};
+    return { scale: 0.6, opacity: 0, x: 1000, zIndex: 0 };
+  };
 
   return (
 
     <>
 
-    <div className=' mx-auto overflow-hidden py-8 sm:py-14'>
-  <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-        
+      <div className=' mx-auto overflow-hidden py-8 sm:py-14'>
+        <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
+
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -81,12 +81,12 @@ const getOffset = (i) => {
             </svg>
           </div>
 
-     
+
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
             Nfts
           </p>
 
-        
+
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -123,49 +123,49 @@ const getOffset = (i) => {
           className="-mb-10 text-center max-w-5xl mx-auto"
         />
 
-         <div className="relative w-full   flex items-center justify-center overflow-hidden px-4">
+        <div className="relative w-full   flex items-center justify-center overflow-hidden px-4">
 
 
-      
-      <div className="relative w-full h-[550px] sm:h-[700px]">
-        {slides.map((slide, i) => {
-          const { scale, opacity, x, zIndex } = getOffset(i);
 
-          return (
-            <div
-              key={slide.id}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]   sm:w-[530px] sm:h-[530px] cursor-grab rounded-full mix-blend-lighten"
-              style={{ zIndex }}
-            >
-              <motion.div
-                drag={i === index ? 'x' : false}
-                onDragEnd={i === index ? handleDragEnd : undefined}
-                className="w-full h-full rounded-xl overflow-hidden shadow-xl"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity, scale, x }}
-                transition={{ duration: 0.5 }}
-                 style={{
-    touchAction: 'pan-y',
-    WebkitUserSelect: 'none',
-    userSelect: 'none',
-  }}
-              >
-                <video
-                  src={slide.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-contain rounded-2xl "
-                />
-              </motion.div>
-            </div>
-          );
-        })}
-      </div>
+          <div className="relative w-full h-[550px] sm:h-[700px]">
+            {slides.map((slide, i) => {
+              const { scale, opacity, x, zIndex } = getOffset(i);
 
-      {/* Arrows */}
-      {/* <button
+              return (
+                <div
+                  key={slide.id}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]   sm:w-[530px] sm:h-[530px] cursor-grab rounded-full mix-blend-lighten"
+                  style={{ zIndex }}
+                >
+                  <motion.div
+                    drag={i === index ? 'x' : false}
+                    onDragEnd={i === index ? handleDragEnd : undefined}
+                    className="w-full h-full rounded-xl overflow-hidden shadow-xl"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity, scale, x }}
+                    transition={{ duration: 0.5 }}
+                    style={{
+                      touchAction: 'pan-y',
+                      WebkitUserSelect: 'none',
+                      userSelect: 'none',
+                    }}
+                  >
+                    <video
+                      src={slide.src}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-contain rounded-2xl "
+                    />
+                  </motion.div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Arrows */}
+          {/* <button
         onClick={prev}
         className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition"
       >
@@ -178,22 +178,21 @@ const getOffset = (i) => {
         ›
       </button> */}
 
-      {/* Dots */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex space-x-2">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full ${
-              i === index ? 'bg-green-400 scale-125' : 'bg-gray-500'
-            } transition`}
-          />
-        ))}
+          {/* Dots */}
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex space-x-2">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`w-3 h-3 rounded-full ${i === index ? 'bg-green-400 scale-125' : 'bg-gray-500'
+                  } transition`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-  
+
     </>
-   
+
   );
 }
