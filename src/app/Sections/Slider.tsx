@@ -122,7 +122,7 @@ const getOffset = (i) => {
           subtitle="Coupled with non-fungible tokens (NFTs)."
           className="-mb-10 text-center max-w-5xl mx-auto"
         />
-        
+
          <div className="relative w-full   flex items-center justify-center overflow-hidden px-4">
 
 
@@ -144,6 +144,11 @@ const getOffset = (i) => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity, scale, x }}
                 transition={{ duration: 0.5 }}
+                 style={{
+    touchAction: 'pan-y',
+    WebkitUserSelect: 'none',
+    userSelect: 'none',
+  }}
               >
                 <video
                   src={slide.src}
