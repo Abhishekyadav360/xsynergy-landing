@@ -137,46 +137,50 @@ export default function Slider() {
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]   sm:w-[530px] sm:h-[530px] cursor-grab rounded-full mix-blend-lighten"
                   style={{ zIndex }}
                 >
-                  <motion.div
-                    drag={i === index ? 'x' : false}
-                    onDragEnd={i === index ? handleDragEnd : undefined}
-                    className="w-full h-full rounded-xl overflow-hidden shadow-xl"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity, scale, x }}
-                    transition={{ duration: 0.5 }}
-                    style={{
-                      touchAction: 'pan-y',
-                      WebkitUserSelect: 'none',
-                      userSelect: 'none',
-                    }}
-                  >
-                    <video
-                      src={slide.src}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-contain rounded-2xl "
-                    />
-                  </motion.div>
+               <motion.div
+  drag={i === index ? 'x' : false}
+  dragConstraints={{ left: 0, right: 0 }}
+  dragSnapToOrigin
+  onDragEnd={i === index ? handleDragEnd : undefined}
+  className="w-full h-full rounded-xl overflow-hidden shadow-xl"
+  initial={{ scale: 0.5 }}
+  animate={{ scale, x }}
+  transition={{ duration: 0.5 }}
+  style={{
+    opacity, // ✅ animate outside
+    touchAction: 'pan-y',
+    WebkitUserSelect: 'none',
+    userSelect: 'none',
+  }}
+>
+  <video
+    src={slide.src}
+    autoPlay
+    loop
+    muted 
+    playsInline
+    style={{ pointerEvents: 'none' }} // ✅ prevent video blocking drag
+    className="w-full h-full object-contain rounded-2xl"
+  />
+</motion.div>
                 </div>
               );
             })}
           </div>
 
           {/* Arrows */}
-          <button
+          {/* <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition block sm:hidden"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition"
       >
         ‹
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition block sm:hidden"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-50 hover:scale-125 transition"
       >
         ›
-      </button>
+      </button> */}
 
           {/* Dots */}
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex space-x-2">
