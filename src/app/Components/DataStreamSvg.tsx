@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef,  useState } from 'react';
 import { motion } from 'framer-motion';
 
 const TOTAL_LINES = 12;
@@ -27,14 +27,19 @@ type Pulse = { id: number; line: number };
 const MatrixStream = () => {
   const [pulses, setPulses] = useState<Pulse[]>([]);
   const [isMobile, setIsMobile] = useState(false);
+  const resizeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const updateMobile = () => setIsMobile(window.innerWidth < 768);
+
     updateMobile();
 
     const resizeListener = () => {
-      clearTimeout((resizeListener as any).timeout);
-      (resizeListener as any).timeout = setTimeout(updateMobile, 200);
+      if (resizeTimeout.current) {
+        clearTimeout(resizeTimeout.current);
+      }
+
+      resizeTimeout.current = setTimeout(updateMobile, 200);
     };
 
     window.addEventListener('resize', resizeListener);
