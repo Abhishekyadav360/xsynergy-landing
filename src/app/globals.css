@@ -608,7 +608,6 @@ body .swiper-button-prev:after,
   background-image: linear-gradient(180deg, rgba(65, 114, 99, 0.15) 0%, rgba(27, 30, 27, 0.1) 100%);
 }
 
-@keyframes slide-in {
 @keyframes progress {
   0% {
     width: 0%;
