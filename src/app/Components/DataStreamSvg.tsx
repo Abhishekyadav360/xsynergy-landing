@@ -49,6 +49,7 @@ const StaticPaths = memo(() => (
     ))}
   </>
 ));
+StaticPaths.displayName = 'StaticPaths';
 
 const MatrixStream = () => {
   const [pulses, setPulses] = useState<Pulse[]>([]);
@@ -189,5 +190,5 @@ const MatrixStream = () => {
     </div>
   );
 };
-
+MatrixStream.displayName = 'MatrixStream';
 export default MatrixStream;

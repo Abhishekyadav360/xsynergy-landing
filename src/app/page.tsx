@@ -4,7 +4,7 @@ import Header from "./Sections/Header";
 import Banner from "./Sections/Banner";
 
 import Footer from "./Sections/Footer";
-import Faq from "./Sections/Faq";
+// import Faq from "./Sections/Faq";
 // import Advantages from "./Sections/Advantages";
 // import Explore from "./Sections/Explore";
 import Slider from "./Sections/Slider";
