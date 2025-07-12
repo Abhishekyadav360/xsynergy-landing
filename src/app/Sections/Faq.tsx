@@ -11,7 +11,7 @@ const rawChat = [
   {
     type: "user",
     message: "Which blockchain is XSynergy built on?",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    avatar: "/userx.webp",
   },
   {
     type: "bot",
@@ -21,7 +21,7 @@ const rawChat = [
   {
     type: "user",
     message: "Is there any admin control or manual access?",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    avatar: "/userx.webp",
   },
   {
     type: "bot",
@@ -31,7 +31,7 @@ const rawChat = [
   {
     type: "user",
     message: "How do I earn rewards?",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    avatar: "/userx.webp",
   },
   {
     type: "bot",
@@ -41,7 +41,7 @@ const rawChat = [
   {
     type: "user",
     message: "Can I access it from anywhere?",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    avatar: "/userx.webp",
   },
   {
     type: "bot",
@@ -214,7 +214,7 @@ useEffect(() => {
               <motion.img
                 src={item.avatar}
                 alt="avatar"
-                className="w-10 h-10 rounded-full border border-green-500/50 object-contain p-0.5"
+                className="w-10 h-10 rounded-full border border-green-500/50 object-contain p-1"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.1, type: "spring", stiffness: 300 }}
