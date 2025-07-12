@@ -137,32 +137,32 @@ export default function Slider() {
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]   sm:w-[530px] sm:h-[530px] cursor-grab rounded-full mix-blend-lighten"
                   style={{ zIndex }}
                 >
-               <motion.div
-  drag={i === index ? 'x' : false}
-  dragConstraints={{ left: 0, right: 0 }}
-  dragSnapToOrigin
-  onDragEnd={i === index ? handleDragEnd : undefined}
-  className="w-full h-full rounded-xl overflow-hidden shadow-xl"
-  initial={{ scale: 0.5 }}
-  animate={{ scale, x }}
-  transition={{ duration: 0.5 }}
-  style={{
-    opacity, // ✅ animate outside
-    touchAction: 'pan-y',
-    WebkitUserSelect: 'none',
-    userSelect: 'none',
-  }}
->
-  <video
-    src={slide.src}
-    autoPlay
-    loop
-    muted 
-    playsInline
-    style={{ pointerEvents: 'none' }} // ✅ prevent video blocking drag
-    className="w-full h-full object-contain rounded-2xl"
-  />
-</motion.div>
+                  <motion.div
+                    drag={i === index ? 'x' : false}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragSnapToOrigin
+                    onDragEnd={i === index ? handleDragEnd : undefined}
+                    className="w-full h-full rounded-xl overflow-hidden shadow-xl"
+                    initial={{ scale: 0.5 }}
+                    animate={{ scale, x }}
+                    transition={{ duration: 0.5 }}
+                    style={{
+                      opacity, // ✅ animate outside
+                      touchAction: 'pan-y',
+                      WebkitUserSelect: 'none',
+                      userSelect: 'none',
+                    }}
+                  >
+                    <video
+                      src={slide.src}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      style={{ pointerEvents: 'none' }} // ✅ prevent video blocking drag
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  </motion.div>
                 </div>
               );
             })}
