@@ -118,7 +118,7 @@ export default function Faqs() {
           title="Why XSynergy?"
           highlightedText=""
           subtitle="XSynergy operates fully on the Polygon blockchain for low fees and high scalability."
-          className="mb-10 text-center max-w-5xl mx-auto"
+          className="mb-10 text-center max-w-5xl mx-auto px-4"
         />
 
         <div className="bg-black text-white flex flex-col lg:flex-row px-4 gap-10 container mx-auto" data-aos='fade-up'>
