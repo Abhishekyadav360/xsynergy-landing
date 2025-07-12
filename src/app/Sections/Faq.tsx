@@ -233,7 +233,7 @@ useEffect(() => {
 
           {typing && (
             <div className="flex items-center gap-2 text-green-400 text-sm font-mono animate-pulse">
-              🤖 Typing<span className="dot-flash">.</span>
+               Typing<span className="dot-flash">.</span>
               <span className="dot-flash delay-100">.</span>
               <span className="dot-flash delay-200">.</span>
             </div>
