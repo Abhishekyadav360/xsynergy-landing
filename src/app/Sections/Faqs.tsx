@@ -48,7 +48,7 @@ export default function Faqs() {
 
   return (
     <>
-      <section className='mx-auto container py-8 md:py-16 '>
+      <section className='mx-auto container py-8 md:py-16 ' >
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
         
           <div className="w-[108px] h-[20px]">
@@ -121,7 +121,7 @@ export default function Faqs() {
           className="mb-10 text-center max-w-5xl mx-auto"
         />
 
-        <div className="bg-black text-white flex flex-col lg:flex-row px-4 gap-10 container mx-auto">
+        <div className="bg-black text-white flex flex-col lg:flex-row px-4 gap-10 container mx-auto" data-aos='fade-up'>
 
         
           <div className="flex-1 space-y-6">

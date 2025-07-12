@@ -50,7 +50,7 @@ export default function Slider() {
 
     <>
 
-      <div className=' mx-auto overflow-hidden py-8 sm:py-14'>
+      <div id='nft' className=' mx-auto overflow-hidden py-8 sm:py-14'>
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
 
           <div className="w-[108px] h-[20px]">
