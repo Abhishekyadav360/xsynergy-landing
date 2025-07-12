@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
     ...props
 }) => {
     const baseStyles =
-        "relative overflow-hidden transition-all duration-300 px-8 py-2 rounded-xl text-lg font-semibold";
+        "relative z-20 overflow-hidden transition-all duration-300 px-8 py-2 rounded-xl text-lg font-semibold";
     const variantStyles =
         variant === "primary"
             ? "btn"

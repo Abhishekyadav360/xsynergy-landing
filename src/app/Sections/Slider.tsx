@@ -183,7 +183,7 @@ export default function Slider() {
       </button> */}
 
           {/* Dots */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex space-x-2">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-0 flex space-x-2">
             {slides.map((_, i) => (
               <button
                 key={i}

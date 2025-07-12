@@ -52,7 +52,7 @@ const Banner = () => {
 
     return (
         <>
-            <section className="relative bg-cover bg-center bg-no-repeat py-36 sm:py-52 overflow-hidden h-[100vh] sm:h-[120vh]">
+            <section className="relative bg-cover bg-center bg-no-repeat py-36 sm:py-52 overflow-hidden min-h-[100vh] sm:min-h-[120vh]">
                 <GridGlow className="-z-30" lines={14} maxLength={400} />
                 <div className='absolute top-0 left-0 w-full h-full z-0 sm:z-10 cursor-grab'>
                     {/* <video
@@ -168,7 +168,7 @@ const Banner = () => {
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
                             Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
                         </p>
-                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto'>
+                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto relative z-30'>
                             <Button className=' z-20 relative' variant="primary" target="_blank" href="/" >
                                 Login
                             </Button>
