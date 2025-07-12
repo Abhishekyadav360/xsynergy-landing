@@ -154,7 +154,7 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               
             >
               <GradientCard
@@ -172,7 +172,7 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.7, ease: 'easeOut' }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
              
             >
               <GradientCard
@@ -190,7 +190,7 @@ const Works = () => {
               }}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
               
             >
               <GradientCard
