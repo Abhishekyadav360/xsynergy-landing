@@ -119,7 +119,7 @@ const Header = () => {
 
             <div
                 ref={menuRef}
-                className={`fixed top-0 right-0 w-3/5 min-h-screen bg-[rgb(26,46,27)] p-6 transform z-10 transition-all duration-500 ease-in-out backdrop-blur-lg md:hidden
+                className={`fixed top-0 right-0 w-3/5 min-h-screen bg-[rgb(17,24,17)] p-6 transform z-10 transition-all duration-500 ease-in-out backdrop-blur-lg md:hidden
                 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
                 `}
             >
