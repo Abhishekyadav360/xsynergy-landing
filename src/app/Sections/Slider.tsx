@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 import Title from '../Components/Title';
 
 const slides = [
-  { id: 1, src: '/video/xsynergy.webm' },
-  { id: 2, src: '/video/xsynergy.webm' },
-  { id: 3, src: '/video/xsynergy.webm' },
-  { id: 4, src: '/video/xsynergy.webm' },
-  { id: 5, src: '/video/xsynergy.webm' },
-  { id: 6, src: '/video/xsynergy.webm' },
-  { id: 7, src: '/video/xsynergy.webm' },
-  { id: 8, src: '/video/xsynergy.webm' },
-  { id: 9, src: '/video/xsynergy.webm' },
-  { id: 10, src: '/video/xsynergy.webm' },
+  { id: 1, src: '/video/xsynergyc.webm' },
+  { id: 2, src: '/video/xsynergyc.webm' },
+  { id: 3, src: '/video/xsynergyc.webm' },
+  { id: 4, src: '/video/xsynergyc.webm' },
+  { id: 5, src: '/video/xsynergyc.webm' },
+  { id: 6, src: '/video/xsynergyc.webm' },
+  { id: 7, src: '/video/xsynergyc.webm' },
+  { id: 8, src: '/video/xsynergyc.webm' },
+  { id: 9, src: '/video/xsynergyc.webm' },
+  { id: 10, src: '/video/xsynergyc.webm' },
 ];
 
 export default function Slider() {
