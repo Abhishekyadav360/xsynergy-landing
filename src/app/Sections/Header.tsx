@@ -7,6 +7,7 @@ import Image from 'next/image';
 import logo from "@/Assets/images/xsynergylogo.webp";
 import Button from '../Components/Button';
 import  Loader  from '../Components/Loader';
+import GridGlow from '../Components/GridGlow';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -119,10 +120,11 @@ const Header = () => {
 
             <div
                 ref={menuRef}
-                className={`fixed top-0 right-0 w-3/5 min-h-screen bg-[rgb(17,24,17)] p-6 transform z-10 transition-all duration-500 ease-in-out backdrop-blur-lg md:hidden
+                className={`fixed top-0 right-0 w-full min-h-screen bg-[rgb(0,0,0)] p-6 transform z-10 transition-all duration-500 ease-in-out backdrop-blur-lg md:hidden
                 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
                 `}
             >
+                <GridGlow className="-z-30" lines={6} maxLength={400} />
 
                 <button
                     onClick={() => setIsOpen(false)}
@@ -135,7 +137,7 @@ const Header = () => {
                 <div className="text-base sm:text-2xl font-semibold">
                     <Link className="items-center gap-1 sm:gap-2" href="/">
                         <Image
-                            className="w-12 md:w-16 h-auto ml-2 md:ml-0"
+                            className="w-14 md:w-16 h-auto ml-2 md:ml-0"
                             src={logo}
                             alt="Logo"
                             width={100}
@@ -145,7 +147,7 @@ const Header = () => {
                 </div>
 
 
-                <nav className="mt-12 space-y-4 text-white text-xl">
+                <nav className="mt-12 space-y-4 text-white/90 text-3xl fr-fnt">
                     <Link href="#about" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'about')}>About</Link>
                     <Link href="#features" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
                     <Link href="#works" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'works')}>Works</Link>

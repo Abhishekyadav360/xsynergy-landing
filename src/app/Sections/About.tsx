@@ -72,7 +72,7 @@ const About = () => {
       <section
         id="about"
         ref={sectionRef}
-        className="relative bg-transparent h-[150vh]  px-4 pt-52 sm:pt-40 pb-0 "
+        className="relative bg-transparent h-[120vh] sm:h-[150vh]  px-4 pt-52 sm:pt-40 pb-0 "
       >
              {/* <div id="stars2"></div> */}
         <div className="sticky top-1/2 -translate-y-1/2">
@@ -162,7 +162,7 @@ const About = () => {
   </span>
 ))}
           </p>
-<div className="mt-10 flex justify-center items-center">
+<div className="mt-4 sm:mt-10 flex justify-center items-center">
           <Marquee />
 
 </div>
