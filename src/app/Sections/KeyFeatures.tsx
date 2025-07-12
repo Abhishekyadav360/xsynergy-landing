@@ -22,7 +22,7 @@ useEffect(() => {
   return (
     <>
 
-      <section className=" relative overflow-hidden pb-8 md:pb-16 ">
+      <section id='features' className=" relative overflow-hidden pb-8 md:pb-16 ">
 
         <div className="absolute inset-0 z-0 flex items-center justify-center top-0 sm:top-20  ">
           <Wave />

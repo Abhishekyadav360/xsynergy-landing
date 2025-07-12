@@ -2,23 +2,22 @@
 import React, { useEffect } from 'react';
 // import Image from 'next/image';
 import Button from '../Components/Button';
-// import circle from '@/Assets/images/tractor.webp';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 // import bnrbg from '@/Assets/images/bannerbg.svg';
-// import GridPattern from '../Components/GridPattern';
-// import GridFX from '../Components/GridFX';
+
 import GridGlow from '../Components/GridGlow';
 import MatrixText from '../Components/MatrixText';
 import GlobeCanvas from '../Components/GlobeCanvas';
 import About from './About';
 
-// const TARGET_TIME = new Date("2025-03-05T09:30:00Z").getTime();
+
 
 
 const Banner = () => {
-    // const [timeLeft, setTimeLeft] = useState<number | null>(null);
+
 
 
     
@@ -30,25 +29,9 @@ const Banner = () => {
         });
 
 
-        // setTimeLeft(TARGET_TIME - Date.now());
 
-        // const interval = setInterval(() => {
-        //     setTimeLeft(TARGET_TIME - Date.now());
-        // }, 1000);
-
-        // return () => clearInterval(interval);
     }, []);
 
-    // const formatTime = (ms: number | null) => {
-    //     if (ms === null || ms <= 0) return "00:00:00:00";
-
-    //     const days = Math.floor(ms / (1000 * 60 * 60 * 24));
-    //     const hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
-    //     const minutes = Math.floor((ms / (1000 * 60)) % 60);
-    //     const seconds = Math.floor((ms / 1000) % 60);
-
-    //     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    // };
 
     return (
         <>
@@ -74,22 +57,9 @@ const Banner = () => {
                 </div>
 
                 <div className="flex items-center relative justify-center container px-2 sm:px-4 mx-auto mt-28 ">
-                    {/* <div className="z-0">
-                        <Image
-                            className="left-right-animation absolute top-[0%] sm:top-[-5%] left-[0%] opacity-70 sm:opacity-100"
-                            src={circle}
-                            alt="circle image"
-                            width={100}
-                        />
-                    </div> */}
+                    
                     <div className="text-center relative max-w-7xl mx-auto w-full  " data-aos="fade-up">
-                        {/* {timeLeft !== null && (
-                            <div className='nft-card max-w-60 sm:max-w-[260px]  mx-auto flex justify-center items-center rounded-[28px] p-2 opacity-90 mb-2'>
-                                <div className="  tetx-lg sm:text-xl font-medium">
-                                    Live in - {formatTime(timeLeft)}⏳
-                                </div>
-                            </div>
-                        )} */}
+                       
 
                         <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}

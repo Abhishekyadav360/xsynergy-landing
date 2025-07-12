@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      
       dropShadow: {
         'custom-green': '0 2px 2px rgb(54, 253, 32)',
       },

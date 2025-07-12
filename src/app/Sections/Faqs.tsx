@@ -132,6 +132,7 @@ export default function Faqs() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(0)} // 
               >
+                
                 <div className="flex space-x-2 sm:space-x-8 w-full">
                   <span className="text-lg sm:text-xl font-semibold w-10">{service.id}</span>
                   <div className=" flex-1">
@@ -182,7 +183,7 @@ export default function Faqs() {
                     src={services[hoveredIndex].img}
                     alt={services[hoveredIndex].title}
                     fill
-                    className="object-contain rounded-lg animate-up-down"
+                    className="object-contain rounded-lg "
                   />
                 </motion.div>
               )}

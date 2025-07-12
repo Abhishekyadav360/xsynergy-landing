@@ -11,7 +11,7 @@ import glow3 from '@/Assets/images/worksx2.webp';
 // import upperright from "@/Assets/images/raysfr.webp";
 // import Image from 'next/image';
 
-import MatrixStream from '../Components/DataStreamSvg';
+// import MatrixStream from '../Components/DataStreamSvg';
 
 const containerVariants = {
   hidden: {},
@@ -46,34 +46,22 @@ const Works = () => {
   const cardVariants = getCardVariants(isMobile);
 
   return (
-    <section id="works" className="relative w-full pt-28 pb-20 overflow-y-visible works-sec">
-      {/* <motion.div
-        initial={{ height: 0 }}
-        whileInView={{ height: '100%' }}
-        transition={{ duration: 1.5, ease: 'easeOut' }}
-        viewport={{ once: false, amount: 0.2 }}
-        className="absolute  -top-[600px] sm:-top-[520px] md:-top-5 left-0 right-0 w-full max-w-[537px] mx-auto pointer-events-none overflow-hidden -z-0"
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="w-full h-full"
-        >
-          <Image
-            src={upperright}
-            alt="gradient background"
-            width={750}
-            height={750}
-            className="  object-contain md:object-cover w-full h-full opacity-30 sm:opacity-30  "
-          />
-        
-        </motion.div>
-      </motion.div> */}
-     <MatrixStream />
+    
+    <section id="works" className="relative w-full pt-28 pb-28 overflow-y-visible works-sec">
+     
+<div className="top-glow-wrapper">
+  <div className="mask-top">
+    <div className="glow-gradient-top" />
+  </div>
+</div>
+<div className="bottom-glow-wrapper">
+  <div className="mask-bottom">
+    <div className="glow-gradient-bottom" />
+  </div>
+</div>
 
       <div className="container mx-auto px-4">
-       <div className="flex z-20 relative items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
+       <div className="flex z-20 relative items-center justify-center mb-2 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
         
           <div className="w-[108px] h-[20px]">
             <svg
@@ -153,7 +141,7 @@ const Works = () => {
         
         {ready && (
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-10 sm:mt-20"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-10 "
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -172,7 +160,8 @@ const Works = () => {
               <GradientCard
                 title="Connect Your Wallet"
                 description="Link your MetaMask, Trust Wallet, or any supported wallet quickly and securely to get started."
-                image={glow1}
+                image={glow1} className=''
+                
               />
             </motion.div>
 
@@ -190,7 +179,7 @@ const Works = () => {
                 title="Register Seamlessly"
                 description="No KYC or approval needed. Just sign a transaction and you're in — fast and hassle-free."
                 image={glow2}
-                className="relative mt-0 sm:mt-20"
+                className=" "
               />
             </motion.div>
 
