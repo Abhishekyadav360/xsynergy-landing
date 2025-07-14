@@ -103,7 +103,7 @@ useEffect(() => {
 
                 <div className="flex items-center gap-4">
                     <div className='bg-black rounded-xl'>
-                    <Button target='_blank' href="/" >Register</Button>
+                    <Button target='_blank' href="Comingsoon" >Register</Button>
 
                     </div>
                     <button
@@ -129,8 +129,6 @@ useEffect(() => {
                     </button>
                 </div>
             </div>
-
-
             <div
                 ref={menuRef}
                 className={`fixed top-0 right-0 w-full min-h-screen bg-[rgb(0,0,0)] p-6 transform z-10 transition-all duration-500 ease-in-out backdrop-blur-lg md:hidden
@@ -138,15 +136,12 @@ useEffect(() => {
                 `}
             >
                 <GridGlow className="-z-30" lines={6} maxLength={400} />
-
                 <button
                     onClick={() => setIsOpen(false)}
                     className="absolute top-5 right-5 text-white focus:outline-none"
                 >
                     ✖
                 </button>
-
-
                 <div className="text-base sm:text-2xl font-semibold">
                     <Link className="items-center gap-1 sm:gap-2" href="/">
                         <Image
@@ -158,14 +153,11 @@ useEffect(() => {
                         />
                     </Link>
                 </div>
-
-
                 <nav className="mt-12 space-y-4 text-white/90 text-3xl fr-fnt">
                     <Link href="#about" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'about')}>About</Link>
                     <Link href="#features" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
                     <Link href="#works" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
                     <Link href="#nft" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'nft')}>NFTs</Link>
-
                     <Link href="#faq" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'faq')}>FAQ</Link>
                 </nav>
             </div>

@@ -50,7 +50,7 @@ const Banner = () => {
                 </div>
 
 
-                <div className="flex items-center relative justify-center container px-2 sm:px-4 mx-auto mt-28 ">
+                <div className="flex items-center relative justify-center container px-2 sm:px-4 mx-auto mt-28">
 
 
                     <div className="text-center relative max-w-7xl mx-auto w-full z-30 " data-aos="fade-up">
@@ -133,8 +133,9 @@ const Banner = () => {
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
                             Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
                         </p>
+
                         <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto  z-30 relative'>
-                            <Button className=' z-20 relative' variant="primary" target="_blank" href="/" >
+                            <Button className=' z-20 relative' variant="primary" target="_blank" href="Comingsoon" >
                                 Login
                             </Button>
                             {/* <Button variant="secondary" target="_blank" href="https://swap.sfagro.club/">
