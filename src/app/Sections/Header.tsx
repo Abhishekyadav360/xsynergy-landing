@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from "@/Assets/images/xsynergylogo.webp";
 import Button from '../Components/Button';
-import  Loader  from '../Components/Loader';
+import Loader from '../Components/Loader';
 import GridGlow from '../Components/GridGlow';
 
 const Header = () => {
@@ -28,20 +28,20 @@ const Header = () => {
             once: true,
         });
     }, []);
-useEffect(() => {
-  if (isOpen) {
-    // Lock scroll when menu is open
-    document.body.style.overflow = 'hidden';
-  } else {
-    // Re-enable scroll when menu is closed
-    document.body.style.overflow = '';
-  }
+    useEffect(() => {
+        if (isOpen) {
+            // Lock scroll when menu is open
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Re-enable scroll when menu is closed
+            document.body.style.overflow = '';
+        }
 
-  // Cleanup on unmount (optional safety)
-  return () => {
-    document.body.style.overflow = '';
-  };
-}, [isOpen]);
+        // Cleanup on unmount (optional safety)
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
 
 
     useEffect(() => {
@@ -90,8 +90,6 @@ useEffect(() => {
                         />
                     </Link>
                 </div>
-
-
                 <nav className="hidden md:flex space-x-6 p-2 rounded-full backdrop-blur-sm nav-bg">
                     <Link href="#about" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'about')}>About</Link>
                     <Link href="#features" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
@@ -99,11 +97,9 @@ useEffect(() => {
                     <Link href="#nft" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'nft')}>NFTs</Link>
                     <Link href="#faq" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'faq')}>FAQ</Link>
                 </nav>
-
-
                 <div className="flex items-center gap-4">
                     <div className='bg-black rounded-xl'>
-                    <Button target='_blank' href="Comingsoon" >Register</Button>
+                        <Button target='_blank' href="Comingsoon" >Register</Button>
 
                     </div>
                     <button
@@ -111,21 +107,21 @@ useEffect(() => {
                         className="md:hidden focus:outline-none pr-3"
                     >
                         <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                aria-hidden="true"  
-                                data-slot="icon"
-                                className='max-w-10'
-                                color="var(--token-06f080bb-b416-40bd-9e82-3f6cb518c925, rgb(255, 255, 255))"
-                                style={{ width: "100%", height: "100%" }}
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm8.25 5.25a.75.75 0 0 1 .75-.75h8.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75Z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            data-slot="icon"
+                            className='max-w-10'
+                            color="var(--token-06f080bb-b416-40bd-9e82-3f6cb518c925, rgb(255, 255, 255))"
+                            style={{ width: "100%", height: "100%" }}
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm8.25 5.25a.75.75 0 0 1 .75-.75h8.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75Z"
+                                clipRule="evenodd"
+                            />
+                        </svg>
                     </button>
                 </div>
             </div>

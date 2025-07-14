@@ -115,7 +115,7 @@ useEffect(() => {
     ref={sectionRef}
      className=" bg-black text-white  px-4 flex items-center justify-center relative pt-8 md:pt-10 pb-16" data-aos="fade-up">
 
-      <div className='absolute top-0 left-0 w-full h-full z-0 sm:z-10 cursor-grab'>
+      <div className='absolute top-0 left-0 w-full h-full z-0 sm:z-10 '>
 
         <Image
           src={faqbg}
