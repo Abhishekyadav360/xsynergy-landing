@@ -81,7 +81,6 @@ export default function Slider() {
             </svg>
           </div>
 
-
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
             Nfts
           </p>

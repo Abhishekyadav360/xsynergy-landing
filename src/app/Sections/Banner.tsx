@@ -56,9 +56,11 @@ const Banner = () => {
                     <GlobeCanvas />
                 </div>
 
+
                 <div className="flex items-center relative justify-center container px-2 sm:px-4 mx-auto mt-28 ">
                     
-                    <div className="text-center relative max-w-7xl mx-auto w-full  " data-aos="fade-up">
+                    
+                    <div className="text-center relative max-w-7xl mx-auto w-full z-30 " data-aos="fade-up">
                        
 
                         <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
@@ -138,7 +140,7 @@ const Banner = () => {
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
                             Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
                         </p>
-                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto relative z-30'>
+                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto  z-30 relative'>
                             <Button className=' z-20 relative' variant="primary" target="_blank" href="/" >
                                 Login
                             </Button>
@@ -147,7 +149,7 @@ const Banner = () => {
                             </Button> */}
                         </div>
                        
-                        <div className="flex flex-col justify-center items-center gap-2 mt-4 max-w-80 mx-auto ">
+                        <div className="flex flex-col justify-center items-center gap-2 mt-4 max-w-80 mx-auto  ">
           <div className="icon-scroll"></div>
             <p className="text-sm text-gray-300">Drag and scroll !</p>
           </div>
