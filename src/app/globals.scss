@@ -660,7 +660,7 @@ body .swiper-button-prev:after,
   position: relative;
   top: 0;
   z-index: 1;
-  animation: topAnimation 3.5s linear infinite;
+  animation: topAnimation 3s linear infinite;
   filter: blur(14px);
   opacity: 1;
   box-shadow: 
@@ -675,7 +675,7 @@ body .swiper-button-prev:after,
   position: relative;
   top: 0;
   z-index: 1;
-  animation: bottomAnimation 3.5s linear infinite;
+  animation: bottomAnimation 3s linear infinite;
   filter: blur(14px);
   opacity: 1;
   box-shadow: 

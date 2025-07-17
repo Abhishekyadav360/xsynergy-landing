@@ -56,66 +56,66 @@ export default function ChatWithFancyAnimations() {
   const [typing, setTyping] = useState(false);
   const sectionRef = useRef(null);
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        let i = 0;
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let i = 0;
 
-        const showNext = () => {
-          if (i < rawChat.length) {
-            setTyping(true);
-            setTimeout(() => {
-              setChat((prev) => [...prev, rawChat[i]]);
-              setTyping(false);
-              i++;
-              setTimeout(showNext, 1200);
-            }, 600);
-          }
-        };
+          const showNext = () => {
+            if (i < rawChat.length) {
+              setTyping(true);
+              setTimeout(() => {
+                setChat((prev) => [...prev, rawChat[i]]);
+                setTyping(false);
+                i++;
+                setTimeout(showNext, 1200);
+              }, 600);
+            }
+          };
 
-        showNext();
-        observer.disconnect(); // run only once
+          showNext();
+          observer.disconnect(); // run only once
+        }
+      },
+      {
+        threshold: 0.3, // run when 30% visible
       }
-    },
-    {
-      threshold: 0.3, // run when 30% visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-  );
 
-  if (sectionRef.current) {
-    observer.observe(sectionRef.current);
-  }
-
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
 
-// useEffect(() => {
-//   let i = 0;
+  // useEffect(() => {
+  //   let i = 0;
 
-//   const showNext = () => {
-//     if (i < rawChat.length) {
-//       setTyping(true);
-//       setTimeout(() => {
-//         setChat((prev) => [...prev, rawChat[i]]);
-//         setTyping(false);
-//         i++;
-//         setTimeout(showNext, 1200);
-//       }, 600);
-//     }
-//   };
+  //   const showNext = () => {
+  //     if (i < rawChat.length) {
+  //       setTyping(true);
+  //       setTimeout(() => {
+  //         setChat((prev) => [...prev, rawChat[i]]);
+  //         setTyping(false);
+  //         i++;
+  //         setTimeout(showNext, 1200);
+  //       }, 600);
+  //     }
+  //   };
 
-//   showNext(); // directly start on component mount
-// }, []);
+  //   showNext(); // directly start on component mount
+  // }, []);
 
   return (
     <div
-    id="faq"
-    ref={sectionRef}
-     className=" bg-black text-white  px-4 flex items-center justify-center relative pt-8 md:pt-10 pb-16" data-aos="fade-up">
+      id="faq"
+      ref={sectionRef}
+      className=" bg-black text-white  px-4 flex items-center justify-center relative pt-8 md:pt-10 pb-16" data-aos="fade-up">
 
-      <div className='absolute top-0 left-0 w-full h-full z-0 sm:z-10 '>
+      <div className='absolute top-0 left-0 w-full h-full z-0 sm:z-10'>
 
         <Image
           src={faqbg}
@@ -194,11 +194,11 @@ useEffect(() => {
         </div>
 
         <Title
-  title="Answers from the Chain"
-  highlightedText=""
-  subtitle="XSynergy is governed by smart contracts, not assumptions. Here’s everything you need to know."
-  className="mb-10 text-center max-w-2xl mx-auto"
-/>
+          title="Answers from the Chain"
+          highlightedText=""
+          subtitle="XSynergy is governed by smart contracts, not assumptions. Here’s everything you need to know."
+          className="mb-10 text-center max-w-2xl mx-auto"
+        />
 
 
         <div className="w-full max-w-3xl space-y-6 mt-20">
@@ -221,8 +221,8 @@ useEffect(() => {
               />
               <motion.div
                 className={`max-w-[75%] px-4 sm:px-5 py-4 rounded-lg border font-mono text-sm shadow-md ${item.type === "user"
-                    ? "bg-gradient-to-br from-black via-black to-green-900 text-green-100 border-[#2d362d]"
-                    : "bg-gradient-to-br from-black via-black to-green-800 text-green-50 border-[#2d362d]"
+                  ? "bg-gradient-to-br from-black via-black to-green-900 text-green-100 border-[#2d362d]"
+                  : "bg-gradient-to-br from-black via-black to-green-800 text-green-50 border-[#2d362d]"
                   }`}
                 whileHover={{ scale: 1.02 }}
               >
@@ -233,7 +233,7 @@ useEffect(() => {
 
           {typing && (
             <div className="flex items-center gap-2 text-green-400 text-sm font-mono animate-pulse">
-               Typing<span className="dot-flash">.</span>
+              Typing<span className="dot-flash">.</span>
               <span className="dot-flash delay-100">.</span>
               <span className="dot-flash delay-200">.</span>
             </div>
@@ -266,3 +266,4 @@ useEffect(() => {
     </div>
   );
 }
+ 
