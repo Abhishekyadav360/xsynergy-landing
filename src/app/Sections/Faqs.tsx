@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NextImage from 'next/image'; 
+import NextImage from 'next/image';
 import Title from '../Components/Title';
 
 const services = [
@@ -11,13 +11,13 @@ const services = [
     title: 'No Admin Ownership',
     desc: 'XSynergy runs on smart contracts with no admin control — fully automatic, fair, and free from human mistakes or Unauthorized changes.',
     img: '/ecosystem.webp',
-    arrow: '→', 
+    arrow: '→',
   },
   {
     id: '02',
     title: 'Fully On-Chain & Verifiable',
     desc: 'Every action and transaction is permanently recorded on the Polygon blockchain, making the system transparent and easy to verify by anyone.',
-    img: '/whyx6.webp',  
+    img: '/whyx6.webp',
     arrow: '↗',
   },
   {
@@ -45,7 +45,7 @@ const services = [
 
 export default function Faqs() {
   const [hoveredIndex, setHoveredIndex] = useState(0);
-    useEffect(() => {
+  useEffect(() => {
     services.forEach(service => {
       const img = new Image();
       img.src = service.img;
@@ -56,7 +56,7 @@ export default function Faqs() {
     <>
       <section className='mx-auto container py-8 md:py-16'>
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-        
+
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -85,12 +85,12 @@ export default function Faqs() {
             </svg>
           </div>
 
-     
+
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
             Advantages
           </p>
 
-        
+
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -119,19 +119,19 @@ export default function Faqs() {
             </svg>
           </div>
         </div>
-<div className='px-4'>
-      <Title
-          title="Why XSynergy?"
-          highlightedText=""
-          subtitle="A fair, automated platform powered by smart contracts — built for users, not admins."
-          className="mb-10 text-center max-w-5xl mx-auto "
-        />
-</div>
-  
+        <div className='px-4'>
+          <Title
+            title="Why XSynergy?"
+            highlightedText=""
+            subtitle="A fair, automated platform powered by smart contracts — built for users, not admins."
+            className="mb-10 text-center max-w-5xl mx-auto "
+          />
+        </div>
+
 
         <div className="bg-black text-white flex flex-col lg:flex-row px-4 gap-10 container mx-auto" data-aos='fade-up'>
 
-        
+
           <div className="flex-1 space-y-6 min-h-[600px]">
             {services.map((service, index) => (
               <div
@@ -140,7 +140,7 @@ export default function Faqs() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(0)} // 
               >
-                
+
                 <div className="flex space-x-2 sm:space-x-8 w-full">
                   <span className="text-lg sm:text-xl font-semibold w-10">{service.id}</span>
                   <div className=" flex-1">
@@ -150,6 +150,7 @@ export default function Faqs() {
                       {hoveredIndex === index && (
                         <motion.div
                           className="overflow-hidden"
+                          layout
                           initial={{ opacity: 0, height: 0, y: -10 }}
                           animate={{ opacity: 1, height: 'auto', y: 0 }}
                           exit={{ opacity: 0, height: 0, y: -10 }}
