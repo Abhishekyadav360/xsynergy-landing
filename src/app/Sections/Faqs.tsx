@@ -132,7 +132,7 @@ export default function Faqs() {
         <div className="bg-black text-white flex flex-col lg:flex-row px-4 gap-10 container mx-auto" data-aos='fade-up'>
 
         
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-6 min-h-[600px]">
             {services.map((service, index) => (
               <div
                 key={index}
