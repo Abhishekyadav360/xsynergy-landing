@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from '../Components/Marquee';
-import Title from '../Components/Title';
+// import Title from '../Components/Title';
 
 interface AnimatedLetterProps {
   char: string;
