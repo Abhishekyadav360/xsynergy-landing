@@ -12,7 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
       dropShadow: {
         'custom-green': '0 2px 2px rgb(54, 253, 32)',
       },

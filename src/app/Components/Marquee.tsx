@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 
 const Marquee = ({
-  text = 'XSYNERGY IS THE FUTURE • POWERED BY POLYGON • REWARDS ON CHAIN',
+  text = 'XSYNERGY - THE NEXT GEN • POWERED BY POLYGON • ON-CHAIN REWARDS •',
   speed = 80,
 }: {
   text?: string
@@ -25,8 +25,8 @@ const Marquee = ({
         }}
       >
         
-        <span>{baseText}</span>
-        <span>{baseText}</span>
+        <span className='fr-fnt'>{baseText}</span>
+        <span className='fr-fnt'>{baseText}</span>
       </motion.div>
     </div>
   )

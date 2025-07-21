@@ -4,19 +4,24 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Wave from './Wave';
 import Title from '../Components/Title';
+import Image from 'next/image';
+import kfx1 from '@/Assets/images/modular-architecture.webp'
+import smartc from '@/Assets/images/smartcontract.webp'
+import transparent from '@/Assets/images/transparent.webp'
+
 
 const KeyFeatures = () => {
-useEffect(() => {
-  AOS.init({
-    duration: 1000,
-    once: false,
-    mirror: true,
-  });
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
 
-  setTimeout(() => {
-    AOS.refresh();
-  }, 500);
-}, []);
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  }, []);
 
 
   return (
@@ -61,7 +66,7 @@ useEffect(() => {
 
 
             <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-              Features
+              Highlights
             </p>
 
 
@@ -97,13 +102,14 @@ useEffect(() => {
           <Title
             title="Key Features"
             highlightedText=""
-            subtitle="XSynergy operates fully on the Polygon blockchain for low fees and high scalability."
+            subtitle="Built-in features that keep it fast, fair, and fully decentralized."
             className="mb-10 text-center max-w-5xl mx-auto"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
             {/* Card 1 */}
+
             <div
-              className="overflow-hidden relative flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
+              className="overflow-hidden relative flex flex-col items-start justify-start min-h-[320px] p-4 border border-[#303033]  border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
               data-aos="fade-right"
               data-aos-duration="3000"
               data-aos-easing="ease-in-out"
@@ -122,6 +128,14 @@ useEffect(() => {
                   zIndex: 1,
                 }}
               />
+              <div className=" max-w-40   pt-2 pb-4 px-4">
+                <Image
+                  src={smartc}
+                  alt="Card top background"
+
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer opacity-80"
+                />
+              </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
                 Instant Smart Contract Payouts and Referral-Driven Earnings
               </h2>
@@ -130,9 +144,7 @@ useEffect(() => {
               </p>
 
             </div>
-
-            {/* Card 2 */}
-            <div className=" overflow-hidden relative  flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
+            <div className=" overflow-hidden relative   flex flex-col items-start justify-start min-h-[320px] p-4 border border-[#303033]  border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
               data-aos="fade-up"
               data-aos-duration="4000"
               data-aos-easing="ease-in-out"
@@ -151,17 +163,24 @@ useEffect(() => {
                   zIndex: 1,
                 }}
               />
+              <div className=" max-w-44 pt-2 pb-4 px-4">
+                <Image
+                  src={kfx1}
+                  alt="Card top background"
+
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer opacity-80"
+                />
+              </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
-                Immutable, Transparent and Decentralized Value Distribution
+                Global Access 24/7 and Built on the Polygon Network
               </h2>
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                Every transaction is secure, visible on-chain, and follows a fair, decentralized model — no admin interference.
+                Join from anywhere in the world, powered by the speed and low cost of the Polygon blockchain.
               </p>
 
             </div>
 
-            {/* Card 3 */}
-            <div className=" overflow-hidden relative   flex flex-col items-start justify-center min-h-[320px] p-4 border border-[#303033] rounded-2xl border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
+            <div className=" overflow-hidden relative  flex flex-col items-start justify-start min-h-[320px] p-4 border border-[#303033]  border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
               data-aos="fade-left"
               data-aos-duration="3000"
               data-aos-easing="ease-in-out"
@@ -180,14 +199,31 @@ useEffect(() => {
                   zIndex: 1,
                 }}
               />
+              <div className=" max-w-44   pt-2 pb-2 px-4">
+                <Image
+                  src={transparent}
+                  alt="Card top background"
+
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer opacity-80"
+                />
+              </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
-                Global Access 24/7 and Built on the Polygon Network
+                Transparent, Secure and Decentralized Value Distribution
               </h2>
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                Join from anywhere in the world, powered by the speed and affordability of the Polygon blockchain.
+                Every transaction is secure, visible on-chain, and follows a fair, decentralized model — no admin interference.
               </p>
 
             </div>
+
+
+
+
+            {/* Card 2 */}
+
+
+
+
           </div>
         </div>
 

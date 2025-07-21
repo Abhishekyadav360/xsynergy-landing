@@ -7,7 +7,7 @@ const Title = ({ title, highlightedText, subtitle = "", className = "" }) => {
         <span className="block ">{title}</span>
         {highlightedText}
       </h2>
-      {subtitle && <p className="text-lg md:text-xl text-gray-400 mt-2 ">{subtitle}</p>}
+      {subtitle && <p className="text-lg md:text-xl text-gray-300 mt-2 ">{subtitle}</p>}
 
     </div>
   );

@@ -134,7 +134,7 @@ const Banner = () => {
                             Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
                         </p>
 
-                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto  z-30 relative'>
+                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto  z-30 relative '>
                             <Button className=' z-20 relative' variant="primary" target="_blank" href="Comingsoon" >
                                 Login
                             </Button>

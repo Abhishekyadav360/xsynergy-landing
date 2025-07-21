@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import Title from '../Components/Title';
 import GradientCard from '../Components/GradientCard';
 
-import glow1 from '@/Assets/images/worksx3.webp';
-import glow2 from '@/Assets/images/worksx1.webp';
-import glow3 from '@/Assets/images/worksx2.webp';
+import glow1 from '@/Assets/images/wallet.webp';
+import glow2 from '@/Assets/images/grow.webp';
+import glow3 from '@/Assets/images/register.webp';
 // import upperright from "@/Assets/images/raysfr.webp";
 // import Image from 'next/image';
 
@@ -46,23 +46,23 @@ const Works = () => {
   const cardVariants = getCardVariants(isMobile);
 
   return (
-    
+
     <section id="works" className="relative w-full pt-28 pb-28 overflow-y-visible works-sec">
-     
-<div className="top-glow-wrapper">
-  <div className="mask-top">
-    <div className="glow-gradient-top" />
-  </div>
-</div>
-<div className="bottom-glow-wrapper">
-  <div className="mask-bottom">
-    <div className="glow-gradient-bottom" />
-  </div>
-</div>
+
+      <div className="top-glow-wrapper">
+        <div className="mask-top">
+          <div className="glow-gradient-top" />
+        </div>
+      </div>
+      <div className="bottom-glow-wrapper">
+        <div className="mask-bottom">
+          <div className="glow-gradient-bottom" />
+        </div>
+      </div>
 
       <div className="container mx-auto px-4">
-       <div className="flex z-20 relative items-center justify-center mb-2 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-        
+        <div className="flex z-20 relative items-center justify-center mb-2 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
+
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -91,12 +91,12 @@ const Works = () => {
             </svg>
           </div>
 
-     
+
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-            XSynergy
+            Steps
           </p>
 
-        
+
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -128,17 +128,17 @@ const Works = () => {
 
 
 
-<div className=''data-aos="fade-down"
->
-  <Title
-          title="How to get started ?"
-          highlightedText=""
-          subtitle="XSynergy operates fully on the Polygon blockchain for low fees and high scalability."
-          className="mb-10 text-center max-w-5xl mx-auto"
-        />
+        <div className='' data-aos="fade-down"
+        >
+          <Title
+            title="How to get started ?"
+            highlightedText=""
+            subtitle="Just connect your wallet, sign once, and you are ready to go — no KYC, no delays.  "
+            className="mb-10 text-center max-w-5xl mx-auto"
+          />
 
-</div>
-        
+        </div>
+
         {ready && (
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-10 "
@@ -155,13 +155,13 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.7, ease: 'easeOut' }}
-              
+
             >
               <GradientCard
-                title="Connect Your Wallet"
-                description="Link your MetaMask, Trust Wallet, or any supported wallet quickly and securely to get started."
+                title="Create a Wallet"
+                description="Download MetaMask or Trust Wallet on your phone or computer (it’s like your digital bank account)."
                 image={glow1} className=''
-                
+
               />
             </motion.div>
 
@@ -173,11 +173,11 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.8, ease: 'easeOut' }}
-             
+
             >
               <GradientCard
-                title="Register Seamlessly"
-                description="No KYC or approval needed. Just sign a transaction and you're in — fast and hassle-free."
+                title="Add Some USDT"
+                description="Buy or transfer some USDT (Tether) — it’s a dollar-based token you’ll use to join."
                 image={glow2}
                 className=" "
               />
@@ -191,14 +191,27 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.7, ease: 'easeOut' }}
-              
+
             >
               <GradientCard
-                title="Invite & Grow"
-                description="Share your invite link and grow your network effortlessly while earning rewards."
+                title="Connect and Register"
+                description={
+                  <>
+                    Go to{' '}
+                    <a
+                      href="https://xsynergy-landing.netlify.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-400 underline hover:text-green-300 transition"
+                    >
+                      xsynergy-landing.netlify.app
+                    </a>{' '}
+                    → Click “Connect Wallet” → Approve → Done!
+                  </>
+                }
                 image={glow3}
-                className=''
               />
+
             </motion.div>
           </motion.div>
         )}

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from '../Components/Marquee';
+import Title from '../Components/Title';
 
 interface AnimatedLetterProps {
   char: string;
@@ -62,7 +63,7 @@ const About = () => {
   });
 
   const text =
-    'XSynergy is a decentralized ecosystem built on blockchain that enables transparent, automated, and community-driven wealth generation — powered by smart contracts, with zero admin control.';
+    'XSynergy is a decentralized ecosystem built on blockchain that enables transparent, automated, and community-driven wealth generation through smart contracts, with zero admin control.';
   const prefix = 'XSynergy is a decentralized ecosys ';
   const prefixLen = prefix.length;
 
@@ -77,8 +78,8 @@ const About = () => {
              {/* <div id="stars2"></div> */}
         <div className="sticky top-1/2 -translate-y-1/2">
           {/* About Us Badge */}
-          <div className="flex items-center mb-4 mt-12 justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-                            {/* Left Decorative SVG */}
+          <div className="flex items-center mb-4 mt-12 justify-center gap-0 sm:gap-4  b rounded-full px-1 py-[5px] max-w-64 sm:max-w-[600px] w-full mx-auto  overflow-hidden">
+                         
                             <div className="w-[108px] h-[20px]">
                                 <svg
                                     width={108}
@@ -107,12 +108,13 @@ const About = () => {
                                 </svg>
                             </div>
 
-                            {/* Center Text */}
-                            <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
+                         
+                            <h2 className=" text-4xl md:text-6xl font-bold leading-[0.8] text-span-gradient  fr-fnt">
                                 About Us
-                            </p>
+                            </h2>
+                          
 
-                            {/* Right Decorative SVG */}
+                          
                             <div className="w-[108px] h-[20px]">
                                 <svg
                                     width={108}
@@ -143,7 +145,7 @@ const About = () => {
                         </div>
 
           {/* Animated Text */}
-          <p className="mx-auto max-w-5xl flex flex-wrap justify-center text-center leading-none text-3xl sm:text-[52px] font-semibold fr-fnt whitespace-pre-wrap">
+          <p className="mx-auto max-w-5xl flex flex-wrap justify-center text-center leading-none text-3xl sm:text-[48px] font-semibold fr-fnt whitespace-pre-wrap">
             {text.split(' ').map((word, wordIdx) => (
   <span key={wordIdx} className="inline-block mr-[0.4ch]">
     {word.split('').map((char, charIdx) => {
@@ -162,7 +164,7 @@ const About = () => {
   </span>
 ))}
           </p>
-<div className="mt-4 sm:mt-10 flex justify-center items-center">
+<div className="mt-4 sm:mt-12 flex justify-center items-center">
           <Marquee />
 
 </div>

@@ -82,7 +82,7 @@ export default function Slider() {
           </div>
 
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-            Nfts
+            Web3 Assets
           </p>
 
 
@@ -116,9 +116,9 @@ export default function Slider() {
         </div>
 
         <Title
-          title="NFTS"
+          title="XSynergy NFTs"
           highlightedText=""
-          subtitle="Coupled with non-fungible tokens (NFTs)."
+          subtitle="NFTs with real use — unlock rewards, access, and features on-chain."
           className="-mb-10 text-center max-w-5xl mx-auto"
         />
 

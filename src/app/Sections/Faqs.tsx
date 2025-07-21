@@ -8,37 +8,37 @@ import Title from '../Components/Title';
 const services = [
   {
     id: '01',
-    title: ' No Admin Ownership',
-    desc: 'XSynergy is fully autonomous, powered by smart contracts with zero admin control — ensuring fairness and eliminating human error or manipulation.',
-    img: '/gt2.webp',
-    arrow: '→',
+    title: 'No Admin Ownership',
+    desc: 'XSynergy runs on smart contracts with no admin control — fully automatic, fair, and free from human mistakes or Unauthorized changes.',
+    img: '/ecosystem.webp',
+    arrow: '→', 
   },
   {
     id: '02',
-    title: 'Fully On-Chain & Auditable',
+    title: 'Fully On-Chain & Verifiable',
     desc: 'Every action and transaction is permanently recorded on the Polygon blockchain, making the system transparent and easy to verify by anyone.',
-    img: '/gt5.webp',  
+    img: '/abhi2.webp',  
     arrow: '↗',
   },
   {
     id: '03',
-    title: 'Ecosystem-Driven Sustainability',
-    desc: 'The platform is designed for long-term growth, driven by user participation and automated logic instead of centralized funding or management.',
-    img: '/gt1.webp',
+    title: 'Stability through the ecosystem',
+    desc: 'This platform is designed for long-term growth, powered by users and smart automation — not by any central team or funding.',
+    img: '/abhi4.webp',
     arrow: '↗',
   },
   {
     id: '04',
-    title: 'Real-World Utility Tokens',
+    title: 'Real-World Use Tokens',
     desc: 'XSynergy’s tokens are not just digital assets — they’re built for real use within the ecosystem and future real-world applications.',
-    img: '/gt3.webp',
+    img: '/abhi.webp',
     arrow: '↗',
   },
   {
     id: '05',
     title: 'Growing Global Community',
-    desc: 'Join a worldwide network of individuals embracing decentralized finance and building a new model of wealth creation together.',
-    img: '/worksx5.webp',
+    desc: 'Join a global community using decentralized finance to build a new and fair way of creating wealth together.',
+    img: '/ecosystem.webp',
     arrow: '↗',
   },
 ];
@@ -48,7 +48,7 @@ export default function Faqs() {
 
   return (
     <>
-      <section className='mx-auto container py-8 md:py-16 ' >
+      <section className='mx-auto container py-8 md:py-16'>
         <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
         
           <div className="w-[108px] h-[20px]">
@@ -81,7 +81,7 @@ export default function Faqs() {
 
      
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-            XSynergy
+            Advantages
           </p>
 
         
@@ -117,7 +117,7 @@ export default function Faqs() {
       <Title
           title="Why XSynergy?"
           highlightedText=""
-          subtitle="XSynergy operates fully on the Polygon blockchain for low fees and high scalability."
+          subtitle="A fair, automated platform powered by smart contracts — built for users, not admins."
           className="mb-10 text-center max-w-5xl mx-auto "
         />
 </div>
@@ -149,7 +149,7 @@ export default function Faqs() {
                           exit={{ opacity: 0, height: 0, y: -10 }}
                           transition={{ duration: 0.4, ease: 'easeInOut' }}
                         >
-                          <p className="text-md text-gray-400 mt-2 leading-relaxed max-w-2xl">
+                          <p className="text-md text-gray-300 mt-2 leading-relaxed max-w-2xl">
                             {service.desc}
                           </p>
                         </motion.div>
@@ -170,7 +170,7 @@ export default function Faqs() {
           </div>
 
           {/* Right: Image Preview */}
-          <div className="flex-1 hidden lg:flex items-center justify-center relative">
+          <div className="flex-1 hidden lg:flex items-center justify-center relative mix-blend-lighten">
             <AnimatePresence mode="wait">
               {hoveredIndex !== null && (
                 <motion.div
@@ -179,7 +179,7 @@ export default function Faqs() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.2, ease: 'easeInOut' }}
-                  className="relative w-[420px] h-[420px]"
+                  className="relative w-[550px] h-[550px]"
                 >
                   <Image
                     src={services[hoveredIndex].img}
