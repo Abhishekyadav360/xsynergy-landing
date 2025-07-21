@@ -185,7 +185,8 @@ export default function Faqs() {
                     src={services[hoveredIndex].img}
                     alt={services[hoveredIndex].title}
                     fill
-                    className="object-contain rounded-lg "
+                    className="object-contain rounded-lg"
+                    priority
                   />
                 </motion.div>
               )}
