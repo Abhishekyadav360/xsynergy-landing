@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import NextImage from 'next/image'; 
 import Title from '../Components/Title';
 
 const services = [
@@ -45,6 +45,12 @@ const services = [
 
 export default function Faqs() {
   const [hoveredIndex, setHoveredIndex] = useState(0);
+    useEffect(() => {
+    services.forEach(service => {
+      const img = new Image();
+      img.src = service.img;
+    });
+  }, []);
 
   return (
     <>
@@ -181,7 +187,7 @@ export default function Faqs() {
                   transition={{ duration: 0.2, ease: 'easeInOut' }}
                   className="relative w-[550px] h-[550px]"
                 >
-                  <Image
+                  <NextImage
                     src={services[hoveredIndex].img}
                     alt={services[hoveredIndex].title}
                     fill
