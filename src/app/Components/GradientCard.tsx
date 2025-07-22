@@ -52,6 +52,8 @@ export default function GradientCard({
           <Image
             src={image}
             alt={title}
+            height={140}
+            width={140}
             className="w-full h-auto hover:translate-z-10 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
           />
         </div>
