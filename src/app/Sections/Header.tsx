@@ -95,7 +95,7 @@ const Header = () => {
                     <Link href="#features" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
                     <Link href="#works" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
                     <Link href="#nft" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'nft')}>NFTs</Link>
-                    <Link href="#faq" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'faq')}>FAQ</Link>
+                    <Link href="#faq" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'faq')}>FAQs</Link>
                 </nav>
                 <div className="flex items-center gap-4">
                     <div className='bg-black rounded-xl'>
@@ -154,7 +154,7 @@ const Header = () => {
                     <Link href="#features" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
                     <Link href="#works" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
                     <Link href="#nft" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'nft')}>NFTs</Link>
-                    <Link href="#faq" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'faq')}>FAQ</Link>
+                    <Link href="#faq" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'faq')}>FAQs</Link>
                 </nav>
             </div>
         </header>
