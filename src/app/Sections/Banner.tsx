@@ -56,7 +56,7 @@ const Banner = () => {
                     <div className="text-center relative max-w-7xl mx-auto w-full z-30 " data-aos="fade-up">
 
 
-                        <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[370px] w-full mx-auto  overflow-hidden">
+                        <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[400px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}
                             <div className="w-[108px] h-[20px]">
                                 <svg
@@ -88,7 +88,7 @@ const Banner = () => {
 
                             {/* Center Text */}
                             <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)]">
-                                Xsynergy
+                               Made for Web3
                             </p>
 
                             {/* Right Decorative SVG */}
