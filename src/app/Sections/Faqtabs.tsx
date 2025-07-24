@@ -204,7 +204,7 @@ export default function Faqtabs() {
             data-aos="fade-up"
         >
             {/* Background Image */}
-            <div className='fixed top-0 left-0 w-full h-full z-0 sm:z-10'>
+            <div className='fixed top-0 left-0 w-full h-full z-0 '>
                 <Image
                     src={faqbg}
                     alt="Background"
@@ -277,7 +277,7 @@ export default function Faqtabs() {
                             </defs>
                         </svg>
                     </div>
-                    
+
                 </div>
 
                 <Title
