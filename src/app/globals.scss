@@ -113,6 +113,13 @@ h6 {
     background-image: linear-gradient(to top, #010101, transparent 15%);
   }
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 
 .nav-bg {
   background: rgba(74, 160, 226, 0.041);

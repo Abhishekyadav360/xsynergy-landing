@@ -63,8 +63,8 @@ const About = () => {
   });
 
   const text =
-    'XSynergy is a decentralized ecosystem built on blockchain that enables transparent, automated, and community-driven wealth generation through smart contracts, with zero admin control.';
-  const prefix = 'XSynergy is a decentralized ecosys ';
+    'XSYNERGY multiplies rewards over time, helping you earn yield you control — not promises you chase. Your money stays in your wallet, under your rules. Smart contracts don’t lie. People do.';
+  const prefix = 'XSYNERGY multiplies rewards ov ';
   const prefixLen = prefix.length;
 
   return (

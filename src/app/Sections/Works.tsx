@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 import Title from '../Components/Title';
 import GradientCard from '../Components/GradientCard';
 
-import glow1 from '@/Assets/images/wallet.webp';
-import glow2 from '@/Assets/images/usdt.webp';
-import glow3 from '@/Assets/images/register.webp';
+import glow1 from '@/Assets/images/wallet2.webp';
+import glow2 from '@/Assets/images/addfunds1.webp';
+import glow3 from '@/Assets/images/register3.webp';
 // import upperright from "@/Assets/images/raysfr.webp";
 // import Image from 'next/image';
-
 // import MatrixStream from '../Components/DataStreamSvg';
+
 
 const containerVariants = {
   hidden: {},
@@ -48,7 +48,6 @@ const Works = () => {
   return (
 
     <section id="works" className="relative w-full pt-28 pb-28 overflow-y-visible works-sec">
-
       <div className="top-glow-wrapper">
         <div className="mask-top">
           <div className="glow-gradient-top" />
@@ -90,13 +89,9 @@ const Works = () => {
               </defs>
             </svg>
           </div>
-
-
           <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
             Steps
           </p>
-
-
           <div className="w-[108px] h-[20px]">
             <svg
               width={108}
@@ -125,23 +120,19 @@ const Works = () => {
             </svg>
           </div>
         </div>
-
-
-
         <div className='' data-aos="fade-down"
         >
+
           <Title
             title="How to get started ?"
             highlightedText=""
-            subtitle="Just connect your wallet, sign once, and you are ready to go — no KYC, no delays.  "
+            subtitle="Just connect your wallet, sign once, and you are ready to go — no KYC, no delays."
             className="mb-10 text-center max-w-5xl mx-auto"
           />
-
         </div>
-
         {ready && (
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-6 justify-items-center mt-10 "
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-6 justify-items-center mt-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -155,16 +146,13 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.7, ease: 'easeOut' }}
-
             >
               <GradientCard
-                title="Create a Wallet"
-                description="Download MetaMask or Trust Wallet on your phone or computer (it’s like your digital bank account)."
+                title="1. Connect your Wallet"
+                description="Connect your MetaMask or Trust Wallet to securely access and begin your journey with the XSYNERGY platform."
                 image={glow1} className=''
-
               />
             </motion.div>
-
             <motion.div
               variants={{
                 hidden: cardVariants.hiddenBottom,
@@ -173,16 +161,14 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.8, ease: 'easeOut' }}
-
             >
               <GradientCard
-                title="Add Some USDT"
-                description="Buy or transfer some USDT (Tether) — it’s a dollar-based token you’ll use to join."
+                title="2. Add Funds"
+                description="Top up your account using USDT or USDC. You can transfer from an exchange or buy directly in your wallet."
                 image={glow2}
                 className=" "
               />
             </motion.div>
-
             <motion.div
               variants={{
                 hidden: cardVariants.hiddenRight,
@@ -191,27 +177,25 @@ const Works = () => {
               initial="hidden"
               whileInView="show"
               transition={{ duration: 0.7, ease: 'easeOut' }}
-
             >
               <GradientCard
-                title="Connect and Register"
+                title="3. Register"
                 description={
                   <>
                     Go to{' '}
                     <a
-                      href="https://xsynergy-landing.netlify.app"
+                      href="https://xsynergy-dashboard.netlify.app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-400 underline hover:text-green-300 transition"
                     >
-                      xsynergy-landing.netlify.app
+                      xsynergy-dashboard.netlify.app
                     </a>{' '}
-                    → Click “Connect Wallet” → Approve → Done!
+                    → Connect Wallet → Approve → Click “Register” → Approve.
                   </>
                 }
                 image={glow3}
               />
-
             </motion.div>
           </motion.div>
         )}

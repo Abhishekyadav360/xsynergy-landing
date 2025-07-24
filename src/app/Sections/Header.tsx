@@ -91,10 +91,26 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav className="hidden md:flex space-x-6 p-2 rounded-full backdrop-blur-sm nav-bg">
-                    <Link href="#about" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'about')}>About</Link>
-                    <Link href="#features" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
-                    <Link href="#works" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
-                    <Link href="#nft" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'nft')}>NFTs</Link>
+                    {/* <Link href="#about" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'about')}>XSYNERGY Plan</Link> */}
+
+                    <a
+                        href="/whitepaper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300"
+                    >
+                        Whitepaper
+                    </a>
+
+                    <a
+                        href="/whitepaper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300"
+                    >
+                        Earn
+                    </a>
+
                     <Link href="#faq" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'faq')}>FAQs</Link>
                 </nav>
                 <div className="flex items-center gap-4">
@@ -150,10 +166,26 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav className="mt-12 space-y-4 text-white/90 text-3xl fr-fnt">
-                    <Link href="#about" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'about')}>About</Link>
-                    <Link href="#features" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'features')}>Features</Link>
-                    <Link href="#works" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'works')}>Works</Link>
-                    <Link href="#nft" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'nft')}>NFTs</Link>
+                    {/* <Link href="#about" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'about')}>XSYNERGY Plan</Link> */}
+
+                    <a
+                        href="/whitepaper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2"
+                    >
+                        Whitepaper
+                    </a>
+
+                    <a
+                        href="/whitepaper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2"
+                    >
+                        Earn
+                    </a>
+
                     <Link href="#faq" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'faq')}>FAQs</Link>
                 </nav>
             </div>

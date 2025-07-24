@@ -103,7 +103,7 @@ export default function Faqs() {
           <Title
             title="Why XSynergy?"
             highlightedText=""
-            subtitle="A fair, automated platform powered by smart contracts — built for users, not admins."
+            subtitle="Transparent. Next-gen. Fully automated."
             className="mb-10 text-center max-w-5xl mx-auto "
           />
         </div>

@@ -88,7 +88,7 @@ const Banner = () => {
 
                             {/* Center Text */}
                             <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)]">
-                               Made for Web3
+                                Made for Web3
                             </p>
 
                             {/* Right Decorative SVG */}
@@ -131,7 +131,9 @@ const Banner = () => {
                         </h1>
 
                         <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
-                            Empowering individuals with real ownership and automated rewards — powered by transparent smart contracts on the Polygon blockchain.
+                            XSYNERGY is the world’s first
+                            platform backed by a Solana-based reserve, built on code,
+                            designed for freedom, and owned by the people
                         </p>
 
                         <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto  z-30 relative '>
