@@ -19,7 +19,6 @@ const slides = [
   { id: 13, src: '/video/13.webm' },
   { id: 14, src: '/video/14.webm' },
   { id: 15, src: '/video/15.webm' },
-
 ];
 
 export default function Slider() {
