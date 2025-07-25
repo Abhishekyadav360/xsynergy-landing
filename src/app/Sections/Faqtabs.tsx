@@ -354,7 +354,7 @@ export default function Faqtabs() {
                         </div>
                     )}
                 </div>
-                {chat.length > 5 && !typing && (
+                {chat.length > 8 && !typing && (
                     <div className="text-center mt-6">
                         <button
                             onClick={() => {
