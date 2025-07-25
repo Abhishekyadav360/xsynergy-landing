@@ -47,7 +47,7 @@ const Works = () => {
 
   return (
 
-    <section id="works" className="relative w-full pt-28 pb-28 overflow-y-visible works-sec">
+    <section id="works" className="relative w-full pt-28 pb-28 overflow-hidden works-sec">
       <div className="top-glow-wrapper">
         <div className="mask-top">
           <div className="glow-gradient-top" />
@@ -132,7 +132,7 @@ const Works = () => {
         </div>
         {ready && (
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-6 justify-items-center mt-10"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-6 justify-center items-center mt-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"

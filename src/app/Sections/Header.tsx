@@ -77,7 +77,7 @@ const Header = () => {
     }
 
     return (
-        <header className="fixed w-full px-2 sm:px-4 2  xl:px-8 bg-transparent z-50 text-white">
+        <header className="fixed w-full px-2 sm:px-4 2  xl:px-8 bg-transparent z-50 text-white ">
             <div className="mx-auto flex items-center justify-between py-2 sm:py-3 mt-4 md:mt-0 res-navbg" data-aos="fade-down">
                 <div className="text-base sm:text-2xl font-semibold">
                     <Link className="items-center gap-1 sm:gap-2" href="/">

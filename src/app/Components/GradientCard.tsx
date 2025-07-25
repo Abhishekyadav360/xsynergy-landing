@@ -79,6 +79,6 @@ export default function GradientCard({
       {cardContent}
     </Link>
   ) : (
-    <div className={`relative w-full max-w-sm h-full ${className}`}>{cardContent}</div>
+    <div className={`relative w-full max-w-sm h-full mx-auto ${className}`}>{cardContent}</div>
   );
 }
