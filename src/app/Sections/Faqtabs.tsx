@@ -359,7 +359,7 @@ export default function Faqtabs() {
                         <button
                             onClick={() => {
                                 if (showAll) {
-                                    setVisibleCount(5);
+                                    setVisibleCount(8);
                                     setShowAll(false);
                                 } else {
                                     setVisibleCount(chat.length);
