@@ -4,16 +4,22 @@ import { motion } from 'framer-motion';
 import Title from '../Components/Title';
 
 const slides = [
-  { id: 1, src: '/video/15.mp4' },
-  { id: 2, src: '/video/15.mp4' },
-  { id: 3, src: '/video/15.mp4' },
-  { id: 4, src: '/video/15.mp4' },
-  { id: 5, src: '/video/15.mp4' },
-  { id: 6, src: '/video/15.mp4' },
-  { id: 7, src: '/video/15.mp4' },
-  { id: 8, src: '/video/15.mp4' },
-  { id: 9, src: '/video/15.mp4' },
-  { id: 10, src: '/video/15.mp4' },
+  { id: 1, src: '/video/1.webm' },
+  { id: 2, src: '/video/2.webm' },
+  { id: 3, src: '/video/3.webm' },
+  { id: 4, src: '/video/4.webm' },
+  { id: 5, src: '/video/5.webm' },
+  { id: 6, src: '/video/6.webm' },
+  { id: 7, src: '/video/7.webm' },
+  { id: 8, src: '/video/8.webm' },
+  { id: 9, src: '/video/9.webm' },
+  { id: 10, src: '/video/10.webm' },
+  { id: 11, src: '/video/11.webm' },
+  { id: 12, src: '/video/12.webm' },
+  { id: 13, src: '/video/13.webm' },
+  { id: 14, src: '/video/14.webm' },
+  { id: 15, src: '/video/15.webm' },
+
 ];
 
 export default function Slider() {
