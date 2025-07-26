@@ -99,7 +99,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className='px-4'>
+        <div className='px-4' data-aos='fade-up'>
           <Title
             title="Why XSynergy?"
             highlightedText=""

@@ -23,6 +23,17 @@ const Tokenomics = () => {
 
     return (
         <section id="tokenomics" className="relative overflow-hidden py-12 md:py-20 ">
+              {/* <div className='absolute top-0 left-0 w-full h-full  '>
+ <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className=" w-full h-full -z-10 object-cover object-center opacity-20 ">
+                        <source src='/video/tkn.mp4' type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+              </div> */}
             <div className="max-w-[1400px] mx-auto px-4 relative" data-aos="fade-up">
 
                 <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">

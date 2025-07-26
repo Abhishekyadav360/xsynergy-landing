@@ -125,7 +125,7 @@ export default function Slider() {
           highlightedText=""
           subtitle="NFTs with real use — unlock rewards, access, and features on-chain."
           className="-mb-10 text-center max-w-5xl mx-auto  px-4"
-        />
+       data-aos='fade-up' />
 
         <div className="relative w-full   flex items-center justify-center overflow-hidden px-4">
 
