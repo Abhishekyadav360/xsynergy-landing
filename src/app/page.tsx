@@ -17,6 +17,7 @@ import Joinnow from "./Sections/Joinnow";
 import Faqs from "./Sections/Faqs";
 import KeyFeatures from "./Sections/KeyFeatures";
 import Faqtabs from './Sections/Faqtabs';
+import Tokenomics from './Sections/Tokenomics';
 
 
 
@@ -30,6 +31,7 @@ export default function Home() {
       <KeyFeatures />
       <Works />
       <Faqs />
+      <Tokenomics />
       <Slider />
       <Joinnow />
       {/* <Faq /> */}

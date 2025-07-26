@@ -48,7 +48,7 @@ export default function GradientCard({
         }}
       >
         
-        <div className="max-w-[140px] mx-auto pt-5 pb-4 px-4">
+        <div className=" max-w-32 sm:max-w-[140px] mx-auto pt-5 pb-4 px-4">
           <Image
             src={image}
             alt={title}
