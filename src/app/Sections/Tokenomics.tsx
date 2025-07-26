@@ -112,7 +112,7 @@ const Tokenomics = () => {
                     <Image
                         src={tokenomics}
                         alt="Tokenomics Chart"
-                        className="w-full h-auto mx-auto animate-up-down " data-aos='fadeup'
+                        className="w-full h-auto mx-auto animate-up-down " data-aos='fade-up'
                     />
 
                     {/* Top Left */}
@@ -224,7 +224,7 @@ const Tokenomics = () => {
                 </div>
 
                 {/* -------- Mobile Layout -------- */}
-                <div className="lg:hidden flex flex-col items-center gap-4" data-aos='fadeup'>
+                <div className="lg:hidden flex flex-col items-center gap-4" data-aos='fade-up'>
                     {/* Top Boxes */}
                     <div className="flex flex-col gap-10 w-full items-center">
                         <div className="w-full max-w-[300px] h-[160px] bg-[url('/arbi-scan-border2.webp')] bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center px-2  text-[#6bffa4] drop-shadow-md">
