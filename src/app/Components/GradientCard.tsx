@@ -29,7 +29,7 @@ export default function GradientCard({
         style={{
           clipPath: polygon,
           WebkitClipPath: polygon,
-          backgroundColor: '#254a23',
+          backgroundColor: '#60e16e',
           filter: 'drop-shadow(0 0 2px #254a23) drop-shadow(0 0 4px #254a23)',
           transform: 'scale(1.01)',
         }}

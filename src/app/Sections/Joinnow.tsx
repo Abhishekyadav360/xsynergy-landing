@@ -49,7 +49,7 @@ const Joinnow = () => {
                         <h2 className="font-bold text-3xl md:text-6xl text-white/90  !leading-none text-center z-10 max-w-4xl mx-auto" >The future of income is <span className='text-span-gradient'> decentralized</span>  — and you are early.</h2>
                         <p className="text-md md:text-lg text-white  leading-tight mb-5 mt-2 text-center z-10 mx-auto"> Ready to be part of the change?
                             Click below and take the first step.</p>
-                        <div className='flex items-center justify-center max-w-40 mx-auto bg-black z-10 rounded-xl'>
+                        <div className='flex items-center justify-center max-w-[300px] mx-auto bg-black z-10 rounded-xl'>
                             <Button variant="primary" href='/Comingsoon'>
                                 Join Now
                             </Button>

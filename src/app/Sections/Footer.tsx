@@ -7,7 +7,7 @@ import facebook from '@/Assets/images/social/facebook.webp'
 import instagram from '@/Assets/images/social/instagram.webp'
 import telegram from '@/Assets/images/social/telegram.webp'
 import youtube from '@/Assets/images/social/youtube.webp'
-import logo from '@/Assets/images/favicon1.webp';   
+import logo from '@/Assets/images/xsynergylogo.webp';   
 import GridGlow from '../Components/GridGlow';
 
 
@@ -25,7 +25,7 @@ const Footer = () => {
                 </h1>
             </div> */}
                 <div className="">
-                            <Image src={logo} alt='logo' width={100} height={100} className='w-full h-auto max-w-12 mb-4 mx-auto  transition-transform duration-300 ease-in-out' />
+                            <Image src={logo} alt='logo' width={100} height={100} className='w-full h-auto max-w-20 mb-4 mx-auto  transition-transform duration-300 ease-in-out' />
 
                     <div className="text-center mt-2">
                         <p className='fr-fnt text-xl'>&copy; {currentYear} XSynergy. All rights reserved.</p>

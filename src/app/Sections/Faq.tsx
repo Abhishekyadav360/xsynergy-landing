@@ -53,7 +53,7 @@ const rawChat = [
 
 export default function ChatWithFancyAnimations() {
   const [chat, setChat] = useState([]);
-  const [typing, setTyping] = useState(false);
+  // const [typing, setTyping] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -64,10 +64,10 @@ export default function ChatWithFancyAnimations() {
 
           const showNext = () => {
             if (i < rawChat.length) {
-              setTyping(true);
+              // setTyping(true);
               setTimeout(() => {
                 setChat((prev) => [...prev, rawChat[i]]);
-                setTyping(false);
+                // setTyping(false);
                 i++;
                 setTimeout(showNext, 1200);
               }, 600);
@@ -231,13 +231,13 @@ export default function ChatWithFancyAnimations() {
             </motion.div>
           ))}
 
-          {typing && (
+          {/* {typing && (
             <div className="flex items-center gap-2 text-green-400 text-sm font-mono animate-pulse">
               Typing<span className="dot-flash">.</span>
               <span className="dot-flash delay-100">.</span>
               <span className="dot-flash delay-200">.</span>
             </div>
-          )}
+          )} */}
         </div>
 
       </div>

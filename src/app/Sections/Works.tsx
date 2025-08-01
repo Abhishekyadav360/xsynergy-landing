@@ -163,7 +163,7 @@ const Works = () => {
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               <GradientCard
-                title="2. Add Funds"
+                title="2. Add Funds +"
                 description="Top up your account using USDT or USDC. You can transfer from an exchange or buy directly in your wallet."
                 image={glow2}
                 className=" "

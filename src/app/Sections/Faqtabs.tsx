@@ -6,7 +6,6 @@ import Image from "next/image";
 import faqbg from "@/Assets/images/footer.webp";
 import Title from "../Components/Title";
 
-// ✅ Your tab-wise FAQ data (partial example – add full chat below)
 const faqTabs = [
     {
         title: "Onboarding & General Questions",
@@ -134,15 +133,22 @@ const faqTabs = [
         ]
     }
 ];
-
+const getTabBaseColor = (index) => {
+  const colors = [
+    'bg-[#7cff98] text-black',
+    'bg-[#98d7ff]  text-black',
+    'bg-[#ffa7f9] text-black',
+    'bg-[#ffe38c] text-black',
+    'bg-[#ffb58c] text-black'
+  ];
+  return colors[index] || 'bg-gray-500 text-white';
+};
 
 export default function Faqtabs() {
     const [activeTab, setActiveTab] = useState(0);
     const [chat, setChat] = useState([]);
-    const [typing, setTyping] = useState(false);
     const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
     const sectionRef = useRef(null);
-    const timeoutRef = useRef(null);
     const [visibleCount, setVisibleCount] = useState(8);
     const [showAll, setShowAll] = useState(false);
 
@@ -150,7 +156,7 @@ export default function Faqtabs() {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting && !hasAnimatedOnce) {
                 setHasAnimatedOnce(true);
-                playChatSequence(faqTabs[0].chat);
+                setChat(faqTabs[0].chat);
             }
         }, { threshold: 0.3 });
 
@@ -158,42 +164,11 @@ export default function Faqtabs() {
         return () => observer.disconnect();
     }, [hasAnimatedOnce]);
 
-    const playChatSequence = (chatData) => {
-        setChat([]);
-        let i = 0;
-
-        const next = () => {
-            if (i < chatData.length) {
-                setTyping(true);
-                timeoutRef.current = setTimeout(() => {
-                    setChat((prev) => [...prev, chatData[i]]);
-                    setTyping(false);
-                    i++;
-                    timeoutRef.current = setTimeout(next, 1200);
-                }, 600);
-            }
-        };
-
-        next();
-    };
-
     const handleTabClick = (index) => {
         setActiveTab(index);
         setVisibleCount(8);
         setShowAll(false);
-
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-            timeoutRef.current = null;
-        }
-
-        if (index === 0 && !hasAnimatedOnce) {
-            playChatSequence(faqTabs[0].chat);
-            setHasAnimatedOnce(true);
-        } else {
-            setTyping(false);
-            setChat(faqTabs[index].chat);
-        }
+        setChat(faqTabs[index].chat);
     };
 
     return (
@@ -203,7 +178,6 @@ export default function Faqtabs() {
             className="bg-black text-white px-4 flex items-center justify-center relative pt-8 md:pt-10 pb-16"
             data-aos="fade-up"
         >
-            {/* Background Image */}
             <div className='fixed top-0 left-0 w-full h-full z-0 '>
                 <Image
                     src={faqbg}
@@ -215,20 +189,11 @@ export default function Faqtabs() {
 
             <div className="mx-auto w-full max-w-3xl">
                 <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-
                     <div className="w-[108px] h-[20px]">
-                        <svg
-                            width={108}
-                            height={20}
-                            viewBox="0 0 108 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
-                                stroke="url(#left-gradient)"
-                                strokeWidth={1}
-                            />
+                        {/* left SVG */}
+                        <svg width={108} height={20} viewBox="0 0 108 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
+                                stroke="url(#left-gradient)" strokeWidth={1} />
                             <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
                             <defs>
                                 <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
@@ -244,25 +209,15 @@ export default function Faqtabs() {
                         </svg>
                     </div>
 
-
                     <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
                         FAQs
                     </p>
 
-
                     <div className="w-[108px] h-[20px]">
-                        <svg
-                            width={108}
-                            height={20}
-                            viewBox="0 0 108 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
-                                stroke="url(#right-gradient)"
-                                strokeWidth={1}
-                            />
+                        {/* right SVG */}
+                        <svg width={108} height={20} viewBox="0 0 108 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
+                                stroke="url(#right-gradient)" strokeWidth={1} />
                             <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
                             <defs>
                                 <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
@@ -277,7 +232,6 @@ export default function Faqtabs() {
                             </defs>
                         </svg>
                     </div>
-
                 </div>
 
                 <Title
@@ -286,28 +240,30 @@ export default function Faqtabs() {
                     subtitle=""
                     className="mb-6 text-center max-w-2xl mx-auto"
                 />
+
                 {/* Tabs */}
-
-
-
                 <div className="mb-6 relative z-20 overflow-x-auto lg:overflow-visible scrollbar-hide">
                     <div className="flex gap-3 min-w-max px-2 lg:flex-wrap lg:min-w-0 justify-center">
-                        {faqTabs.map((tab, i) => (
-                            <button
-                                key={i}
-                                onClick={() => handleTabClick(i)}
-                                className={`px-4 py-2 rounded-lg text-md font-medium whitespace-nowrap ${activeTab === i
-                                    ? 'bg-green-400/80 text-black'
-                                    : 'border-[#baf8cc2f] border-[1px] bg-[#0d0d0d] text-white'
-                                    }`}
-                            >
-                                {tab.title}
-                            </button>
-                        ))}
+{faqTabs.map((tab, i) => (
+  <button
+    key={i}
+    onClick={() => handleTabClick(i)}
+    className={`rounded-lg text-md font-medium whitespace-nowrap p-[2px] ${getTabBaseColor(i)}`}
+  >
+    <div className={`
+      px-4 py-2 rounded-md
+      ${activeTab === i ? 'border-2 border-black' : ''}
+      transition-all duration-200
+    `}>
+      {tab.title}
+    </div>
+  </button>
+))}
+
                     </div>
                 </div>
 
-                {/* Chat Animation */}
+                {/* Chat List */}
                 <div className="space-y-4 mt-12">
                     {chat.slice(0, visibleCount).map((item, i) => {
                         if (!item) return null;
@@ -343,18 +299,9 @@ export default function Faqtabs() {
                             </motion.div>
                         );
                     })}
-
-
-
-                    {typing && (
-                        <div className="flex items-center gap-2 text-green-400 text-sm font-mono animate-pulse">
-                            Typing<span className="dot-flash">.</span>
-                            <span className="dot-flash delay-100">.</span>
-                            <span className="dot-flash delay-200">.</span>
-                        </div>
-                    )}
                 </div>
-                {chat.length > 8 && !typing && (
+
+                {chat.length > 8 && (
                     <div className="text-center mt-6">
                         <button
                             onClick={() => {
@@ -373,23 +320,6 @@ export default function Faqtabs() {
                     </div>
                 )}
             </div>
-
-
-            <style jsx>{`
-        .dot-flash {
-          animation: flash 1s infinite;
-        }
-        .delay-100 {
-          animation-delay: 0.2s;
-        }
-        .delay-200 {
-          animation-delay: 0.4s;
-        }
-        @keyframes flash {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 1; }
-        }
-      `}</style>
         </div>
     );
 }

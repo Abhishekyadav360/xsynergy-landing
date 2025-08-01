@@ -18,7 +18,7 @@ const services = [
     desc: 'Every action and transaction is permanently recorded on the Polygon blockchain, making the system transparent and easy to verify by anyone.',
     img: '/whyx6.webp',
     arrow: '↗',
-  },
+  },  
   {
     id: '03',
     title: 'Stability through the ecosystem',
