@@ -5,10 +5,9 @@ import 'aos/dist/aos.css';
 import Wave from './Wave';
 import Title from '../Components/Title';
 import Image from 'next/image';
-import kfx1 from '@/Assets/images/modular-architecture.webp'
-import smartc from '@/Assets/images/smartcontract.webp'
-import transparent from '@/Assets/images/transparent.webp'
-
+import kfx1 from '@/Assets/images/globalnew.webp'
+import smartc from '@/Assets/images/cyber.webp'
+import transparent from '@/Assets/images/colorsmtr2.webp'
 
 const KeyFeatures = () => {
   useEffect(() => {
@@ -128,12 +127,12 @@ const KeyFeatures = () => {
                   zIndex: 1,
                 }}
               />
-              <div className=" max-w-40   pt-2 pb-4 px-4">
+              <div className=" max-w-36   pt-2 pb-4 px-4">
                 <Image
                   src={smartc}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer opacity-80"
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[330deg] "
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
@@ -163,12 +162,12 @@ const KeyFeatures = () => {
                   zIndex: 1,
                 }}
               />
-              <div className=" max-w-44 pt-2 pb-4 px-4">
+              <div className=" max-w-40 pt-2 pb-4 px-4">
                 <Image
                   src={kfx1}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer opacity-80"
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[330deg]"
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
@@ -204,7 +203,7 @@ const KeyFeatures = () => {
                   src={transparent}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer opacity-80"
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[335deg]"
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
