@@ -6,7 +6,7 @@ import Title from '../Components/Title';
 import GradientCard from '../Components/GradientCard';
 
 import glow1 from '@/Assets/images/wallet2.webp';
-import glow2 from '@/Assets/images/addfunds1.webp';
+import glow2 from '@/Assets/images/earnnew.webp';
 import glow3 from '@/Assets/images/newregister.webp';
 // import upperright from "@/Assets/images/raysfr.webp";
 // import Image from 'next/image';
