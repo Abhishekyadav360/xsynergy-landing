@@ -23,7 +23,7 @@ const Tokenomics = () => {
 
     return (
         <section id="tokenomics" className="relative overflow-hidden py-12 md:py-20 ">
-              {/* <div className='absolute top-0 left-0 w-full h-full  '>
+            {/* <div className='absolute top-0 left-0 w-full h-full  '>
  <video
                         autoPlay
                         loop
@@ -35,71 +35,69 @@ const Tokenomics = () => {
                     </video>
               </div> */}
             <div className="max-w-[1400px] mx-auto px-4 relative" data-aos="fade-up">
-
                 <div className="flex items-center justify-center mb-4 gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[350px] w-full mx-auto  overflow-hidden">
-
-            <div className="w-[108px] h-[20px]">
-              <svg
-                width={108}
-                height={20}
-                viewBox="0 0 108 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
-                  stroke="url(#left-gradient)"
-                  strokeWidth={1}
-                />
-                <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
-                <defs>
-                  <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#A0A0A0" stopOpacity="0.1" />
-                    <stop offset="0.5" stopColor="#D1D5DB" />
-                    <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
-                  </linearGradient>
-                  <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
-                    <stop stopColor="#E5E7EB" />
-                    <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-              </svg>
-            </div>
-
-
-            <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
-              Tokenomics
-            </p>
+                    <div className="w-[108px] h-[20px]">
+                        <svg
+                            width={108}
+                            height={20}
+                            viewBox="0 0 108 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
+                                stroke="url(#left-gradient)"
+                                strokeWidth={1}
+                            />
+                            <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
+                            <defs>
+                                <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                                    <stop offset="0.5" stopColor="#D1D5DB" />
+                                    <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                                </linearGradient>
+                                <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
+                                    <stop stopColor="#E5E7EB" />
+                                    <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
 
 
-            <div className="w-[108px] h-[20px]">
-              <svg
-                width={108}
-                height={20}
-                viewBox="0 0 108 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
-                  stroke="url(#right-gradient)"
-                  strokeWidth={1}
-                />
-                <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
-                <defs>
-                  <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#A0A0A0" stopOpacity="0.1" />
-                    <stop offset="0.5" stopColor="#D1D5DB" />
-                    <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
-                  </linearGradient>
-                  <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
-                    <stop stopColor="#E5E7EB" />
-                    <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
+                    <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)] fr-fnt">
+                        Tokenomics
+                    </p>
+
+
+                    <div className="w-[108px] h-[20px]">
+                        <svg
+                            width={108}
+                            height={20}
+                            viewBox="0 0 108 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
+                                stroke="url(#right-gradient)"
+                                strokeWidth={1}
+                            />
+                            <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
+                            <defs>
+                                <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                                    <stop offset="0.5" stopColor="#D1D5DB" />
+                                    <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                                </linearGradient>
+                                <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
+                                    <stop stopColor="#E5E7EB" />
+                                    <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
                 <Title
                     title="Token Allocation Overview"
                     highlightedText=""
@@ -207,7 +205,7 @@ const Tokenomics = () => {
                                     title="Copy Address"
                                     className="hover:text-white transition"
                                 >
-                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1z"/><path d="M20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12z"/></svg>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1z" /><path d="M20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12z" /></svg>
                                 </button>
                                 <a
                                     href={`https://arbiscan.io/address/${contractAddress}`}
@@ -216,7 +214,7 @@ const Tokenomics = () => {
                                     title="View on Arbiscan"
                                     className="hover:text-white transition"
                                 >
-                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3l-1.4 1.4L17.2 9H10v2h7.2l-4.6 4.6L14 17l8-8z"/><path d="M5 5h4V3H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-4h-2v4H5V5z"/></svg>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3l-1.4 1.4L17.2 9H10v2h7.2l-4.6 4.6L14 17l8-8z" /><path d="M5 5h4V3H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-4h-2v4H5V5z" /></svg>
                                 </a>
                             </div>
                         </div>
@@ -292,7 +290,7 @@ const Tokenomics = () => {
                                     title="Copy Address"
                                     className="hover:text-white transition text-green-400"
                                 >
-                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1z"/><path d="M20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12z"/></svg>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1z" /><path d="M20 5H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h12z" /></svg>
                                 </button>
                                 <a
                                     href={`https://arbiscan.io/address/${contractAddress}`}
@@ -301,7 +299,7 @@ const Tokenomics = () => {
                                     title="View on Arbiscan"
                                     className="hover:text-white transition"
                                 >
-                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3l-1.4 1.4L17.2 9H10v2h7.2l-4.6 4.6L14 17l8-8z"/><path d="M5 5h4V3H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-4h-2v4H5V5z"/></svg>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3l-1.4 1.4L17.2 9H10v2h7.2l-4.6 4.6L14 17l8-8z" /><path d="M5 5h4V3H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-4h-2v4H5V5z" /></svg>
                                 </a>
                             </div>
                         </div>
