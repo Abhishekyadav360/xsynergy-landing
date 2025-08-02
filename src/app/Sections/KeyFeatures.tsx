@@ -126,7 +126,7 @@ const KeyFeatures = () => {
                   width: '170px',
                   zIndex: 1,
                 }}
-              />
+              />  
               <div className=" max-w-36   pt-2 pb-4 px-4">
                 <Image
                   src={smartc}
@@ -141,7 +141,6 @@ const KeyFeatures = () => {
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
                 Get rewarded automatically and instantly through referral-based smart contracts that never miss a payout.
               </p>
-
             </div>
             <div className=" overflow-hidden relative   flex flex-col items-start justify-start min-h-[320px] p-4 border border-[#303033]  border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
               data-aos="fade-up"
