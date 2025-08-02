@@ -132,7 +132,7 @@ const KeyFeatures = () => {
                   src={smartc}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer "
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[350deg]"
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
