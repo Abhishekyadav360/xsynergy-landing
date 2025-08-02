@@ -5,9 +5,9 @@ import 'aos/dist/aos.css';
 import Wave from './Wave';
 import Title from '../Components/Title';
 import Image from 'next/image';
-import kfx1 from '@/Assets/images/globalnew.webp'
-import smartc from '@/Assets/images/cyber.webp'
-import transparent from '@/Assets/images/colorsmtr2.webp'
+import kfx1 from '@/Assets/images/glbl.webp'
+import smartc from '@/Assets/images/smartc.webp'
+import transparent from '@/Assets/images/ts.webp'
 
 const KeyFeatures = () => {
   useEffect(() => {
@@ -132,7 +132,7 @@ const KeyFeatures = () => {
                   src={smartc}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[330deg] "
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer "
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
@@ -162,16 +162,16 @@ const KeyFeatures = () => {
                   zIndex: 1,
                 }}
               />
-              <div className=" max-w-40 pt-2 pb-4 px-4">
+              <div className=" max-w-32 pt-2 pb-4 px-4">
                 <Image
                   src={kfx1}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[330deg]"
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer "
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
-                Global Access 24/7 and Built on the Polygon Network
+                Global Access 24/7 and Securely Built on the Polygon Network
               </h2>
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
                 Join from anywhere in the world, powered by the speed and low cost of the Polygon blockchain.
@@ -198,12 +198,12 @@ const KeyFeatures = () => {
                   zIndex: 1,
                 }}
               />
-              <div className=" max-w-44   pt-2 pb-2 px-4">
+              <div className=" max-w-[136px]   pt-2 pb-2 px-4">
                 <Image
                   src={transparent}
                   alt="Card top background"
 
-                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer hue-rotate-[335deg]"
+                  className=" w-full h-auto hover:translate-y-[-10px] duration-300 ease-in-out cursor-pointer "
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
