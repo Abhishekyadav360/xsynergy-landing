@@ -23,6 +23,7 @@ const slides = [
 
 export default function Slider() {
   const [index, setIndex] = useState(0);
+  
 
   const next = () => setIndex((prev) => (prev + 1) % slides.length);
   const prev = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
