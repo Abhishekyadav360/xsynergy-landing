@@ -10,138 +10,138 @@ const faqTabs = [
     {
         title: "Onboarding & General Questions",
         chat: [
-            { type: "user", message: "What is XSYNERGY in simple terms?", avatar: "/userx.webp" },
+            { type: "user", message: "What is XSYNERGY in simple terms?", avatar: "/userx1.webp" },
             { type: "bot", message: "A decentralized platform where anyone can earn crypto through a smart matrix system.", avatar: "/logo.ico" },
-            { type: "user", message: "Who can join XSYNERGY?", avatar: "/userx.webp" },
+            { type: "user", message: "Who can join XSYNERGY?", avatar: "/userx1.webp" },
             { type: "bot", message: "Anyone with a crypto wallet and internet access.", avatar: "/logo.ico" },
-            { type: "user", message: "Is XSYNERGY beginner-friendly?", avatar: "/userx.webp" },
+            { type: "user", message: "Is XSYNERGY beginner-friendly?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, it's made for both beginners and pros.", avatar: "/logo.ico" },
-            { type: "user", message: "How do I get started?", avatar: "/userx.webp" },
+            { type: "user", message: "How do I get started?", avatar: "/userx1.webp" },
             { type: "bot", message: "Connect your wallet, choose a level, and activate your position.", avatar: "/logo.ico" },
-            { type: "user", message: "What do I need to register?", avatar: "/userx.webp" },
+            { type: "user", message: "What do I need to register?", avatar: "/userx1.webp" },
             { type: "bot", message: "Just a wallet and a few dollars in crypto.", avatar: "/logo.ico" },
-            { type: "user", message: "Is it free to join?", avatar: "/userx.webp" },
+            { type: "user", message: "Is it free to join?", avatar: "/userx1.webp" },
             { type: "bot", message: "No, but the starting cost is low and affordable.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I earn without referring anyone?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I earn without referring anyone?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, thanks to system spillover and matrix upgrades, staking and token value.", avatar: "/logo.ico" },
-            { type: "user", message: "Is there an app or is it browser-based?", avatar: "/userx.webp" },
+            { type: "user", message: "Is there an app or is it browser-based?", avatar: "/userx1.webp" },
             { type: "bot", message: "It works directly in your browser — no app needed.", avatar: "/logo.ico" },
-            { type: "user", message: "Do I need to be tech-savvy to use it?", avatar: "/userx.webp" },
+            { type: "user", message: "Do I need to be tech-savvy to use it?", avatar: "/userx1.webp" },
             { type: "bot", message: "No, everything is designed to be simple.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I use my phone to access the platform?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I use my phone to access the platform?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, it works on all smartphones.", avatar: "/logo.ico" }
         ]
     },
     {
         title: "Blockchain & Wallet Questions",
         chat: [
-            { type: "user", message: "What blockchain is XSYNERGY built on?", avatar: "/userx.webp" },
+            { type: "user", message: "What blockchain is XSYNERGY built on?", avatar: "/userx1.webp" },
             { type: "bot", message: "It's built on Polygon.", avatar: "/logo.ico" },
-            { type: "user", message: "What crypto wallet do I need?", avatar: "/userx.webp" },
+            { type: "user", message: "What crypto wallet do I need?", avatar: "/userx1.webp" },
             { type: "bot", message: "Any wallet that supports the network — like Trust Wallet or MetaMask.", avatar: "/logo.ico" },
-            { type: "user", message: "How do I connect my wallet?", avatar: "/userx.webp" },
+            { type: "user", message: "How do I connect my wallet?", avatar: "/userx1.webp" },
             { type: "bot", message: "Click \"Connect Wallet\" on the homepage and approve.", avatar: "/logo.ico" },
-            { type: "user", message: "Is this platform fully decentralized?", avatar: "/userx.webp" },
+            { type: "user", message: "Is this platform fully decentralized?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, 100% smart contract-powered.", avatar: "/logo.ico" },
-            { type: "user", message: "Are transactions instant or delayed?", avatar: "/userx.webp" },
+            { type: "user", message: "Are transactions instant or delayed?", avatar: "/userx1.webp" },
             { type: "bot", message: "Instant or near-instant.", avatar: "/logo.ico" },
-            { type: "user", message: "What token is used for payments?", avatar: "/userx.webp" },
+            { type: "user", message: "What token is used for payments?", avatar: "/userx1.webp" },
             { type: "bot", message: "You pay and earn in USDC or USDT.", avatar: "/logo.ico" },
-            { type: "user", message: "Is gas or network fee required?", avatar: "/userx.webp" },
+            { type: "user", message: "Is gas or network fee required?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, a small network fee is needed per action.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I change wallets after I register?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I change wallets after I register?", avatar: "/userx1.webp" },
             { type: "bot", message: "No, your ID is linked to your wallet address.", avatar: "/logo.ico" },
-            { type: "user", message: "Is my wallet and identity secure?", avatar: "/userx.webp" },
+            { type: "user", message: "Is my wallet and identity secure?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, your data stays with you — we don't store anything.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I use a cold wallet (e.g. Ledger)?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I use a cold wallet (e.g. Ledger)?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, as long as it supports DApps.", avatar: "/logo.ico" }
         ]
     },
     {
         title: "Compensation & Earnings",
         chat: [
-            { type: "user", message: "How does the Matrix payout system work?", avatar: "/userx.webp" },
+            { type: "user", message: "How does the Matrix payout system work?", avatar: "/userx1.webp" },
             { type: "bot", message: "You earn when others join and upgrade under you. Spillover pass ups and token trading or staking.", avatar: "/logo.ico" },
-            { type: "user", message: "What is the minimum amount I can earn?", avatar: "/userx.webp" },
+            { type: "user", message: "What is the minimum amount I can earn?", avatar: "/userx1.webp" },
             { type: "bot", message: "It depends on your level, but payouts start from your first referral. Limitless.", avatar: "/logo.ico" },
-            { type: "user", message: "Is there a cap on earnings?", avatar: "/userx.webp" },
+            { type: "user", message: "Is there a cap on earnings?", avatar: "/userx1.webp" },
             { type: "bot", message: "No hard cap — earn as much as your structure grows.", avatar: "/logo.ico" },
-            { type: "user", message: "Do I earn from people I don't know?", avatar: "/userx.webp" },
+            { type: "user", message: "Do I earn from people I don't know?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, through spillover and team upgrades.", avatar: "/logo.ico" },
-            { type: "user", message: "What is spillover and how does it work?", avatar: "/userx.webp" },
+            { type: "user", message: "What is spillover and how does it work?", avatar: "/userx1.webp" },
             { type: "bot", message: "It's when users placed above or below benefit your matrix.", avatar: "/logo.ico" },
-            { type: "user", message: "How fast can I start earning?", avatar: "/userx.webp" },
+            { type: "user", message: "How fast can I start earning?", avatar: "/userx1.webp" },
             { type: "bot", message: "Immediately after your first team activity.", avatar: "/logo.ico" },
-            { type: "user", message: "Are the earnings real crypto or points?", avatar: "/userx.webp" },
+            { type: "user", message: "Are the earnings real crypto or points?", avatar: "/userx1.webp" },
             { type: "bot", message: "All earnings are real-time crypto.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I withdraw instantly?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I withdraw instantly?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, funds go directly to your wallet.", avatar: "/logo.ico" },
-            { type: "user", message: "Is there a withdrawal limit?", avatar: "/userx.webp" },
+            { type: "user", message: "Is there a withdrawal limit?", avatar: "/userx1.webp" },
             { type: "bot", message: "No — it's your wallet, your money.", avatar: "/logo.ico" },
-            { type: "user", message: "Do I need to complete tasks to earn?", avatar: "/userx.webp" },
+            { type: "user", message: "Do I need to complete tasks to earn?", avatar: "/userx1.webp" },
             { type: "bot", message: "No tasks — just build and grow your matrix.", avatar: "/logo.ico" }
         ]
     },
     {
         title: "Upgrades, Ranks & Bonuses",
         chat: [
-            { type: "user", message: "What are Matrix Levels?", avatar: "/userx.webp" },
+            { type: "user", message: "What are Matrix Levels?", avatar: "/userx1.webp" },
             { type: "bot", message: "Each level increases your income potential.", avatar: "/logo.ico" },
-            { type: "user", message: "How do I unlock higher levels?", avatar: "/userx.webp" },
+            { type: "user", message: "How do I unlock higher levels?", avatar: "/userx1.webp" },
             { type: "bot", message: "You can upgrade manually anytime.", avatar: "/logo.ico" },
-            { type: "user", message: "What happens when I reach Level 3?", avatar: "/userx.webp" },
+            { type: "user", message: "What happens when I reach Level 3?", avatar: "/userx1.webp" },
             { type: "bot", message: "You unlock deeper levels of rewards and new matrix entries.", avatar: "/logo.ico" },
-            { type: "user", message: "Do I need to upgrade manually?", avatar: "/userx.webp" },
+            { type: "user", message: "Do I need to upgrade manually?", avatar: "/userx1.webp" },
             { type: "bot", message: "You can, or set auto-upgrade if enabled.", avatar: "/logo.ico" },
-            { type: "user", message: "Is there auto-upgrade or auto-rebuy?", avatar: "/userx.webp" },
+            { type: "user", message: "Is there auto-upgrade or auto-rebuy?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, you can turn it on in your dashboard.", avatar: "/logo.ico" },
-            { type: "user", message: "What bonuses are available beyond the Matrix?", avatar: "/userx.webp" },
+            { type: "user", message: "What bonuses are available beyond the Matrix?", avatar: "/userx1.webp" },
             { type: "bot", message: "There are referral bonuses, check matches, and pool rewards. Spillover pass ups over staking rewards.", avatar: "/logo.ico" },
-            { type: "user", message: "How do I reach Leaderboard or Rank rewards?", avatar: "/userx.webp" },
+            { type: "user", message: "How do I reach Leaderboard or Rank rewards?", avatar: "/userx1.webp" },
             { type: "bot", message: "Refer, grow your team, and help others level up.", avatar: "/logo.ico" },
-            { type: "user", message: "What's the advantage of upgrading early?", avatar: "/userx.webp" },
+            { type: "user", message: "What's the advantage of upgrading early?", avatar: "/userx1.webp" },
             { type: "bot", message: "You earn faster and receive more spillover.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I skip levels?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I skip levels?", avatar: "/userx1.webp" },
             { type: "bot", message: "No, levels must be unlocked in order.", avatar: "/logo.ico" },
-            { type: "user", message: "Are there any penalties for not upgrading?", avatar: "/userx.webp" },
+            { type: "user", message: "Are there any penalties for not upgrading?", avatar: "/userx1.webp" },
             { type: "bot", message: "You may miss earnings until you upgrade.", avatar: "/logo.ico" }
         ]
     },
     {
         title: "Team Building & Referrals",
         chat: [
-            { type: "user", message: "How do I refer others?", avatar: "/userx.webp" },
+            { type: "user", message: "How do I refer others?", avatar: "/userx1.webp" },
             { type: "bot", message: "Share your link — it's on your dashboard.", avatar: "/logo.ico" },
-            { type: "user", message: "What do I earn when someone joins through my link?", avatar: "/userx.webp" },
+            { type: "user", message: "What do I earn when someone joins through my link?", avatar: "/userx1.webp" },
             { type: "bot", message: "You get instant crypto commissions.", avatar: "/logo.ico" },
-            { type: "user", message: "How many people can I refer?", avatar: "/userx.webp" },
+            { type: "user", message: "How many people can I refer?", avatar: "/userx1.webp" },
             { type: "bot", message: "Unlimited — refer as many as you like.", avatar: "/logo.ico" },
-            { type: "user", message: "What is the team structure like?", avatar: "/userx.webp" },
+            { type: "user", message: "What is the team structure like?", avatar: "/userx1.webp" },
             { type: "bot", message: "It's matrix-based with automatic placement.", avatar: "/logo.ico" },
-            { type: "user", message: "Can someone above me earn from my referrals?", avatar: "/userx.webp" },
+            { type: "user", message: "Can someone above me earn from my referrals?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes, through the matrix and uplines.", avatar: "/logo.ico" },
-            { type: "user", message: "Can I earn passively from my team?", avatar: "/userx.webp" },
+            { type: "user", message: "Can I earn passively from my team?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes — from their upgrades and matrix actions.", avatar: "/logo.ico" },
-            { type: "user", message: "What's the fastest way to grow my team?", avatar: "/userx.webp" },
+            { type: "user", message: "What's the fastest way to grow my team?", avatar: "/userx1.webp" },
             { type: "bot", message: "Use your link, plug into team tools, and be consistent.", avatar: "/logo.ico" },
-            { type: "user", message: "Do I get a bonus for helping others upgrade?", avatar: "/userx.webp" },
+            { type: "user", message: "Do I get a bonus for helping others upgrade?", avatar: "/userx1.webp" },
             { type: "bot", message: "Yes — you benefit from team success.", avatar: "/logo.ico" },
-            { type: "user", message: "How do I track my downlines and team income?", avatar: "/userx.webp" },
+            { type: "user", message: "How do I track my downlines and team income?", avatar: "/userx1.webp" },
             { type: "bot", message: "Use the dashboard — it shows all your data.", avatar: "/logo.ico" },
-            { type: "user", message: "Is there any incentive for helping others succeed?", avatar: "/userx.webp" },
+            { type: "user", message: "Is there any incentive for helping others succeed?", avatar: "/userx1.webp" },
             { type: "bot", message: "Absolutely — the more they grow, the more you earn.", avatar: "/logo.ico" }
         ]
     }
 ];
 const getTabBaseColor = (index) => {
-  const colors = [
-    'bg-[#7cff98] text-black',
-    'bg-[#98d7ff]  text-black',
-    'bg-[#ffa7f9] text-black',
-    'bg-[#ffe38c] text-black',
-    'bg-[#ffb58c] text-black'
-  ];
-  return colors[index] || 'bg-gray-500 text-white';
+    const colors = [
+        'bg-[#7cff98] text-black',
+        'bg-[#98d7ff]  text-black',
+        'bg-[#ffa7f9] text-black',
+        'bg-[#ffe38c] text-black',
+        'bg-[#ffb58c] text-black'
+    ];
+    return colors[index] || 'bg-gray-500 text-white';
 };
 
 export default function Faqtabs() {
@@ -244,26 +244,24 @@ export default function Faqtabs() {
                 {/* Tabs */}
                 <div className="mb-6 relative z-20 overflow-x-auto lg:overflow-visible scrollbar-hide">
                     <div className="flex gap-3 min-w-max px-2 lg:flex-wrap lg:min-w-0 justify-center">
-{faqTabs.map((tab, i) => (
-  <button
-    key={i}
-    onClick={() => handleTabClick(i)}
-    className={`rounded-lg text-md font-medium whitespace-nowrap p-[2px] ${getTabBaseColor(i)}`}
-  >
-    <div className={`
+                        {faqTabs.map((tab, i) => (
+                            <button
+                                key={i}
+                                onClick={() => handleTabClick(i)}
+                                className={`rounded-lg text-md font-medium whitespace-nowrap p-[2px] ${getTabBaseColor(i)}`}
+                            >
+                                <div className={`
       px-4 py-2 rounded-md
       ${activeTab === i ? 'border-2 border-black' : ''}
       transition-all duration-200
     `}>
-      {tab.title}
-    </div>
-  </button>
-))}
+                                    {tab.title}
+                                </div>
+                            </button>
+                        ))}
 
                     </div>
                 </div>
-
-                {/* Chat List */}
                 <div className="space-y-4 mt-12">
                     {chat.slice(0, visibleCount).map((item, i) => {
                         if (!item) return null;

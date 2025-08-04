@@ -11,7 +11,7 @@ const rawChat = [
   {
     type: "user",
     message: "Which blockchain is XSynergy built on?",
-    avatar: "/userx.webp",
+    avatar: "/userx1.webp",
   },
   {
     type: "bot",
@@ -21,7 +21,7 @@ const rawChat = [
   {
     type: "user",
     message: "Is there any admin control or manual access?",
-    avatar: "/userx.webp",
+    avatar: "/userx1.webp",
   },
   {
     type: "bot",
@@ -31,7 +31,7 @@ const rawChat = [
   {
     type: "user",
     message: "How do I earn rewards?",
-    avatar: "/userx.webp",
+    avatar: "/userx1.webp",
   },
   {
     type: "bot",
@@ -41,7 +41,7 @@ const rawChat = [
   {
     type: "user",
     message: "Can I access it from anywhere?",
-    avatar: "/userx.webp",
+    avatar: "/userx1.webp",
   },
   {
     type: "bot",
