@@ -30,14 +30,14 @@ const Header = () => {
     }, []);
     useEffect(() => {
         if (isOpen) {
-            // Lock scroll when menu is open
+          
             document.body.style.overflow = 'hidden';
         } else {
-            // Re-enable scroll when menu is closed
+           
             document.body.style.overflow = '';
         }
 
-        // Cleanup on unmount (optional safety)
+      
         return () => {
             document.body.style.overflow = '';
         };

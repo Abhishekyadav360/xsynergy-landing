@@ -26,7 +26,7 @@ const AnimatedLetter: React.FC<AnimatedLetterProps> = ({
   const start = localIndex * delayFactor;
   const end = start + 0.2;
 
-  // ✅ Hooks are always called (no condition)
+
   const color = useTransform(scrollYProgress, [start, end], ['#666', '#ffffff']);
   const shadow = useTransform(
     scrollYProgress,
@@ -34,7 +34,7 @@ const AnimatedLetter: React.FC<AnimatedLetterProps> = ({
     ['0 0 0px transparent', '0 0 6px #ffffff']
   );
 
-  // ✅ Conditional rendering only (hook already called above)
+
   if (index < prefixLen) {
     return (
       <span style={{ color: '#ffffff', textShadow: '0 0 3px #ffffff' }}>
@@ -75,9 +75,9 @@ const About = () => {
         ref={sectionRef}
         className="relative bg-transparent h-[110vh] sm:h-[150vh]  px-4 pt-52 sm:pt-40 pb-0 "
       >
-             {/* <div id="stars2"></div> */}
+             
         <div className="sticky top-1/2 -translate-y-1/2">
-          {/* About Us Badge */}
+    
           <div className="flex items-center mb-4 mt-12 justify-center gap-0 sm:gap-4  b rounded-full px-1 py-[5px] max-w-64 sm:max-w-[600px] w-full mx-auto  overflow-hidden">
                          
                             <div className="w-[108px] h-[20px]">
@@ -144,7 +144,7 @@ const About = () => {
                             </div>
                         </div>
 
-          {/* Animated Text */}
+       
           <p className="mx-auto max-w-5xl flex flex-wrap justify-center text-center leading-none text-3xl sm:text-[48px] font-semibold fr-fnt whitespace-pre-wrap">
             {text.split(' ').map((word, wordIdx) => (
   <span key={wordIdx} className="inline-block mr-[0.4ch]">
