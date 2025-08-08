@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import AOS from 'aos';
@@ -69,105 +68,100 @@ const About = () => {
 
   return (
     <main className="bg-transparent text-white whitespace-nowrap ">
-     
+
       <section
         id="about"
         ref={sectionRef}
         className="relative bg-transparent h-[110vh] sm:h-[150vh]  px-4 pt-52 sm:pt-40 pb-0 "
       >
-             
+
         <div className="sticky top-1/2 -translate-y-1/2">
-    
+
           <div className="flex items-center mb-4 mt-12 justify-center gap-0 sm:gap-4  b rounded-full px-1 py-[5px] max-w-64 sm:max-w-[600px] w-full mx-auto  overflow-hidden">
-                         
-                            <div className="w-[108px] h-[20px]">
-                                <svg
-                                    width={108}
-                                    height={20}
-                                    viewBox="0 0 108 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
-                                        stroke="url(#left-gradient)"
-                                        strokeWidth={1}
-                                    />
-                                    <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
-                                    <defs>
-                                        <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
-                                            <stop stopColor="#A0A0A0" stopOpacity="0.1" />
-                                            <stop offset="0.5" stopColor="#D1D5DB" />
-                                            <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
-                                        </linearGradient>
-                                        <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
-                                            <stop stopColor="#E5E7EB" />
-                                            <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
-                                        </radialGradient>
-                                    </defs>
-                                </svg>
-                            </div>
 
-                         
-                            <h2 className=" text-4xl md:text-6xl font-bold leading-[0.8] text-span-gradient  fr-fnt">
-                                About Us
-                            </h2>
-                          
+            <div className="w-[108px] h-[20px]">
+              <svg
+                width={108}
+                height={20}
+                viewBox="0 0 108 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M103.5 11.0455H72.4759M72.4759 11.0455L65.0301 1H0.5M72.4759 11.0455H40.2108M7.946 11.0455H40.2108M40.2108 11.0455L35.247 18H0.5"
+                  stroke="url(#left-gradient)"
+                  strokeWidth={1}
+                />
+                <circle cx="99.5" cy="11" r="5" fill="url(#left-circle)" />
+                <defs>
+                  <linearGradient id="left-gradient" x1="0" y1="11" x2="103" y2="11" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                    <stop offset="0.5" stopColor="#D1D5DB" />
+                    <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                  </linearGradient>
+                  <radialGradient id="left-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5 11) scale(5)">
+                    <stop stopColor="#E5E7EB" />
+                    <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
 
-                          
-                            <div className="w-[108px] h-[20px]">
-                                <svg
-                                    width={108}
-                                    height={20}
-                                    viewBox="0 0 108 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
-                                        stroke="url(#right-gradient)"
-                                        strokeWidth={1}
-                                    />
-                                    <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
-                                    <defs>
-                                        <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
-                                            <stop stopColor="#A0A0A0" stopOpacity="0.1" />
-                                            <stop offset="0.5" stopColor="#D1D5DB" />
-                                            <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
-                                        </linearGradient>
-                                        <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
-                                            <stop stopColor="#E5E7EB" />
-                                            <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
-                                        </radialGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </div>
+            <h2 className=" text-4xl md:text-6xl font-bold leading-[0.8] text-span-gradient  fr-fnt">
+              About Us
+            </h2>
+            <div className="w-[108px] h-[20px]">
+              <svg
+                width={108}
+                height={20}
+                viewBox="0 0 108 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 11.0455H35.5241M35.5241 11.0455L42.9699 1H107.5M35.5241 11.0455H67.7892M100.054 11.0455H67.7892M67.7892 11.0455L72.753 18H107.5"
+                  stroke="url(#right-gradient)"
+                  strokeWidth={1}
+                />
+                <circle cx="8.5" cy="11" r="5" fill="url(#right-circle)" />
+                <defs>
+                  <linearGradient id="right-gradient" x1="4" y1="11" x2="108" y2="11" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#A0A0A0" stopOpacity="0.1" />
+                    <stop offset="0.5" stopColor="#D1D5DB" />
+                    <stop offset="1" stopColor="#A0A0A0" stopOpacity="0.1" />
+                  </linearGradient>
+                  <radialGradient id="right-circle" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.5 11) scale(5)">
+                    <stop stopColor="#E5E7EB" />
+                    <stop offset="1" stopColor="#E5E7EB" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
 
-       
+
           <p className="mx-auto max-w-5xl flex flex-wrap justify-center text-center leading-none text-3xl sm:text-[48px] font-semibold fr-fnt whitespace-pre-wrap">
             {text.split(' ').map((word, wordIdx) => (
-  <span key={wordIdx} className="inline-block mr-[0.4ch]">
-    {word.split('').map((char, charIdx) => {
-      const globalIdx = text.split(' ').slice(0, wordIdx).join(' ').length + wordIdx + charIdx;
+              <span key={wordIdx} className="inline-block mr-[0.4ch]">
+                {word.split('').map((char, charIdx) => {
+                  const globalIdx = text.split(' ').slice(0, wordIdx).join(' ').length + wordIdx + charIdx;
 
-      return (
-        <AnimatedLetter
-          key={`${wordIdx}-${charIdx}`}
-          char={char}
-          index={globalIdx}
-          prefixLen={prefixLen}
-          scrollYProgress={scrollYProgress}
-        />
-      );
-    })}
-  </span>
-))}
+                  return (
+                    <AnimatedLetter
+                      key={`${wordIdx}-${charIdx}`}
+                      char={char}
+                      index={globalIdx}
+                      prefixLen={prefixLen}
+                      scrollYProgress={scrollYProgress}
+                    />
+                  );
+                })}
+              </span>
+            ))}
           </p>
-<div className="mt-4 sm:mt-12 flex justify-center items-center">
-          <Marquee />
-
-</div>
+          <div className="mt-4 sm:mt-12 flex justify-center items-center">
+            <Marquee />
+          </div>
         </div>
       </section>
     </main>
