@@ -64,4 +64,4 @@ const Joinnow = () => {
     )
 }
 
-export default Joinnow
+export default Joinnow  
