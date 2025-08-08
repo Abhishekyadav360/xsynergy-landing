@@ -3,7 +3,7 @@ import React from "react";
 const Title = ({ title, highlightedText, subtitle = "", className = "" }) => {
   return (
     <div className={`titlebox relative ${className}`}>
-      <h2 className="text-4xl md:text-6xl font-bold leading-[0.8] text-span-gradient ">
+      <h2 className="text-4xl md:text-6xl font-bold !leading-[1] text-span-gradient ">
         <span className="block ">{title}</span>
         {highlightedText}
       </h2>

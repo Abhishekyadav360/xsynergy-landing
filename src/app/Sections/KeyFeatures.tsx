@@ -99,9 +99,9 @@ const KeyFeatures = () => {
           </div>
 
           <Title
-            title="Key Features"
+            title="Highlights"
             highlightedText=""
-            subtitle="Built-in features that keep it fast, fair, and fully decentralized."
+            subtitle="Core pillars that power trustless, instant, and global rewards."
             className="mb-10 text-center max-w-5xl mx-auto"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 relative max-w-6xl mx-auto mt-10">
@@ -136,10 +136,10 @@ const KeyFeatures = () => {
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
-                Instant Smart Contract Payouts and Referral-Driven Earnings
+                Automated Payouts on Demand
               </h2>
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                Get rewarded automatically and instantly through referral-based smart contracts that never miss a payout.
+                Every USDT you stake triggers instant USDT rewards—no delays, no errors, no middlemen.
               </p>
             </div>
             <div className=" overflow-hidden relative   flex flex-col items-start justify-start min-h-[320px] p-4 border border-[#303033]  border-gradient bg-gradient-to-b from-[rgba(20,22,25,0.1)] to-[rgba(27,27,30,0.1)] backdrop-blur-sm"
@@ -170,10 +170,10 @@ const KeyFeatures = () => {
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
-                Global Access 24/7 and Securely Built on the Polygon Network
+                Access from Anywhere, Always On 
               </h2>
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                Join from anywhere in the world, powered by the speed and low cost of the Polygon blockchain.
+               Log in with any wallet, anytime—our protocol never sleeps and works across borders.
               </p>
 
             </div>
@@ -206,10 +206,10 @@ const KeyFeatures = () => {
                 />
               </div>
               <h2 className="text-2xl sm:text-3xl font-medium">
-                Transparent, Secure and Decentralized Value Distribution
+               Immutable Transparency & Security 
               </h2>
               <p className="text-[#E5E5E5] text-lg font-normal leading-6 mt-2">
-                Every transaction is secure, visible on-chain, and follows a fair, decentralized model — no admin interference.
+                All payouts and vault operations are on-chain and auditable—guaranteed by code, not humans.
               </p>
 
             </div>

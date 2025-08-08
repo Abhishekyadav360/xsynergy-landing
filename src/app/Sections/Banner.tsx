@@ -56,7 +56,7 @@ const Banner = () => {
                     <div className="text-center relative max-w-7xl mx-auto w-full z-30 " data-aos="fade-up">
 
 
-                        <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[400px] w-full mx-auto  overflow-hidden">
+                        <div className="  hidden md:flex items-center justify-center gap-0 sm:gap-4 border-[1px] border-[#baf8cc2f] bg-[#0d0d0d] rounded-full px-1 py-[5px] max-w-64 sm:max-w-[480px] w-full mx-auto  overflow-hidden">
                             {/* Left Decorative SVG */}
                             <div className="w-[108px] h-[20px]">
                                 <svg
@@ -88,7 +88,7 @@ const Banner = () => {
 
                             {/* Center Text */}
                             <p className="text-green-400 text-lg  drop-shadow-[0_0_6px_rgba(209,213,219,0.5)]">
-                                Made for Web3
+                                Forged for Sovereign Wealth
                             </p>
 
                             {/* Right Decorative SVG */}
@@ -122,23 +122,22 @@ const Banner = () => {
                         </div>
 
 
-                        <h1 className="text-5xl md:text-[90px] font-bold mb-3 sm:mb-3 !leading-[1] sm:leading-none max-w-4xl mx-auto">
+                        <h1 className="text-5xl md:text-[80px] font-bold mb-3 sm:mb-3 !leading-[1] sm:leading-none max-w-5xl mx-auto">
                             <span className='inline-block rounded-xl sm:rounded-2xl px-3 py-0 sm:py-0.5 font-semibold text-span'>
                                 Welcome to
                             </span>
 
-                            <MatrixText key={(typeof window !== 'undefined' && window.performance.now()) || 1} text="XSynergy" speed={250} /> – Built for Web3
+                            <MatrixText key={(typeof window !== 'undefined' && window.performance.now()) || 1} text="XSynergy" speed={250} /> – The World’s First Hybrid Matrix Engine
                         </h1>
 
-                        <p className="text-md md:text-lg max-w-2xl mx-auto mb-7 sm:mb-10">
-                            XSYNERGY is the world’s first
-                            platform backed by a Solana-based reserve, built on code,
-                            designed for freedom, and owned by the people
+                        <p className="text-md md:text-lg max-w-2xl mx-auto mb-6 sm:mb-6">
+                           Backed by Solana’s untouchable reserves. Secured by unbreakable smart contracts. 
+Your simple path to daily wealth.
                         </p>
 
-                        <div className='flex flex-wrap gap-4 justify-center items-center max-w-48 mx-auto  z-30 relative '>
+                        <div className='flex flex-wrap gap-4 justify-center items-center  mx-auto  z-30 relative '>
                             <Button className=' z-20 relative' variant="primary" target="_blank" href="Comingsoon" >
-                                Login
+                               Claim Your Slot
                             </Button>
                             {/* <Button variant="secondary" target="_blank" href="https://swap.sfagro.club/">
                                 Swap

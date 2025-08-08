@@ -98,12 +98,16 @@ const Tokenomics = () => {
                         </svg>
                     </div>
                 </div>
-                <Title
+                <div className=' max-w-lg lg:max-w-xl xl:max-w-3xl mx-auto'>
+ <Title
                     title="Token Allocation Overview"
                     highlightedText=""
-                    subtitle="Transparent token flow to fuel innovation, rewards, and ecosystem security."
+                    subtitle="Every XSYNERGY token is allocated to power your rewards, drive community growth, and lock in the network’s stability."
                     className="mb-10 text-center max-w-5xl mx-auto "
                 />
+
+                </div>
+               
 
                 {/* -------- Desktop / Tablet Layout -------- */}
                 <div className="w-full max-w-md lg:max-w-2xl xl:max-w-3xl mx-auto hidden lg:block mt-20">

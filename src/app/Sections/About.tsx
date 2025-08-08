@@ -63,8 +63,8 @@ const About = () => {
   });
 
   const text =
-    'XSYNERGY multiplies rewards over time, helping you earn yield you control — not promises you chase. Your money stays in your wallet, under your rules. Smart contracts don’t lie. People do.';
-  const prefix = 'XSYNERGY multiplies rewards ov ';
+    'XSYNERGY is a trustless reward engine that turns your  USDT into daily earnings. Our first-ever hybrid Time-Mining + Vault Staking protocol auto-converts, locks, and pays you in $XSYN—straight to your wallet. No middlemen. No hype. Just code.';
+  const prefix = 'XSYNERGY is a trustless reward';
   const prefixLen = prefix.length;
 
   return (

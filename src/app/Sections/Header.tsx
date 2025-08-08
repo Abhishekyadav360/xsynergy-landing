@@ -115,7 +115,7 @@ const Header = () => {
                 </nav>
                 <div className="flex items-center gap-4">
                     <div className='bg-black rounded-xl'>
-                        <Button target='_blank' href="Comingsoon">Register</Button>
+                        <Button target='_blank' href="Comingsoon">Enter The Matrix</Button>
 
                     </div>
                     <button
