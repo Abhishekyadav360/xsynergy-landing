@@ -94,7 +94,7 @@ const Header = () => {
                     {/* <Link href="#about" className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300" onClick={(e) => handleScroll(e, 'about')}>XSYNERGY Plan</Link> */}
 
                     <a
-                        href="/whitepaper.pdf"
+                        href="https://docs.xsynergy.io/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300"
@@ -103,8 +103,8 @@ const Header = () => {
                     </a>
 
                     <a
-                        href="/whitepaper.pdf"
-                        target="_blank"
+                        href="/Comingsoon"
+                        
                         rel="noopener noreferrer"
                         className="px-4 py-2 hover:text-green-400 transition-all ease-in-out duration-300"
                     >
@@ -169,7 +169,7 @@ const Header = () => {
                     {/* <Link href="#about" className="block px-4 py-2" onClick={(e) => handleScroll(e, 'about')}>XSYNERGY Plan</Link> */}
 
                     <a
-                        href="/whitepaper.pdf"
+                        href="https://docs.xsynergy.io/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block px-4 py-2"
@@ -178,8 +178,8 @@ const Header = () => {
                     </a>
 
                     <a
-                        href="/whitepaper.pdf"
-                        target="_blank"
+                        href="/Comingsoon"
+                       
                         rel="noopener noreferrer"
                         className="block px-4 py-2"
                     >
